@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Village Condo Hub</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0d1b2a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1b263b, #415a77);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            animation: glow 2s infinite alternate;
+        }
+
+        /* Ticker */
+        .ticker {
+            background: #e63946;
+            padding: 12px;
+            color: #fff;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .ticker span {
+            display: inline-block;
+            animation: scroll 12s linear infinite;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Updates Section */
+        .updates-section {
+            background: #1b263b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: #e63946;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #778da9;
+            padding-bottom: 6px;
+        }
+
+        /* Update Card */
+        .update-card {
+            background: #415a77;
+            padding: 16px;
+            margin-bottom: 14px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .update-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .update-card::after {
+            content: 'LIVE';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e63946;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            animation: pulse 1.5s infinite;
+        }
+
+        .timestamp {
+            font-size: 0.85em;
+            color: #a0b4c8;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        strong {
+            color: #f0f0f0;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85em;
+            color: #778da9;
+            background: #1b263b;
+            margin-top: 20px;
+            border-top: 1px solid #415a77;
+        }
+
+        footer a {
+            color: #e63946;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #e63946, 0 0 10px #778da9; }
+            100% { text-shadow: 0 0 15px #e63946, 0 0 25px #778da9; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            .container { padding: 15px; }
+            .update-card { padding: 12px; }
+            h2 { font-size: 1.4em; }
+            .ticker span { font-size: 0.9em; }
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.5em; }
+            .ticker { padding: 8px; }
+            .update-card { padding: 10px; }
+            h2 { font-size: 1.3em; }
+            p { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Site Updates</h1>
+    </header>
+
+    <!-- Ticker -->
+    <div class="ticker">
+        <span>All under control, thanks to the Gatehouse team.</span>
+    </div>
+
+    <div class="container">
+        <div class="updates-section">
+            <h2>Live Site Updates</h2>
+
+            <!-- Update Card 1 -->
+            <div class="update-card">
+                <p><strong>Notice:</strong> This platform is still under progress and will be ready soon...</p>
+                <span class="timestamp">Last Updated: March 16, 2025, 10:00 AM</span>
+            </div>
+
+            
+    </div>
+
+    <footer>
+        Rainbow Village Condo Hub | <a href="#terms">Terms & Conditions</a>
+        <div id="terms" style="display: none;">Managed by Jagroop Singh</div>
+    </footer>
+
+    <script>
+        function updateTimestamps() {
+            const timestamps = document.querySelectorAll('.timestamp');
+            timestamps.forEach(ts => {
+                ts.textContent = `Last Updated: ${new Date().toLocaleString()}`;
+            });
+        }
+        setInterval(updateTimestamps, 60000);
+    </script>
+</body>
+</html>
