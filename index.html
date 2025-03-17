@@ -3,214 +3,587 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class 12 Political Science Quiz</title>
+    <title>CBSE Class 12 Political Science 2025 - Anmol Singh</title>
     <style>
-        /* Futuristic Theme Styling */
         * {
             margin: 0;
-            padding: _
-
-0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: 'Orbitron', sans-serif; /* Futuristic font */
-            background: linear-gradient(180deg, #0d1b2a, #1b263b);
-            color: #e0e1dd;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 1.5em;
         }
 
         .container {
-            background: rgba(27, 38, 59, 0.9);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(69, 123, 157, 0.5);
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-            animation: glow 2s infinite alternate;
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
         }
 
-        @keyframes glow {
-            from { box-shadow: 0 0 20px rgba(69, 123, 157, 0.5); }
-            to { box-shadow: 0 0 40px rgba(69, 123, 157, 0.8); }
+        .section {
+            margin-bottom: 20px;
         }
 
-        h1 {
-            font-size: 2.2rem;
-            color: #00b4d8;
-            text-shadow: 0 0 10px #00b4d8;
-            margin-bottom: 1.5rem;
-        }
-
-        #question-container {
-            margin: 1.5rem 0;
-            padding: 1.5rem;
-            background: #415a77;
-            border-radius: 15px;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        #question-text {
-            font-size: 1.5rem;
-            color: #90e0ef;
-            margin-bottom: 1rem;
-        }
-
-        .options label {
-            display: block;
-            padding: 0.8rem;
-            background: #778da9;
-            margin: 0.5rem 0;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #fff;
-        }
-
-        .options label:hover {
-            background: #00b4d8;
-            transform: translateX(5px);
-        }
-
-        input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        #submit-btn {
-            padding: 0.8rem 2rem;
-            background: #ff4d6d;
-            border: none;
-            border-radius: 10px;
-            color: #fff;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        #submit-btn:hover {
-            background: #ff758f;
-            transform: scale(1.1);
-        }
-
-        #feedback {
-            margin-top: 1rem;
-            font-size: 1.3rem;
-            padding: 0.5rem;
+        .section h2 {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
             border-radius: 5px;
-            display: none;
+            cursor: pointer;
+            font-size: 1.2em;
         }
 
-        .correct { background: #06d6a0; color: #fff; }
-        .wrong { background: #ef476f; color: #fff; }
+        .section-content {
+            display: none;
+            padding: 10px 0;
+        }
 
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            #question-text { font-size: 1.2rem; }
-            .options label { font-size: 0.9rem; }
-            #submit-btn { font-size: 1rem; }
+        .section-content.active {
+            display: block;
+        }
+
+        .question {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .question p {
+            margin: 5px 0;
+        }
+
+        .answer {
+            display: none;
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+
+        .password-box {
+            margin: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .password-box input {
+            padding: 8px;
+            width: 100%;
+            max-width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .password-box button {
+            padding: 8px 20px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+
+        .password-box button:hover {
+            background: #34495e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.9em;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h1>CBSE Class 12 Political Science 2025</h1>
+        <p>For Anmol Singh</p>
+    </header>
+
     <div class="container">
-        <h1>CBSE Class 12 Political Science Quiz</h1>
-        <div id="question-container">
-            <p id="question-text"></p>
-            <form id="quiz-form" class="options"></form>
-            <button id="submit-btn">Submit</button>
+        <!-- Section A -->
+        <div class="section">
+            <h2 onclick="toggleSection('sectionA')">Section A: MCQs (1 Mark Each)</h2>
+            <div class="section-content" id="sectionA">
+                <div class="question">
+                    <p><strong>Q1.</strong> What was the main reason for the end of the Cold War?</p>
+                    <p>a) Economic collapse of the Soviet Union  b) World War III  c) Formation of NATO  d) Rise of China</p>
+                    <div class="password-box">
+                        <input type="password" id="pass1" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass1', 'ans1')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans1">
+                        <p><strong>Answer:</strong> a) Economic collapse of the Soviet Union</p>
+                        <p><strong>Explanation:</strong> The Cold War ended mainly because the Soviet Union faced economic problems and could not compete with the USA, leading to its breakup in 1991.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q2.</strong> Which country is not a permanent member of the UN Security Council?</p>
+                    <p>a) USA  b) Russia  c) India  d) China</p>
+                    <div class="password-box">
+                        <input type="password" id="pass2" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass2', 'ans2')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans2">
+                        <p><strong>Answer:</strong> c) India</p>
+                        <p><strong>Explanation:</strong> The permanent members are USA, Russia, UK, France, and China. India is not a permanent member but wants to be.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q3.</strong> What does ‘ASEAN’ stand for?</p>
+                    <p>a) Association of Southeast Asian Nations  b) Alliance of South European Nations  c) African Social Economic Agreement  d) Asian Security and Economic Network</p>
+                    <div class="password-box">
+                        <input type="password" id="pass3" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass3', 'ans3')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans3">
+                        <p><strong>Answer:</strong> a) Association of Southeast Asian Nations</p>
+                        <p><strong>Explanation:</strong> ASEAN is a group of countries in Southeast Asia working together for peace and growth.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q4.</strong> Who was the first Prime Minister of India?</p>
+                    <p>a) Jawaharlal Nehru  b) Mahatma Gandhi  c) Sardar Patel  d) Indira Gandhi</p>
+                    <div class="password-box">
+                        <input type="password" id="pass4" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass4', 'ans4')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans4">
+                        <p><strong>Answer:</strong> a) Jawaharlal Nehru</p>
+                        <p><strong>Explanation:</strong> Jawaharlal Nehru became India’s first PM in 1947 after independence.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q5.</strong> The ‘Two-Nation Theory’ was given by:</p>
+                    <p>a) Mahatma Gandhi  b) Muhammad Ali Jinnah  c) Jawaharlal Nehru  d) B.R. Ambedkar</p>
+                    <div class="password-box">
+                        <input type="password" id="pass5" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass5', 'ans5')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans5">
+                        <p><strong>Answer:</strong> b) Muhammad Ali Jinnah</p>
+                        <p><strong>Explanation:</strong> Jinnah proposed that Hindus and Muslims are two separate nations, leading to Pakistan’s creation.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q6.</strong> Which article of the Indian Constitution gives special status to Jammu and Kashmir (before 2019)?</p>
+                    <p>a) Article 370  b) Article 356  c) Article 14  d) Article 21</p>
+                    <div class="password-box">
+                        <input type="password" id="pass6" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass6', 'ans6')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans6">
+                        <p><strong>Answer:</strong> a) Article 370</p>
+                        <p><strong>Explanation:</strong> Article 370 gave special rights to Jammu and Kashmir, like its own constitution, until it was removed in 2019.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q7.</strong> The ‘Green Revolution’ in India was related to:</p>
+                    <p>a) Forest conservation  b) Increase in agriculture production  c) Water management  d) Industrial growth</p>
+                    <div class="password-box">
+                        <input type="password" id="pass7" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass7', 'ans7')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans7">
+                        <p><strong>Answer:</strong> b) Increase in agriculture production</p>
+                        <p><strong>Explanation:</strong> The Green Revolution used new seeds and technology to grow more food in the 1960s and 70s.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q8.</strong> What is the full form of SAARC?</p>
+                    <p>a) South Asian Association for Regional Cooperation  b) South African Alliance for Regional Control  c) Southeast Asian Agreement for Regional Cooperation  d) South American Association for Rural Cooperation</p>
+                    <div class="password-box">
+                        <input type="password" id="pass8" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass8', 'ans8')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans8">
+                        <p><strong>Answer:</strong> a) South Asian Association for Regional Cooperation</p>
+                        <p><strong>Explanation:</strong> SAARC is a group of South Asian countries like India, Pakistan, and Bangladesh working together.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q9.</strong> The Emergency in India was declared in:</p>
+                    <p>a) 1962  b) 1971  c) 1975  d) 1980</p>
+                    <div class="password-box">
+                        <input type="password" id="pass9" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass9', 'ans9')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans9">
+                        <p><strong>Answer:</strong> c) 1975</p>
+                        <p><strong>Explanation:</strong> Indira Gandhi declared Emergency in 1975 due to political problems, lasting until 1977.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q10.</strong> Which movement was led by Sardar Patel to unite princely states?</p>
+                    <p>a) Quit India Movement  b) Integration of Princely States  c) Dandi Salt March  d) Non-Cooperation Movement</p>
+                    <div class="password-box">
+                        <input type="password" id="pass10" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass10', 'ans10')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans10">
+                        <p><strong>Answer:</strong> b) Integration of Princely States</p>
+                        <p><strong>Explanation:</strong> Sardar Patel worked to bring over 500 princely states into India after 1947.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q11.</strong> The policy of ‘Non-Alignment’ means:</p>
+                    <p>a) Supporting USA in the Cold War  b) Not joining any power bloc  c) Fighting against colonialism  d) Joining the Soviet Union</p>
+                    <div class="password-box">
+                        <input type="password" id="pass11" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass11', 'ans11')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans11">
+                        <p><strong>Answer:</strong> b) Not joining any power bloc</p>
+                        <p><strong>Explanation:</strong> India stayed neutral during the Cold War, not siding with the USA or Soviet Union.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q12.</strong> Globalization means:</p>
+                    <p>a) More trade and connection between countries  b) Closing borders  c) Reducing technology use  d) Stopping migration</p>
+                    <div class="password-box">
+                        <input type="password" id="pass12" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass12', 'ans12')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans12">
+                        <p><strong>Answer:</strong> a) More trade and connection between countries</p>
+                        <p><strong>Explanation:</strong> Globalization connects the world through trade, culture, and technology.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="feedback"></div>
+
+        <!-- Section B -->
+        <div class="section">
+            <h2 onclick="toggleSection('sectionB')">Section B: Very Short Answer (2 Marks Each)</h2>
+            <div class="section-content" id="sectionB">
+                <div class="question">
+                    <p><strong>Q13.</strong> What is meant by ‘Unipolar World’?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass13" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass13', 'ans13')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans13">
+                        <p><strong>Answer:</strong> A unipolar world means one country, like the USA, is the most powerful in the world after the Cold War ended.</p>
+                        <p><strong>Explanation:</strong> After the Soviet Union broke up in 1991, the USA became the only superpower.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q14.</strong> Name two leaders of the Non-Aligned Movement.</p>
+                    <div class="password-box">
+                        <input type="password" id="pass14" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass14', 'ans14')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans14">
+                        <p><strong>Answer:</strong> Jawaharlal Nehru (India) and Josip Broz Tito (Yugoslavia).</p>
+                        <p><strong>Explanation:</strong> They started the Non-Aligned Movement to stay neutral in the Cold War.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q15.</strong> What is the main goal of the United Nations?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass15" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass15', 'ans15')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans15">
+                        <p><strong>Answer:</strong> The main goal of the UN is to maintain peace and security in the world.</p>
+                        <p><strong>Explanation:</strong> It was formed in 1945 to stop wars and help countries work together.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q16.</strong> What was the ‘Partition of India’?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass16" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass16', 'ans16')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans16">
+                        <p><strong>Answer:</strong> The Partition of India was the division of British India into India and Pakistan in 1947 based on religion.</p>
+                        <p><strong>Explanation:</strong> Hindus got India, and Muslims got Pakistan, causing migration and violence.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q17.</strong> What is a ‘Coalition Government’?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass17" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass17', 'ans17')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans17">
+                        <p><strong>Answer:</strong> A coalition government is when two or more political parties join to form a government.</p>
+                        <p><strong>Explanation:</strong> This happens when no single party gets enough seats to rule alone.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q18.</strong> Define ‘Secularism’ in the Indian Constitution.</p>
+                    <div class="password-box">
+                        <input type="password" id="pass18" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass18', 'ans18')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans18">
+                        <p><strong>Answer:</strong> Secularism means the government treats all religions equally and does not favor any one religion.</p>
+                        <p><strong>Explanation:</strong> India allows freedom of religion for all citizens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section C -->
+        <div class="section">
+            <h2 onclick="toggleSection('sectionC')">Section C: Short Answer (4 Marks Each)</h2>
+            <div class="section-content" id="sectionC">
+                <div class="question">
+                    <p><strong>Q19.</strong> Explain the role of the Soviet Union in the Cold War.</p>
+                    <div class="password-box">
+                        <input type="password" id="pass19" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass19', 'ans19')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans19">
+                        <p><strong>Answer:</strong> The Soviet Union was one of the two superpowers in the Cold War, competing with the USA. It led the communist countries and formed the Warsaw Pact to fight against NATO. It supported countries like Cuba and Vietnam against the USA. The Cold War ended when the Soviet Union broke up in 1991 due to economic failure.</p>
+                        <p><strong>Explanation:</strong> The Soviet Union and USA never fought directly but had a rivalry through wars, spies, and technology.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q20.</strong> What are the main features of India’s foreign policy?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass20" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass20', 'ans20')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans20">
+                        <p><strong>Answer:</strong> India’s foreign policy has these features:</p>
+                        <p>1. <strong>Non-Alignment:</strong> Not joining any superpower during the Cold War.</p>
+                        <p>2. <strong>Peace:</strong> Promoting peace and solving disputes without war.</p>
+                        <p>3. <strong>Friendship:</strong> Building good relations with all countries.</p>
+                        <p>4. <strong>Support to UN:</strong> Working with the UN for global peace.</p>
+                        <p><strong>Explanation:</strong> India follows these ideas to stay independent and peaceful in the world.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q21.</strong> Why did India adopt a mixed economy after independence?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass21" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass21', 'ans21')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans21">
+                        <p><strong>Answer:</strong> India adopted a mixed economy because:</p>
+                        <p>1. It wanted both government and private companies to grow the economy.</p>
+                        <p>2. It aimed to reduce poverty and inequality using government control.</p>
+                        <p>3. It needed fast development after British rule ended.</p>
+                        <p>4. It balanced socialism (public sector) and capitalism (private sector).</p>
+                        <p><strong>Explanation:</strong> This system helped India build industries and support the poor.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q22.</strong> What were the effects of the Emergency (1975–77) in India?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass22" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass22', 'ans22')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans22">
+                        <p><strong>Answer:</strong> Effects of the Emergency were:</p>
+                        <p>1. <strong>Loss of Freedom:</strong> People lost rights like speech and press.</p>
+                        <p>2. <strong>Arrests:</strong> Many leaders and citizens were jailed without reason.</p>
+                        <p>3. <strong>Fear:</strong> People were scared of the government’s strict rules.</p>
+                        <p>4. <strong>Elections:</strong> After it ended, Indira Gandhi lost the 1977 election.</p>
+                        <p><strong>Explanation:</strong> The Emergency was a tough time for democracy in India.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q23.</strong> How does globalization affect India?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass23" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass23', 'ans23')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans23">
+                        <p><strong>Answer:</strong> Globalization affects India in these ways:</p>
+                        <p>1. <strong>Economy:</strong> More jobs and trade with other countries.</p>
+                        <p>2. <strong>Technology:</strong> Better phones, internet, and machines.</p>
+                        <p>3. <strong>Culture:</strong> Mixing of Indian and foreign cultures (e.g., food, movies).</p>
+                        <p>4. <strong>Problems:</strong> Some local businesses and farmers suffer.</p>
+                        <p><strong>Explanation:</strong> Globalization has both good and bad impacts on India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section D -->
+        <div class="section">
+            <h2 onclick="toggleSection('sectionD')">Section D: Passage/Map-Based (4 Marks Each)</h2>
+            <div class="section-content" id="sectionD">
+                <div class="question">
+                    <p><strong>Q24.</strong> Read the passage and answer the questions:</p>
+                    <p><em>The United Nations was formed in 1945 after World War II. Its main aim is to keep peace and help countries work together. It has 193 member countries today. The Security Council is its most powerful body with 5 permanent members.</em></p>
+                    <p>a) When and why was the UN formed? (2 marks)</p>
+                    <p>b) Name two permanent members of the Security Council. (2 marks)</p>
+                    <div class="password-box">
+                        <input type="password" id="pass24" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass24', 'ans24')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans24">
+                        <p><strong>Answer:</strong></p>
+                        <p>a) The UN was formed in 1945 after World War II to maintain peace and stop future wars.</p>
+                        <p>b) USA and Russia (two permanent members).</p>
+                        <p><strong>Explanation:</strong> The UN helps solve global problems, and its Security Council includes USA, Russia, UK, France, and China.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q25.</strong> On the map of India, identify and name:</p>
+                    <p>a) The state where the Green Revolution started. (2 marks)</p>
+                    <p>b) The state with special status under Article 370 until 2019. (2 marks)</p>
+                    <div class="password-box">
+                        <input type="password" id="pass25" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass25', 'ans25')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans25">
+                        <p><strong>Answer:</strong></p>
+                        <p>a) Punjab (Green Revolution started here).</p>
+                        <p>b) Jammu and Kashmir (had special status).</p>
+                        <p><strong>Explanation:</strong> Punjab grew more crops with new technology, and Jammu and Kashmir had its own rules until 2019.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q26.</strong> Read the passage and answer:</p>
+                    <p><em>The Non-Aligned Movement (NAM) was started by leaders like Nehru and Tito. It helped countries stay neutral during the Cold War and focus on development.</em></p>
+                    <p>a) What was the purpose of NAM? (2 marks)</p>
+                    <p>b) Name one leader of NAM. (2 marks)</p>
+                    <div class="password-box">
+                        <input type="password" id="pass26" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass26', 'ans26')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans26">
+                        <p><strong>Answer:</strong></p>
+                        <p>a) NAM’s purpose was to stay neutral in the Cold War and focus on peace and growth.</p>
+                        <p>b) Jawaharlal Nehru (one leader).</p>
+                        <p><strong>Explanation:</strong> NAM gave smaller countries a voice against superpowers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section E -->
+        <div class="section">
+            <h2 onclick="toggleSection('sectionE')">Section E: Long Answer (6 Marks Each)</h2>
+            <div class="section-content" id="sectionE">
+                <div class="question">
+                    <p><strong>Q27.</strong> Discuss the challenges faced by India during partition in 1947.</p>
+                    <div class="password-box">
+                        <input type="password" id="pass27" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass27', 'ans27')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans27">
+                        <p><strong>Answer:</strong> India faced these challenges during partition:</p>
+                        <p>1. <strong>Violence:</strong> Riots between Hindus and Muslims killed many people.</p>
+                        <p>2. <strong>Migration:</strong> Millions moved between India and Pakistan, leaving homes behind.</p>
+                        <p>3. <strong>Refugees:</strong> The government had to help settle displaced people.</p>
+                        <p>4. <strong>Princely States:</strong> Some states like Hyderabad and Kashmir didn’t join India easily.</p>
+                        <p>5. <strong>Economy:</strong> Division of resources weakened the economy.</p>
+                        <p>6. <strong>Unity:</strong> Leaders worked hard to keep India united despite division.</p>
+                        <p><strong>Explanation:</strong> Partition was a tough time, but leaders like Gandhi and Patel solved many issues.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q28.</strong> Explain the role of the Election Commission in India.</p>
+                    <div class="password-box">
+                        <input type="password" id="pass28" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass28', 'ans28')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans28">
+                        <p><strong>Answer:</strong> The Election Commission (EC) has these roles:</p>
+                        <p>1. <strong>Conducting Elections:</strong> It organizes free and fair elections for Parliament and state assemblies.</p>
+                        <p>2. <strong>Voter List:</strong> Prepares and updates the list of voters.</p>
+                        <p>3. <strong>Rules:</strong> Makes rules to stop cheating, like spending limits.</p>
+                        <p>4. <strong>Monitoring:</strong> Watches elections to ensure they are honest.</p>
+                        <p>5. <strong>Symbols:</strong> Gives symbols to political parties.</p>
+                        <p>6. <strong>Education:</strong> Teaches people about voting rights.</p>
+                        <p><strong>Explanation:</strong> The EC keeps democracy strong by making elections fair.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q29.</strong> What are the advantages and disadvantages of coalition governments in India?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass29" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass29', 'ans29')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans29">
+                        <p><strong>Answer:</strong></p>
+                        <p><strong>Advantages:</strong></p>
+                        <p>1. <strong>More Voices:</strong> Many parties get to share ideas and rule together.</p>
+                        <p>2. <strong>Balance:</strong> Stops one party from having too much power.</p>
+                        <p>3. <strong>Representation:</strong> Small groups and regions get heard.</p>
+                        <p><strong>Disadvantages:</strong></p>
+                        <p>1. <strong>Instability:</strong> Governments can fall if parties fight.</p>
+                        <p>2. <strong>Slow Decisions:</strong> Agreement takes time, delaying work.</p>
+                        <p>3. <strong>Compromise:</strong> Policies may weaken to please everyone.</p>
+                        <p><strong>Explanation:</strong> Coalition governments are common in India but can be strong or weak depending on teamwork.</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p><strong>Q30.</strong> How has India contributed to world peace?</p>
+                    <div class="password-box">
+                        <input type="password" id="pass30" placeholder="Enter Password">
+                        <button onclick="checkPassword('pass30', 'ans30')">Show Answer</button>
+                    </div>
+                    <div class="answer" id="ans30">
+                        <p><strong>Answer:</strong> India has helped world peace by:</p>
+                        <p>1. <strong>Non-Alignment:</strong> Stayed neutral in the Cold War, reducing tension.</p>
+                        <p>2. <strong>UN Peacekeeping:</strong> Sent soldiers to UN missions in Congo, Sudan, etc.</p>
+                        <p>3. <strong>No War Policy:</strong> Solved disputes with talks, not fights (e.g., with Pakistan).</p>
+                        <p>4. <strong>Support to Freedom:</strong> Helped countries like South Africa fight colonialism.</p>
+                        <p>5. <strong>Global Groups:</strong> Active in UN, NAM, and SAARC for peace.</p>
+                        <p>6. <strong>Gandhi’s Ideas:</strong> Spread non-violence worldwide.</p>
+                        <p><strong>Explanation:</strong> India’s peaceful approach makes it a respected country globally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <footer>
+        <p>© 2025 Anmol Singh | All Rights Reserved</p>
+    </footer>
+
     <script>
-        const questions = [
-            { q: "1. When did the Cold War officially end?", options: ["a) 1985", "b) 1991", "c) 1995", "d) 2000"], answer: "b" },
-            { q: "2. Which event marked the beginning of the disintegration of the Soviet Union?", options: ["a) Fall of the Berlin Wall", "b) Cuban Missile Crisis", "c) Formation of NATO", "d) Gorbachev’s reforms"], answer: "a" },
-            { q: "3. What was the main objective of ‘Shock Therapy’?", options: ["a) To strengthen communism", "b) To transition to a market economy", "c) To increase military power", "d) To form a new alliance"], answer: "b" },
-            { q: "4. Which organ of the United Nations is responsible for maintaining peace and security?", options: ["a) General Assembly", "b) Security Council", "c) Economic and Social Council", "d) International Court of Justice"], answer: "b" },
-            { q: "5. Globalization primarily refers to:", options: ["a) Political unification of nations", "b) Economic and cultural interconnectedness", "c) Military alliances", "d) Formation of regional blocs"], answer: "b" },
-            { q: "6. Which country is NOT a permanent member of the UN Security Council?", options: ["a) China", "b) Japan", "c) Russia", "d) United States"], answer: "b" },
-            { q: "7. The ‘Hegemony’ of the USA after the Cold War refers to:", options: ["a) Military dominance", "b) Economic collapse", "c) Cultural isolation", "d) Political instability"], answer: "a" },
-            { q: "8. Which challenge was faced by India immediately after independence?", options: ["a) Economic liberalization", "b) Partition-related violence", "c) Globalization", "d) Coalition politics"], answer: "b" },
-            { q: "9. The first general election in India was held in:", options: ["a) 1947", "b) 1950", "c) 1951-52", "d) 1962"], answer: "c" },
-            { q: "10. The Emergency in India was declared on:", options: ["a) June 25, 1975", "b) August 15, 1975", "c) January 26, 1976", "d) March 31, 1977"], answer: "a" },
-            { q: "11. The Mandal Commission recommended reservations for:", options: ["a) Scheduled Castes", "b) Other Backward Classes (OBCs)", "c) Scheduled Tribes", "d) Economically Weaker Sections"], answer: "b" },
-            { q: "12. A coalition government in India first came to power at the center in:", options: ["a) 1967", "b) 1977", "c) 1989", "d) 1991"], answer: "b" },
-            { q: "13. The Green Revolution in India aimed to:", options: ["a) Increase industrial production", "b) Boost agricultural productivity", "c) Promote urbanization", "d) Reduce population growth"], answer: "b" },
-            { q: "14. India adopted a secular state to:", options: ["a) Promote one religion", "b) Ensure equality of all religions", "c) Ban religious practices", "d) Favor the majority religion"], answer: "b" },
-            { q: "15. Which movement led to the formation of Telangana as a separate state?", options: ["a) Naxalite Movement", "b) Telangana Movement", "c) Chipko Movement", "d) Anti-Arrack Movement"], answer: "b" },
-            { q: "16. Which party dominated Indian politics during the initial years after independence?", options: ["a) Bharatiya Janata Party (BJP)", "b) Communist Party of India (CPI)", "c) Indian National Congress (INC)", "d) Janata Party"], answer: "c" },
-            { q: "17. The Planning Commission was replaced by:", options: ["a) NITI Aayog", "b) Finance Commission", "c) National Development Council", "d) Economic Advisory Council"], answer: "a" }
-        ];
+        function checkPassword(inputId, answerId) {
+            const password = document.getElementById(inputId).value;
+            const correctPassword = "123456";
+            const answerDiv = document.getElementById(answerId);
 
-        let currentQuestion = 0;
-
-        const questionText = document.getElementById('question-text');
-        const quizForm = document.getElementById('quiz-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const feedback = document.getElementById('feedback');
-
-        function loadQuestion() {
-            const q = questions[currentQuestion];
-            questionText.textContent = q.q;
-            quizForm.innerHTML = '';
-            q.options.forEach((option, index) => {
-                const label = document.createElement('label');
-                label.innerHTML = `<input type="radio" name="answer" value="${String.fromCharCode(97 + index)}"> ${option}`;
-                quizForm.appendChild(label);
-            });
-            feedback.style.display = 'none';
-            submitBtn.textContent = 'Submit';
-        }
-
-        function showFeedback(isCorrect) {
-            feedback.style.display = 'block';
-            if (isCorrect) {
-                feedback.textContent = 'Shabash Putra!';
-                feedback.className = 'correct';
+            if (password === correctPassword) {
+                answerDiv.style.display = "block";
             } else {
-                feedback.textContent = 'Chal Sala Fuddu Padh Penchoda';
-                feedback.className = 'wrong';
+                alert("Incorrect password! Please try again.");
             }
         }
 
-        submitBtn.addEventListener('click', () => {
-            const selected = quizForm.querySelector('input[name="answer"]:checked');
-            if (!selected) {
-                alert('Please select an answer!');
-                return;
-            }
-
-            const userAnswer = selected.value;
-            const correctAnswer = questions[currentQuestion].answer;
-
-            showFeedback(userAnswer === correctAnswer);
-
-            setTimeout(() => {
-                currentQuestion++;
-                if (currentQuestion < questions.length) {
-                    loadQuestion();
-                } else {
-                    questionText.textContent = 'Quiz Completed!';
-                    quizForm.innerHTML = '';
-                    submitBtn.style.display = 'none';
-                    feedback.textContent = 'Well Done, Chad!';
-                    feedback.className = 'correct';
-                    feedback.style.display = 'block';
-                }
-            }, 1500); // Delay before next question
-        });
-
-        // Load the first question
-        loadQuestion();
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle("active");
+        }
     </script>
 </body>
 </html>
