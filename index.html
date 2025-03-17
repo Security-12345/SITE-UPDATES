@@ -3,284 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anmol Singh's Political Science Quiz</title>
+    <title>Class 12 Political Science Notes - Jagroop Singh</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
             color: #333;
+            line-height: 1.6;
         }
-        h1 {
+
+        header {
+            background: #1a2a6c;
+            color: white;
             text-align: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px #000;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .quiz-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
-        .question {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border: 1px solid #ddd;
+
+        header p {
+            font-size: 1.2rem;
         }
-        .question h3 {
-            margin: 0 0 10px;
-            color: #2c3e50;
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
-        .options label {
-            display: block;
-            margin: 5px 0;
-            cursor: pointer;
+
+        .part {
+            margin-bottom: 3rem;
         }
-        button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            background: #27ae60;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #219653;
-        }
-        #result {
-            display: none;
-            margin-top: 20px;
-            padding: 20px;
-            background: #ecf0f1;
-            border-radius: 10px;
+
+        .part h2 {
+            background: #f4c430;
+            color: #1a2a6c;
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
             text-align: center;
+            font-size: 2rem;
         }
-        #result h2 {
-            color: #e74c3c;
+
+        .chapter {
+            background: white;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
-        #result p {
-            font-size: 18px;
+
+        .chapter:hover {
+            transform: translateY(-5px);
+        }
+
+        .chapter h3 {
+            color: #1a2a6c;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .chapter ul {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+
+        .chapter ul li {
+            margin: 0.5rem 0;
+            position: relative;
+        }
+
+        .chapter ul li::before {
+            content: "➜";
+            color: #f4c430;
+            position: absolute;
+            left: -1rem;
+        }
+
+        .key-idea {
+            background: #e6f3ff;
+            padding: 0.5rem;
+            border-left: 5px solid #1a2a6c;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1a2a6c;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .part h2 {
+                font-size: 1.5rem;
+            }
+
+            .chapter h3 {
+                font-size: 1.2rem;
+            }
+
+            .chapter {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Anmol Singh's Political Science Quiz</h1>
-    <div class="quiz-container">
-        <form id="quizForm">
-            <!-- Question 1 -->
-            <div class="question">
-                <h3>1. Which event marked the end of the Cold War?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="a"> Fall of the Berlin Wall</label>
-                    <label><input type="radio" name="q1" value="b"> Cuban Missile Crisis</label>
-                    <label><input type="radio" name="q1" value="c"> Formation of NATO</label>
-                    <label><input type="radio" name="q1" value="d"> Signing of the Warsaw Pact</label>
-                </div>
+    <header>
+        <h1>Class 12 CBSE Political Science Notes</h1>
+        <p>2024-25 Syllabus | Simple & Easy | By Jagroop Singh</p>
+    </header>
+
+    <div class="container">
+        <!-- Part A -->
+        <div class="part">
+            <h2>Part A: Contemporary World Politics</h2>
+
+            <div class="chapter">
+                <h3>Chapter 1: The End of Bipolarity</h3>
+                <ul>
+                    <li>Soviet Union broke in 1991—Cold War ended.</li>
+                    <li>Why? Economic mess, weak leaders, freedom demands.</li>
+                    <li>Shock Therapy: Fast switch to capitalism—chaos followed.</li>
+                    <li>USA became the only superpower; Russia rose.</li>
+                    <li>India stayed buddies with Russia.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> World went from two powers to one!</div>
             </div>
 
-            <!-- Question 2 -->
-            <div class="question">
-                <h3>2. The United Nations was established on:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="a"> October 24, 1945</label>
-                    <label><input type="radio" name="q2" value="b"> June 26, 1945</label>
-                    <label><input type="radio" name="q2" value="c"> August 15, 1947</label>
-                    <label><input type="radio" name="q2" value="d"> January 1, 1950</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 2: New Centres of Power</h3>
+                <ul>
+                    <li>New strong groups grew after USSR fell.</li>
+                    <li>EU: Europe teamed up for trade.</li>
+                    <li>ASEAN: Southeast Asia joined for peace.</li>
+                    <li>China: Big in money and military.</li>
+                    <li>India works with all these groups.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> Power isn’t just USA’s anymore!</div>
             </div>
 
-            <!-- Question 3 -->
-            <div class="question">
-                <h3>3. Which country launched the ‘Operation Enduring Freedom’ after the 9/11 attacks?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="a"> Russia</label>
-                    <label><input type="radio" name="q3" value="b"> USA</label>
-                    <label><input type="radio" name="q3" value="c"> UK</label>
-                    <label><input type="radio" name="q3" value="d"> France</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 3: Contemporary South Asia</h3>
+                <ul>
+                    <li>Countries: India, Pakistan, Bangladesh, etc.</li>
+                    <li>Issues: Fights (Kashmir), poverty, weak democracy.</li>
+                    <li>SAARC: Group for trade and peace.</li>
+                    <li>India leads but has tensions (Pakistan).</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> South Asia fights but tries teamwork.</div>
             </div>
 
-            <!-- Question 4 -->
-            <div class="question">
-                <h3>4. The main objective of the Non-Aligned Movement (NAM) was to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="a"> Support the USA</label>
-                    <label><input type="radio" name="q4" value="b"> Oppose the Soviet Union</label>
-                    <label><input type="radio" name="q4" value="c"> Stay away from power blocs</label>
-                    <label><input type="radio" name="q4" value="d"> Promote military alliances</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 4: International Organisations</h3>
+                <ul>
+                    <li>UN: Countries solve issues together.</li>
+                    <li>UN Jobs: Peace, poverty, climate.</li>
+                    <li>Security Council: 5 big countries control.</li>
+                    <li>Issue: UN’s old—India wants a bigger role.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> UN helps but needs fixing.</div>
             </div>
 
-            <!-- Question 5 -->
-            <div class="question">
-                <h3>5. Which of the following is a permanent member of the UN Security Council?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="a"> India</label>
-                    <label><input type="radio" name="q5" value="b"> Japan</label>
-                    <label><input type="radio" name="q5" value="c"> China</label>
-                    <label><input type="radio" name="q5" value="d"> Germany</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 5: Security in the Contemporary World</h3>
+                <ul>
+                    <li>Security: Safe from war, terror, etc.</li>
+                    <li>Old: Wars. New: Terror, cyber, diseases.</li>
+                    <li>Solutions: Teamwork or fight.</li>
+                    <li>India: Faces Pakistan, China, terror.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> Safety’s more than just wars now.</div>
             </div>
 
-            <!-- Question 6 -->
-            <div class="question">
-                <h3>6. The term ‘BRICS’ refers to an association of which countries?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q6" value="a"> Brazil, Russia, India, China, South Africa</label>
-                    <label><input type="radio" name="q6" value="b"> Britain, Russia, India, Canada, Spain</label>
-                    <label><input type="radio" name="q6" value="c"> Brazil, Romania, Italy, China, Sweden</label>
-                    <label><input type="radio" name="q6" value="d"> Belgium, Russia, India, Chile, Singapore</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 6: Environment and Natural Resources</h3>
+                <ul>
+                    <li>Problems: Pollution, climate, resource fights.</li>
+                    <li>Deals: Paris Agreement to save Earth.</li>
+                    <li>India: Grows but goes green (solar).</li>
+                    <li>Rich countries use more, blame others.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> Earth needs help—who does it?</div>
             </div>
 
-            <!-- Question 7 -->
-            <div class="question">
-                <h3>7. India conducted its second nuclear test, known as Pokhran-II, in:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q7" value="a"> 1974</label>
-                    <label><input type="radio" name="q7" value="b"> 1998</label>
-                    <label><input type="radio" name="q7" value="c"> 1984</label>
-                    <label><input type="radio" name="q7" value="d"> 2004</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 7: Globalisation</h3>
+                <ul>
+                    <li>World connects—trade, culture, tech.</li>
+                    <li>Good: Jobs, products. Bad: Big wins, small lose.</li>
+                    <li>India: Opened in 1991—growth + struggles.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> World’s smaller, not always fair.</div>
+            </div>
+        </div>
+
+        <!-- Part B -->
+        <div class="part">
+            <h2>Part B: Politics in India Since Independence</h2>
+
+            <div class="chapter">
+                <h3>Chapter 1: Challenges of Nation-Building</h3>
+                <ul>
+                    <li>1947: India free but messy.</li>
+                    <li>Partition: India-Pakistan split, chaos.</li>
+                    <li>Unity: 500+ states joined India.</li>
+                    <li>Diversity: Many languages, cultures.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> Building India was tough but worked.</div>
             </div>
 
-            <!-- Question 8 -->
-            <div class="question">
-                <h3>8. Who was the first President of independent India?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q8" value="a"> Dr. Rajendra Prasad</label>
-                    <label><input type="radio" name="q8" value="b"> Jawaharlal Nehru</label>
-                    <label><input type="radio" name="q8" value="c"> Sardar Vallabhbhai Patel</label>
-                    <label><input type="radio" name="q8" value="d"> Dr. B.R. Ambedkar</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 2: Planned Development</h3>
+                <ul>
+                    <li>Plans to grow after 1947.</li>
+                    <li>Five-Year Plans: Farms, factories.</li>
+                    <li>Goals: Less poverty, more jobs.</li>
+                    <li>Some wins, some still poor.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> India planned its future.</div>
             </div>
 
-            <!-- Question 9 -->
-            <div class="question">
-                <h3>9. The States Reorganisation Act was passed in which year?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q9" value="a"> 1950</label>
-                    <label><input type="radio" name="q9" value="b"> 1952</label>
-                    <label><input type="radio" name="q9" value="c"> 1956</label>
-                    <label><input type="radio" name="q9" value="d"> 1960</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 3: India’s Foreign Policy</h3>
+                <ul>
+                    <li>Non-Alignment: No USA or USSR side.</li>
+                    <li>Wars: Pakistan (1947, 65, 71), China (62).</li>
+                    <li>Today: Friends with USA, Russia.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> India stays independent globally.</div>
             </div>
 
-            <!-- Question 10 -->
-            <div class="question">
-                <h3>10. The leader of the opposition during the Emergency (1975-77) was:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="a"> Atal Bihari Vajpayee</label>
-                    <label><input type="radio" name="q10" value="b"> Jayaprakash Narayan</label>
-                    <label><input type="radio" name="q10" value="c"> Morarji Desai</label>
-                    <label><input type="radio" name="q10" value="d"> Charan Singh</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 4: Parties and the Party System in India</h3>
+                <ul>
+                    <li>Congress ruled early years.</li>
+                    <li>1977: Others won, coalitions started.</li>
+                    <li>Now: BJP, Congress, regional parties.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> From one party to many.</div>
             </div>
 
-            <!-- Question 11 -->
-            <div class="question">
-                <h3>11. Which article of the Indian Constitution was used to impose the Emergency in 1975?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q11" value="a"> Article 352</label>
-                    <label><input type="radio" name="q11" value="b"> Article 356</label>
-                    <label><input type="radio" name="q11" value="c"> Article 360</label>
-                    <label><input type="radio" name="q11" value="d"> Article 370</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 5: Democratic Resurgence</h3>
+                <ul>
+                    <li>Emergency (1975-77): Freedoms stopped.</li>
+                    <li>People fought back—more parties.</li>
+                    <li>Today: Big, messy elections work.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> Democracy bounced back.</div>
             </div>
 
-            <!-- Question 12 -->
-            <div class="question">
-                <h3>12. The assassination of Indira Gandhi took place in:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q12" value="a"> 1980</label>
-                    <label><input type="radio" name="q12" value="b"> 1982</label>
-                    <label><input type="radio" name="q12" value="c"> 1984</label>
-                    <label><input type="radio" name="q12" value="d"> 1986</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 6: Regional Aspirations</h3>
+                <ul>
+                    <li>States wanted freedom: Kashmir, Punjab.</li>
+                    <li>Northeast: Identity fights.</li>
+                    <li>India gave some rights, kept unity.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> Balancing local demands.</div>
             </div>
 
-            <!-- Question 13 -->
-            <div class="question">
-                <h3>13. The Mandal Commission report was implemented by which Prime Minister?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q13" value="a"> Rajiv Gandhi</label>
-                    <label><input type="radio" name="q13" value="b"> V.P. Singh</label>
-                    <label><input type="radio" name="q13" value="c"> P.V. Narasimha Rao</label>
-                    <label><input type="radio" name="q13" value="d"> H.D. Deve Gowda</label>
-                </div>
+            <div class="chapter">
+                <h3>Chapter 7: Indian Politics: Trends and Developments</h3>
+                <ul>
+                    <li>Coalitions: No single ruler.</li>
+                    <li>Religion, caste in votes.</li>
+                    <li>BJP rose, welfare schemes big.</li>
+                </ul>
+                <div class="key-idea"><strong>Key Idea:</strong> Politics now diverse, competitive.</div>
             </div>
-
-            <!-- Question 14 -->
-            <div class="question">
-                <h3>14. The Planning Commission in India was replaced by which body in 2014?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q14" value="a"> NITI Aayog</label>
-                    <label><input type="radio" name="q14" value="b"> Finance Commission</label>
-                    <label><input type="radio" name="q14" value="c"> National Development Council</label>
-                    <label><input type="radio" name="q14" value="d"> Economic Advisory Council</label>
-                </div>
-            </div>
-
-            <!-- Question 15 -->
-            <div class="question">
-                <h3>15. Which of the following was a major demand of the Chipko Movement?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q15" value="a"> Reservation for OBCs</label>
-                    <label><input type="radio" name="q15" value="b"> Protection of forests</label>
-                    <label><input type="radio" name="q15" value="c"> Separate statehood</label>
-                    <label><input type="radio" name="q15" value="d"> Agricultural reforms</label>
-                </div>
-            </div>
-
-            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
-        </form>
-        <div id="result">
-            <h2>Your Score</h2>
-            <p id="score"></p>
-            <h2>Correct Answers</h2>
-            <p id="answers"></p>
         </div>
     </div>
 
-    <script>
-        const correctAnswers = {
-            q1: 'a', q2: 'a', q3: 'b', q4: 'c', q5: 'c',
-            q6: 'a', q7: 'b', q8: 'a', q9: 'c', q10: 'b',
-            q11: 'a', q12: 'c', q13: 'b', q14: 'a', q15: 'b'
-        };
-
-        function submitQuiz() {
-            let score = 0;
-            const form = document.getElementById('quizForm');
-            const result = document.getElementById('result');
-            const scoreDisplay = document.getElementById('score');
-            const answersDisplay = document.getElementById('answers');
-            let answersText = '';
-
-            for (let i = 1; i <= 15; i++) {
-                const userAnswer = form.querySelector(`input[name="q${i}"]:checked`);
-                const correctAnswer = correctAnswers[`q${i}`];
-                if (userAnswer && userAnswer.value === correctAnswer) {
-                    score++;
-                }
-                answersText += `Q${i}: Correct Answer - ${correctAnswer.toUpperCase()}<br>`;
-            }
-
-            scoreDisplay.innerHTML = `Anmol Singh, your score is: ${score} out of 15`;
-            answersDisplay.innerHTML = answersText;
-            result.style.display = 'block';
-            window.scrollTo(0, document.body.scrollHeight);
-        }
-    </script>
+    <footer>
+        <p>Notes Prepared by Jagroop Singh | For CBSE Class 12 (2024-25)</p>
+    </footer>
 </body>
 </html>
