@@ -3,546 +3,453 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class 12 Political Science Practice 2025</title>
+    <title>Rainbow Village Security Updates</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background: #1a1a1a;
-            color: #e0e0e0;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 20px;
+            color: #343a40;
             line-height: 1.6;
-            padding: 20px;
         }
 
-        h1 {
-            text-align: center;
-            color: #00d4ff;
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px #00d4ff;
-        }
-
-        .container {
-            max-width: 800px;
+        .news-container {
+            max-width: 1200px;
             margin: 0 auto;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            background-image: linear-gradient(45deg, #f5f5f5 25%, #e9ecef 25%, #e9ecef 50%, #f5f5f5 50%, #f5f5f5 75%, #e9ecef 75%, #e9ecef);
+            background-size: 20px 20px;
         }
 
-        .section {
-            margin-bottom: 40px;
-            background: #2a2a2a;
-            padding: 20px;
+        .header {
+            background: #212529;
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffffff;
+            border-bottom: 6px solid #c0392b;
+            position: relative;
+        }
+
+        .site-heading {
+            font-size: clamp(2.5em, 5vw, 4em);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .ticker {
+            background: #c0392b;
+            color: #ffffff;
+            padding: 15px;
+            font-size: clamp(1em, 2.5vw, 1.3em);
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .ticker span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .headline {
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #c0392b;
+            text-align: center;
+            padding: 30px 15px;
+            background: #f5f5f5;
+            font-weight: 700;
+            border-bottom: 6px solid #e74c3c;
+            text-transform: uppercase;
+        }
+
+        .content {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 50px;
+        }
+
+        .updates-section {
+            background: #ffffff;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            color: #00d4ff;
-            font-size: 1.5em;
+        .updates-section h2 {
+            font-size: clamp(1.8em, 3vw, 2.2em);
+            color: #212529;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #c0392b;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .update-item {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 6px solid #c0392b;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .update-item.latest {
+            border-left: 6px solid #e74c3c;
+            background: #eceff1;
+        }
+
+        .update-item:hover {
+            transform: translateX(10px);
+        }
+
+        .update-item h3 {
+            font-size: clamp(1.3em, 2vw, 1.6em);
+            color: #212529;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .update-item p {
+            font-size: clamp(1em, 2vw, 1.2em);
+            color: #343a40;
             margin-bottom: 15px;
         }
 
-        .question {
-            margin-bottom: 20px;
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #ffffff;
+        }
+
+        .schedule-table th, .schedule-table td {
             padding: 15px;
-            background: #333;
-            border-radius: 8px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
         }
 
-        .question p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        .options {
-            margin-left: 20px;
-            font-size: 0.95em;
-        }
-
-        .answer-btn {
-            background: #00d4ff;
-            color: #1a1a1a;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .schedule-table th {
+            background: #212529;
+            color: #ffffff;
             font-weight: bold;
-            transition: background 0.3s;
-            display: block;
-            margin-top: 10px;
         }
 
-        .answer-btn:hover {
-            background: #00b0cc;
+        .schedule-table td {
+            background: #f8f9fa;
         }
 
-        .answer {
-            display: none;
-            background: #3a3a3a;
-            padding: 15px;
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .timestamp {
+            font-size: clamp(0.9em, 1.5vw, 1em);
+            color: #868e96;
+            font-style: italic;
+            display: inline-flex;
+            align-items: center;
+            background: #e9ecef;
+            padding: 8px 12px;
             border-radius: 5px;
-            margin-top: 10px;
-            color: #b0ff57;
-            border-left: 4px solid #00d4ff;
         }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em;
-            }
+        .timestamp::before {
+            content: '🕒';
+            margin-right: 5px;
+        }
 
-            h2 {
-                font-size: 1.2em;
-            }
+        .sidebar {
+            background: #343a40;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+        }
 
-            .section {
-                padding: 15px;
-            }
+        .sidebar h3 {
+            font-size: clamp(1.3em, 2.5vw, 1.6em);
+            color: #ffffff;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #c0392b;
+            padding-bottom: 10px;
+        }
 
-            .question p {
+        .quick-links ul {
+            list-style: none;
+        }
+
+        .quick-links li {
+            margin: 15px 0;
+        }
+
+        .quick-links a {
+            color: #e74c3c;
+            text-decoration: none;
+            padding: 12px 15px;
+            display: block;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            background: #e74c3c;
+            color: #ffffff;
+        }
+
+        .footer {
+            background: #212529;
+            color: #adb5bd;
+            text-align: center;
+            padding: 20px;
+            font-size: clamp(0.9em, 1.5vw, 1em);
+        }
+
+        .footer a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 25px;
+                gap: 30px;
+            }
+            .schedule-table {
+                display: block;
+            }
+            .schedule-table tr {
+                display: block;
+                margin-bottom: 20px;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                padding: 10px;
+                background: #ffffff;
+            }
+            .schedule-table th, .schedule-table td {
+                display: block;
+                text-align: left;
+                border: none;
+            }
+            .schedule-table th {
+                display: none;
+            }
+            .schedule-table td::before {
+                content: attr(data-label) ": ";
+                font-weight: bold;
+                color: #c0392b;
+            }
+            .ticker span {
+                animation: marquee 20s linear infinite;
+            }
+            .ticker:hover span {
+                animation-play-state: paused;
+            }
+            .update-item p {
                 font-size: 1em;
             }
+            .update-item h3 {
+                font-size: 1.4em;
+            }
+            .sidebar {
+                padding: 20px;
+            }
+        }
 
-            .answer-btn {
-                padding: 6px 12px;
-                font-size: 0.9em;
+        @media (max-width: 480px) {
+            .site-heading {
+                font-size: 2em;
+            }
+            .headline {
+                font-size: 1.3em;
+                padding: 20px 10px;
+            }
+            .update-item {
+                padding: 15px;
+            }
+            .schedule-table td {
+                padding: 10px;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>CBSE Class 12 Political Science Practice 2025</h1>
+    <div class="news-container">
+        <div class="header">
+            <h1 class="site-heading">Rainbow Village Security Updates</h1>
+        </div>
 
-        <!-- Section A: MCQs -->
-        <div class="section">
-            <h2>Section A: Multiple Choice Questions (1 Mark Each)</h2>
-            <div class="question">
-                <p><b>Q1.</b> Which event marked the beginning of the end of the Cold War?</p>
-                <div class="options">
-                    a) Fall of the Berlin Wall<br>
-                    b) Formation of NATO<br>
-                    c) Cuban Missile Crisis<br>
-                    d) Korean War
+        <div class="ticker">
+            <span>Security Team: New RV Updates Added - Check Below for Details!</span>
+        </div>
+
+        <h2 class="headline">Security Team Briefing</h2>
+
+        <div class="content">
+            <div class="updates-section">
+                <h2>Security Team Updates</h2>
+
+                <!-- RV Updates Section -->
+                <div class="update-item latest">
+                    <h3>RV Updates: Fan-Coil Maintenance at 466 Eglinton Avenue East</h3>
+                    <p>We have scheduled the Fan-coil Unit Maintenance & LINT SCREEN CLEANING at 466 Eglinton Avenue East as follows:</p>
+                    <table class="schedule-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                            <th>Floors</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Tuesday</td>
+                            <td data-label="Date">March 25</td>
+                            <td data-label="Details">Day 1</td>
+                            <td data-label="Floors">PH 18, LPH Floor to 16th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">March 26</td>
+                            <td data-label="Details">Day 2</td>
+                            <td data-label="Floors">15th Floor to 12th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Thursday</td>
+                            <td data-label="Date">March 27</td>
+                            <td data-label="Details">Day 3</td>
+                            <td data-label="Floors">11th Floor to 8th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Friday</td>
+                            <td data-label="Date">March 28</td>
+                            <td data-label="Details">Day 4</td>
+                            <td data-label="Floors">7th Floor to 6th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">April 2</td>
+                            <td data-label="Details">Day 5</td>
+                            <td data-label="Floors">5th Floor to Ground Floor inclusive</td>
+                        </tr>
+                    </table>
+                    <p>This is a building function, and it is necessary to be done. Please ensure that access is granted during that time. If we cannot access your unit with our master key, please ensure to leave your key with the management office. It is not necessary that you be home during the day, as building staff will accompany the crew. Please also ensure that any entry alarm set up in the unit is deactivated.</p>
+                    <p class="highlight">For the crew to have clear access to the fan coil unit(s) and dryer, please remove all items at least 3 feet in front and beside the fan coil unit and dryer.</p>
+                    <p><strong>Oil Collection Drum:</strong> The drum is located outside the recycling room, in the loading dock area behind the building. You can open the lid and dump the oil inside the drum. We request all residents to use the drum to dispose of cooking oil/grease. When cooking oil/grease is disposed in the kitchen sink, it can clog the drains and cause back-ups & floods.</p>
+                    <p><strong>Resident Maintenance Responsibilities:</strong> Please be reminded that residents are responsible for the maintenance and repair of all items inside their unit, including any fixtures or systems that serve only your unit or an adjacent one. This includes but is not limited to plumbing, electrical, appliances, and other personal fixtures. The building management is only responsible for maintaining the Fancoil units in your suites.</p>
+                    <p><strong>Notify Gatehouse of Visitor Arrivals:</strong> To assist our security team, please inform the Gatehouse of expected visitors. Your cooperation enhances our community’s safety and helps regulate the high volume of traffic.</p>
+                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
                 </div>
-                <button class="answer-btn" onclick="showAnswer(1)">Show Answer</button>
-                <div id="answer-1" class="answer">
-                    <b>Answer:</b> a) Fall of the Berlin Wall<br>
-                    <b>Explanation:</b> The Berlin Wall fell in 1989, showing the collapse of Soviet control and the end of the Cold War.
+
+                <!-- Existing Updates -->
+                <div class="update-item">
+                    <h3>Support Fan-Coil Maintenance at 466 Eglinton Avenue East</h3>
+                    <p>Security Team, please be aware of the scheduled fan-coil unit maintenance and lint screen cleaning at 466 Eglinton Avenue East. Your role is to ensure smooth access for the maintenance crew and accompany them as needed. The schedule is as follows:</p>
+                    <table class="schedule-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                            <th>Floors</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Tuesday</td>
+                            <td data-label="Date">March 25</td>
+                            <td data-label="Details">Day 1</td>
+                            <td data-label="Floors">PH 18, LPH Floor to 16th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">March 26</td>
+                            <td data-label="Details">Day 2</td>
+                            <td data-label="Floors">15th Floor to 12th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Thursday</td>
+                            <td data-label="Date">March 27</td>
+                            <td data-label="Details">Day 3</td>
+                            <td data-label="Floors">11th Floor to 8th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Friday</td>
+                            <td data-label="Date">March 28</td>
+                            <td data-label="Details">Day 4</td>
+                            <td data-label="Floors">7th Floor to 6th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">April 2</td>
+                            <td data-label="Details">Day 5</td>
+                            <td data-label="Floors">5th Floor to Ground Floor inclusive</td>
+                        </tr>
+                    </table>
+                    <p>Please coordinate with the management office to ensure master key access to units. If a resident has not provided a key, you may need to facilitate entry. Ensure that any entry alarms in the units are deactivated during the maintenance period.</p>
+                    <p class="highlight">Action Required: Verify that residents have cleared at least 3 feet of space in front of and beside the fan-coil units and dryers to allow the crew to work efficiently.</p>
+                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
+                </div>
+
+                <div class="update-item">
+                    <h3>Monitor Oil Collection Drum Usage</h3>
+                    <p>Security Team, an oil collection drum is located outside the recycling room in the loading dock area behind the building. It is designated for residents to dispose of cooking oil/grease to prevent clogs and floods in the building’s plumbing system.</p>
+                    <p>Please monitor the area to ensure residents are using the drum correctly and report any misuse or overflow to management. Unauthorized disposal in kitchen sinks can lead to significant plumbing issues, so your vigilance is critical.</p>
+                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
+                </div>
+
+                <div class="update-item">
+                    <h3>Clarify Maintenance Responsibilities for Residents</h3>
+                    <p>Security Team, please note that residents are responsible for the maintenance and repair of all items within their units, including fixtures and systems that serve only their unit or an adjacent one (e.g., plumbing, electrical, appliances, and personal fixtures).</p>
+                    <p>The building management handles maintenance of the fan-coil units. If residents report issues related to their personal fixtures, direct them to handle repairs themselves or contact the appropriate service provider. Your role is to ensure clarity on this division of responsibility during interactions with residents.</p>
+                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
+                </div>
+
+                <div class="update-item">
+                    <h3>Enforce Visitor Notification Protocol</h3>
+                    <p>Security Team, to maintain safety and manage traffic flow, ensure that residents notify the Gatehouse of all expected visitors. Your team must enforce this protocol by verifying visitor logs and ensuring all visitors are pre-authorized by residents.</p>
+                    <p>Failure to follow this protocol can lead to unauthorized access and increased security risks. Please maintain strict oversight of visitor arrivals and report any issues to management immediately.</p>
+                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
                 </div>
             </div>
 
-            <div class="question">
-                <p><b>Q2.</b> India’s ‘Act East Policy’ focuses on improving ties with:</p>
-                <div class="options">
-                    a) European Union<br>
-                    b) Southeast Asian countries<br>
-                    c) Middle Eastern countries<br>
-                    d) African nations
-                </div>
-                <button class="answer-btn" onclick="showAnswer(2)">Show Answer</button>
-                <div id="answer-2" class="answer">
-                    <b>Answer:</b> b) Southeast Asian countries<br>
-                    <b>Explanation:</b> Started in 2014, this policy strengthens India’s relations with ASEAN and East Asian countries.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q3.</b> Which organization was formed to promote peace after World War II?</p>
-                <div class="options">
-                    a) NATO<br>
-                    b) United Nations<br>
-                    c) ASEAN<br>
-                    d) SAARC
-                </div>
-                <button class="answer-btn" onclick="showAnswer(3)">Show Answer</button>
-                <div id="answer-3" class="answer">
-                    <b>Answer:</b> b) United Nations<br>
-                    <b>Explanation:</b> The UN was created in 1945 to maintain global peace and cooperation.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q4.</b> Who led the integration of princely states into India?</p>
-                <div class="options">
-                    a) Jawaharlal Nehru<br>
-                    b) Sardar Vallabhbhai Patel<br>
-                    c) Mahatma Gandhi<br>
-                    d) Indira Gandhi
-                </div>
-                <button class="answer-btn" onclick="showAnswer(4)">Show Answer</button>
-                <div id="answer-4" class="answer">
-                    <b>Answer:</b> b) Sardar Vallabhbhai Patel<br>
-                    <b>Explanation:</b> Patel united over 500 princely states into India after 1947.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q5.</b> The ‘Panchsheel Agreement’ was signed between India and:</p>
-                <div class="options">
-                    a) Pakistan<br>
-                    b) China<br>
-                    c) USA<br>
-                    d) Soviet Union
-                </div>
-                <button class="answer-btn" onclick="showAnswer(5)">Show Answer</button>
-                <div id="answer-5" class="answer">
-                    <b>Answer:</b> b) China<br>
-                    <b>Explanation:</b> Signed in 1954, it aimed for peace and cooperation but later weakened due to the 1962 war.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q6.</b> Which amendment made education a fundamental right in India?</p>
-                <div class="options">
-                    a) 42nd Amendment<br>
-                    b) 86th Amendment<br>
-                    c) 44th Amendment<br>
-                    d) 73rd Amendment
-                </div>
-                <button class="answer-btn" onclick="showAnswer(6)">Show Answer</button>
-                <div id="answer-6" class="answer">
-                    <b>Answer:</b> b) 86th Amendment<br>
-                    <b>Explanation:</b> Passed in 2002, it added Article 21A, making education free for children aged 6–14.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q7.</b> The ‘Look East Policy’ was introduced by which Prime Minister?</p>
-                <div class="options">
-                    a) Narasimha Rao<br>
-                    b) Rajiv Gandhi<br>
-                    c) Atal Bihari Vajpayee<br>
-                    d) Manmohan Singh
-                </div>
-                <button class="answer-btn" onclick="showAnswer(7)">Show Answer</button>
-                <div id="answer-7" class="answer">
-                    <b>Answer:</b> a) Narasimha Rao<br>
-                    <b>Explanation:</b> Started in 1991, it aimed to connect India with Southeast Asia.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q8.</b> Which country is India’s biggest trade partner in SAARC?</p>
-                <div class="options">
-                    a) Pakistan<br>
-                    b) Bangladesh<br>
-                    c) Sri Lanka<br>
-                    d) Nepal
-                </div>
-                <button class="answer-btn" onclick="showAnswer(8)">Show Answer</button>
-                <div id="answer-8" class="answer">
-                    <b>Answer:</b> b) Bangladesh<br>
-                    <b>Explanation:</b> India and Bangladesh share strong trade ties in South Asia.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q9.</b> The Mandal Commission recommended reservations for:</p>
-                <div class="options">
-                    a) Scheduled Castes<br>
-                    b) Other Backward Classes<br>
-                    c) Scheduled Tribes<br>
-                    d) Women
-                </div>
-                <button class="answer-btn" onclick="showAnswer(9)">Show Answer</button>
-                <div id="answer-9" class="answer">
-                    <b>Answer:</b> b) Other Backward Classes<br>
-                    <b>Explanation:</b> In 1990, it suggested 27% reservation for OBCs in government jobs.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q10.</b> Which war led to the creation of Bangladesh?</p>
-                <div class="options">
-                    a) 1962 India-China War<br>
-                    b) 1965 India-Pakistan War<br>
-                    c) 1971 India-Pakistan War<br>
-                    d) Kargil War
-                </div>
-                <button class="answer-btn" onclick="showAnswer(10)">Show Answer</button>
-                <div id="answer-10" class="answer">
-                    <b>Answer:</b> c) 1971 India-Pakistan War<br>
-                    <b>Explanation:</b> India helped East Pakistan become Bangladesh in 1971.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q11.</b> The term ‘BRICS’ includes which of these countries?</p>
-                <div class="options">
-                    a) Britain<br>
-                    b) Brazil<br>
-                    c) Bangladesh<br>
-                    d) Belgium
-                </div>
-                <button class="answer-btn" onclick="showAnswer(11)">Show Answer</button>
-                <div id="answer-11" class="answer">
-                    <b>Answer:</b> b) Brazil<br>
-                    <b>Explanation:</b> BRICS stands for Brazil, Russia, India, China, and South Africa.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q12.</b> What is the main source of energy in India’s ‘Energy Security’ policy?</p>
-                <div class="options">
-                    a) Solar power<br>
-                    b) Coal<br>
-                    c) Wind power<br>
-                    d) Nuclear power
-                </div>
-                <button class="answer-btn" onclick="showAnswer(12)">Show Answer</button>
-                <div id="answer-12" class="answer">
-                    <b>Answer:</b> b) Coal<br>
-                    <b>Explanation:</b> Coal remains India’s biggest energy source, though renewable energy is growing.
+            <div class="sidebar">
+                <h3>Quick Links</h3>
+                <div class="quick-links">
+                    <ul>
+                        <li><a href="#">Security Protocols</a></li>
+                        <li><a href="#">Contact Management</a></li>
+                        <li><a href="#">Site Map (Coming Soon)</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Section B: Very Short Answer -->
-        <div class="section">
-            <h2>Section B: Very Short Answer Questions (2 Marks Each)</h2>
-            <div class="question">
-                <p><b>Q13.</b> What is meant by ‘Multipolar World’?</p>
-                <button class="answer-btn" onclick="showAnswer(13)">Show Answer</button>
-                <div id="answer-13" class="answer">
-                    <b>Answer:</b> A multipolar world means many countries, like USA, China, and India, share global power instead of one dominating.<br>
-                    <b>Explanation:</b> After the Cold War, power shifted from just USA to multiple nations.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q14.</b> Name two objectives of India’s foreign policy.</p>
-                <button class="answer-btn" onclick="showAnswer(14)">Show Answer</button>
-                <div id="answer-14" class="answer">
-                    <b>Answer:</b> 1. Promote peace. 2. Build economic ties with other countries.<br>
-                    <b>Explanation:</b> India wants a peaceful world and growth through trade.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q15.</b> What was the ‘Nehru-Liaquat Pact’?</p>
-                <button class="answer-btn" onclick="showAnswer(15)">Show Answer</button>
-                <div id="answer-15" class="answer">
-                    <b>Answer:</b> It was an agreement in 1950 between India and Pakistan to protect minorities after partition.<br>
-                    <b>Explanation:</b> Signed by Nehru and Liaquat Ali Khan, it aimed to stop violence against Hindus and Muslims.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q16.</b> Define ‘Federalism’ in the Indian Constitution.</p>
-                <button class="answer-btn" onclick="showAnswer(16)">Show Answer</button>
-                <div id="answer-16" class="answer">
-                    <b>Answer:</b> Federalism means power is divided between the central government and states in India.<br>
-                    <b>Explanation:</b> Both levels have their own roles, like the center handling defense and states managing education.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q17.</b> What is the role of the UN Security Council?</p>
-                <button class="answer-btn" onclick="showAnswer(17)">Show Answer</button>
-                <div id="answer-17" class="answer">
-                    <b>Answer:</b> The UN Security Council works to maintain peace and can send troops or impose sanctions.<br>
-                    <b>Explanation:</b> It has 15 members, including 5 permanent ones with veto power.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q18.</b> What is ‘Global Warming’?</p>
-                <button class="answer-btn" onclick="showAnswer(18)">Show Answer</button>
-                <div id="answer-18" class="answer">
-                    <b>Answer:</b> Global warming is the rise in Earth’s temperature due to pollution and greenhouse gases.<br>
-                    <b>Explanation:</b> It causes climate change, like melting ice and rising seas.
-                </div>
-            </div>
-        </div>
-
-        <!-- Section C: Short Answer -->
-        <div class="section">
-            <h2>Section C: Short Answer Questions (4 Marks Each)</h2>
-            <div class="question">
-                <p><b>Q19.</b> Explain the impact of the 1971 India-Pakistan War.</p>
-                <button class="answer-btn" onclick="showAnswer(19)">Show Answer</button>
-                <div id="answer-19" class="answer">
-                    <b>Answer:</b> The 1971 war had these impacts:<br>
-                    1. Bangladesh Creation: East Pakistan became independent as Bangladesh.<br>
-                    2. India’s Strength: India showed its military power by defeating Pakistan.<br>
-                    3. Refugees: India helped millions of refugees from East Pakistan.<br>
-                    4. Global Role: India gained respect for supporting freedom.<br>
-                    <b>Explanation:</b> The war lasted 13 days and changed South Asia’s map.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q20.</b> What are the challenges to India’s permanent seat in the UN Security Council?</p>
-                <button class="answer-btn" onclick="showAnswer(20)">Show Answer</button>
-                <div id="answer-20" class="answer">
-                    <b>Answer:</b> Challenges include:<br>
-                    1. Opposition: Countries like China and Pakistan don’t support India.<br>
-                    2. Veto Power: Current permanent members may not want to share power.<br>
-                    3. Reforms: UN rules are hard to change.<br>
-                    4. Competition: Other countries like Japan and Germany also want seats.<br>
-                    <b>Explanation:</b> India is pushing for a seat due to its size and global role.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q21.</b> How did the 1991 economic reforms change India?</p>
-                <button class="answer-btn" onclick="showAnswer(21)">Show Answer</button>
-                <div id="answer-21" class="answer">
-                    <b>Answer:</b> The 1991 reforms:<br>
-                    1. Opened Economy: Allowed foreign companies to invest in India.<br>
-                    2. Growth: Increased jobs and industries like IT.<br>
-                    3. Trade: More imports and exports with the world.<br>
-                    4. Privatization: Reduced government control over businesses.<br>
-                    <b>Explanation:</b> Led by PM Narasimha Rao, these changes made India a global player.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q22.</b> Why is SAARC important for South Asia?</p>
-                <button class="answer-btn" onclick="showAnswer(22)">Show Answer</button>
-                <div id="answer-22" class="answer">
-                    <b>Answer:</b> SAARC is important because:<br>
-                    1. Cooperation: Helps countries like India and Pakistan work together.<br>
-                    2. Trade: Boosts business between members.<br>
-                    3. Peace: Reduces tensions in the region.<br>
-                    4. Development: Focuses on poverty and education.<br>
-                    <b>Explanation:</b> Formed in 1985, SAARC unites South Asia despite challenges.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q23.</b> What are the effects of social media on Indian democracy?</p>
-                <button class="answer-btn" onclick="showAnswer(23)">Show Answer</button>
-                <div id="answer-23" class="answer">
-                    <b>Answer:</b> Effects include:<br>
-                    1. Awareness: People learn about rights and issues.<br>
-                    2. Campaigns: Parties use it to reach voters.<br>
-                    3. Fake News: Spreads rumors that confuse people.<br>
-                    4. Participation: Citizens voice opinions online.<br>
-                    <b>Explanation:</b> Social media is powerful but has both good and bad sides.
-                </div>
-            </div>
-        </div>
-
-        <!-- Section D: Passage/Map-Based -->
-        <div class="section">
-            <h2>Section D: Passage/Map-Based Questions (4 Marks Each)</h2>
-            <div class="question">
-                <p><b>Q24.</b> Read the passage and answer:<br><i>India tested its nuclear weapons in 1998 under Operation Shakti. This made India a nuclear power but also caused global concern.</i><br>a) Where was the nuclear test conducted? (2 marks)<br>b) Why did some countries oppose it? (2 marks)</p>
-                <button class="answer-btn" onclick="showAnswer(24)">Show Answer</button>
-                <div id="answer-24" class="answer">
-                    <b>Answer:</b><br>
-                    a) Pokhran, Rajasthan.<br>
-                    b) They feared it would start an arms race and threaten peace.<br>
-                    <b>Explanation:</b> The 1998 tests showed India’s strength but worried nations like the USA.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q25.</b> On the map of India, identify and name:<br>a) The state where the first nuclear test (1974) happened. (2 marks)<br>b) The state with the longest international border with Bangladesh. (2 marks)</p>
-                <button class="answer-btn" onclick="showAnswer(25)">Show Answer</button>
-                <div id="answer-25" class="answer">
-                    <b>Answer:</b><br>
-                    a) Rajasthan (Pokhran, 1974 test).<br>
-                    b) West Bengal (shares a long border with Bangladesh).<br>
-                    <b>Explanation:</b> Rajasthan is key for nuclear history, and West Bengal has trade ties with Bangladesh.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q26.</b> Read the passage and answer:<br><i>The Paris Agreement (2015) aims to fight climate change. India joined it and promised to use more renewable energy.</i><br>a) What is the main goal of the Paris Agreement? (2 marks)<br>b) Name one renewable energy source India is focusing on. (2 marks)</p>
-                <button class="answer-btn" onclick="showAnswer(26)">Show Answer</button>
-                <div id="answer-26" class="answer">
-                    <b>Answer:</b><br>
-                    a) To limit global warming to below 2°C.<br>
-                    b) Solar energy.<br>
-                    <b>Explanation:</b> India is building solar plants to meet its Paris goals.
-                </div>
-            </div>
-        </div>
-
-        <!-- Section E: Long Answer -->
-        <div class="section">
-            <h2>Section E: Long Answer Questions (6 Marks Each)</h2>
-            <div class="question">
-                <p><b>Q27.</b> Discuss India’s role in the Non-Aligned Movement (NAM).</p>
-                <button class="answer-btn" onclick="showAnswer(27)">Show Answer</button>
-                <div id="answer-27" class="answer">
-                    <b>Answer:</b> India’s role in NAM includes:<br>
-                    1. Leadership: Nehru co-founded NAM in 1961 with Tito and Nasser.<br>
-                    2. Neutrality: Stayed out of USA-Soviet rivalry in the Cold War.<br>
-                    3. Voice for Poor: Spoke for developing countries’ rights.<br>
-                    4. Peace: Promoted solving disputes without war.<br>
-                    5. Unity: Brought Asian and African nations together.<br>
-                    6. Relevance: Still uses NAM to stay independent today.<br>
-                    <b>Explanation:</b> NAM made India a leader of smaller nations globally.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q28.</b> Explain the changes after the removal of Article 370 in 2019.</p>
-                <button class="answer-btn" onclick="showAnswer(28)">Show Answer</button>
-                <div id="answer-28" class="answer">
-                    <b>Answer:</b> Changes after 2019:<br>
-                    1. No Special Status: Jammu and Kashmir lost its separate constitution.<br>
-                    2. Union Territories: Split into J&K and Ladakh, ruled by the center.<br>
-                    3. Laws: All Indian laws now apply there, like RTI.<br>
-                    4. Development: More focus on jobs and infrastructure.<br>
-                    5. Criticism: Some say it reduced local rights.<br>
-                    6. Security: Tighter control to stop terrorism.<br>
-                    <b>Explanation:</b> This was a big shift in India’s federal structure.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q29.</b> What are the pros and cons of globalization for India?</p>
-                <button class="answer-btn" onclick="showAnswer(29)">Show Answer</button>
-                <div id="answer-29" class="answer">
-                    <b>Answer:</b><br>
-                    <b>Pros:</b><br>
-                    1. Jobs: More companies like Google create work.<br>
-                    2. Technology: Better phones and internet access.<br>
-                    3. Trade: India exports more goods like medicines.<br>
-                    <b>Cons:</b><br>
-                    1. Inequality: Rich get richer, poor stay poor.<br>
-                    2. Local Loss: Small businesses struggle against big firms.<br>
-                    3. Culture: Western influence weakens traditions.<br>
-                    <b>Explanation:</b> Globalization helps India grow but also brings challenges.
-                </div>
-            </div>
-
-            <div class="question">
-                <p><b>Q30.</b> How has India’s relation with the USA evolved since the Cold War?</p>
-                <button class="answer-btn" onclick="showAnswer(30)">Show Answer</button>
-                <div id="answer-30" class="answer">
-                    <b>Answer:</b> India-USA relations evolved like this:<br>
-                    1. Cold War: India was neutral, closer to Soviet Union, USA supported Pakistan.<br>
-                    2. 1990s: Ties improved after economic reforms and nuclear tests.<br>
-                    3. 2000s: Nuclear deal in 2008 made them partners.<br>
-                    4. Now: Work together on defense, trade, and countering China.<br>
-                    5. Trade: USA is a top partner for India’s IT and goods.<br>
-                    6. Challenges: Some disagreements over trade and Russia ties remain.<br>
-                    <b>Explanation:</b> From distance to strong friendship, ties have grown.
-                </div>
-            </div>
+        <div class="footer">
+            © 2025 Rainbow Village Security Updates | Crafted with precision by <a href="#" title="Jagroop Singh">JS</a>
         </div>
     </div>
-
-    <script>
-        function showAnswer(qNum) {
-            let password = prompt("Enter password to view the answer:");
-            if (password === "000") {
-                document.getElementById(`answer-${qNum}`).style.display = "block";
-            } else {
-                alert("Incorrect password! Try again.");
-            }
-        }
-    </script>
 </body>
 </html>
