@@ -48,6 +48,9 @@
 
         .question {
             margin-bottom: 20px;
+            padding: 15px;
+            background: #333;
+            border-radius: 8px;
         }
 
         .question p {
@@ -69,6 +72,8 @@
             cursor: pointer;
             font-weight: bold;
             transition: background 0.3s;
+            display: block;
+            margin-top: 10px;
         }
 
         .answer-btn:hover {
@@ -77,11 +82,12 @@
 
         .answer {
             display: none;
-            background: #333;
+            background: #3a3a3a;
             padding: 15px;
             border-radius: 5px;
             margin-top: 10px;
             color: #b0ff57;
+            border-left: 4px solid #00d4ff;
         }
 
         @media (max-width: 600px) {
@@ -428,8 +434,7 @@
         <div class="section">
             <h2>Section D: Passage/Map-Based Questions (4 Marks Each)</h2>
             <div class="question">
-                <p><b>Q24.</b> Read the passage and answer:<br><i>India tested its nuclear weapons in 1998 under Operation Shakti. This made India a nuclear power but also caused global concern.</i></p>
-                <p>a) Where was the nuclear test conducted? (2 marks)<br>b) Why did some countries oppose it? (2 marks)</p>
+                <p><b>Q24.</b> Read the passage and answer:<br><i>India tested its nuclear weapons in 1998 under Operation Shakti. This made India a nuclear power but also caused global concern.</i><br>a) Where was the nuclear test conducted? (2 marks)<br>b) Why did some countries oppose it? (2 marks)</p>
                 <button class="answer-btn" onclick="showAnswer(24)">Show Answer</button>
                 <div id="answer-24" class="answer">
                     <b>Answer:</b><br>
@@ -451,8 +456,7 @@
             </div>
 
             <div class="question">
-                <p><b>Q26.</b> Read the passage and answer:<br><i>The Paris Agreement (2015) aims to fight climate change. India joined it and promised to use more renewable energy.</i></p>
-                <p>a) What is the main goal of the Paris Agreement? (2 marks)<br>b) Name one renewable energy source India is focusing on. (2 marks)</p>
+                <p><b>Q26.</b> Read the passage and answer:<br><i>The Paris Agreement (2015) aims to fight climate change. India joined it and promised to use more renewable energy.</i><br>a) What is the main goal of the Paris Agreement? (2 marks)<br>b) Name one renewable energy source India is focusing on. (2 marks)</p>
                 <button class="answer-btn" onclick="showAnswer(26)">Show Answer</button>
                 <div id="answer-26" class="answer">
                     <b>Answer:</b><br>
