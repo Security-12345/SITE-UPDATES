@@ -3,200 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 12 Political Science Q&A</title>
+    <title>CBSE Class 12 Political Science Quiz</title>
     <style>
-        /* Reset default styles */
+        /* Futuristic Theme Styling */
         * {
             margin: 0;
-            padding: 0;
+            padding: _
+
+0;
             box-sizing: border-box;
         }
 
-        /* Body styling */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Orbitron', sans-serif; /* Futuristic font */
+            background: linear-gradient(180deg, #0d1b2a, #1b263b);
+            color: #e0e1dd;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
-        /* Header styling */
-        header {
-            background: url('https://via.placeholder.com/1200x300.png?text=Political+Science+Header') no-repeat center center/cover;
-            color: white;
-            text-align: center;
+        .container {
+            background: rgba(27, 38, 59, 0.9);
             padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-        }
-
-        /* Main content styling */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .part {
-            margin-bottom: 2rem;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .part h2 {
-            color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-
-        .qa {
-            margin: 1rem 0;
-            padding: 1rem;
-            background: #ecf0f1;
-            border-left: 5px solid #3498db;
-            border-radius: 5px;
-        }
-
-        .qa h3 {
-            color: #2980b9;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .qa p {
-            font-size: 1rem;
-        }
-
-        /* Footer styling */
-        footer {
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(69, 123, 157, 0.5);
+            width: 90%;
+            max-width: 600px;
             text-align: center;
-            padding: 1rem;
-            background: #2c3e50;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 2rem;
+            animation: glow 2s infinite alternate;
         }
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(69, 123, 157, 0.5); }
+            to { box-shadow: 0 0 40px rgba(69, 123, 157, 0.8); }
+        }
 
-            header p {
-                font-size: 1rem;
-            }
+        h1 {
+            font-size: 2.2rem;
+            color: #00b4d8;
+            text-shadow: 0 0 10px #00b4d8;
+            margin-bottom: 1.5rem;
+        }
 
-            .part h2 {
-                font-size: 1.5rem;
-            }
+        #question-container {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: #415a77;
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
 
-            .qa h3 {
-                font-size: 1.2rem;
-            }
+        #question-text {
+            font-size: 1.5rem;
+            color: #90e0ef;
+            margin-bottom: 1rem;
+        }
+
+        .options label {
+            display: block;
+            padding: 0.8rem;
+            background: #778da9;
+            margin: 0.5rem 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+
+        .options label:hover {
+            background: #00b4d8;
+            transform: translateX(5px);
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        #submit-btn {
+            padding: 0.8rem 2rem;
+            background: #ff4d6d;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #submit-btn:hover {
+            background: #ff758f;
+            transform: scale(1.1);
+        }
+
+        #feedback {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .correct { background: #06d6a0; color: #fff; }
+        .wrong { background: #ef476f; color: #fff; }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            #question-text { font-size: 1.2rem; }
+            .options label { font-size: 0.9rem; }
+            #submit-btn { font-size: 1rem; }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Class 12 CBSE Political Science Q&A (2024-25)</h1>
-        <p>Simple and Easy Revision Guide</p>
-    </header>
+    <div class="container">
+        <h1>CBSE Class 12 Political Science Quiz</h1>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <form id="quiz-form" class="options"></form>
+            <button id="submit-btn">Submit</button>
+        </div>
+        <div id="feedback"></div>
+    </div>
 
-    <main>
-        <section class="part">
-            <h2>Part A: Contemporary World Politics</h2>
-            <div class="qa">
-                <h3>1. What was the Cold War?</h3>
-                <p>The Cold War was a long period of tension between the United States (USA) and the Soviet Union (USSR) after World War II. They didn’t fight directly but competed through weapons, space races, and influence over other countries. It lasted from 1945 to 1991.</p>
-            </div>
-            <div class="qa">
-                <h3>2. Why did the Soviet Union break up?</h3>
-                <p>The Soviet Union broke up in 1991 because of economic problems, political corruption, and demands for freedom from its republics like Russia, Ukraine, and others. People were unhappy with the strict government, and leaders couldn’t fix the issues.</p>
-            </div>
-            <div class="qa">
-                <h3>3. What is meant by ‘Shock Therapy’?</h3>
-                <p>Shock Therapy was a sudden change in ex-Soviet countries after 1991. They shifted from a government-controlled economy to a free-market economy quickly. It caused hardships like price rise and unemployment.</p>
-            </div>
-            <div class="qa">
-                <h3>4. What is the role of the United Nations (UN)?</h3>
-                <p>The UN works to keep peace in the world, solve conflicts between countries, and help with problems like poverty, health, and human rights. It’s like a global team for cooperation.</p>
-            </div>
-            <div class="qa">
-                <h3>5. What is globalization?</h3>
-                <p>Globalization means the world becoming more connected through trade, technology, and culture. It’s when countries share goods, ideas, and services easily, like buying clothes from another country online.</p>
-            </div>
-        </section>
+    <script>
+        const questions = [
+            { q: "1. When did the Cold War officially end?", options: ["a) 1985", "b) 1991", "c) 1995", "d) 2000"], answer: "b" },
+            { q: "2. Which event marked the beginning of the disintegration of the Soviet Union?", options: ["a) Fall of the Berlin Wall", "b) Cuban Missile Crisis", "c) Formation of NATO", "d) Gorbachev’s reforms"], answer: "a" },
+            { q: "3. What was the main objective of ‘Shock Therapy’?", options: ["a) To strengthen communism", "b) To transition to a market economy", "c) To increase military power", "d) To form a new alliance"], answer: "b" },
+            { q: "4. Which organ of the United Nations is responsible for maintaining peace and security?", options: ["a) General Assembly", "b) Security Council", "c) Economic and Social Council", "d) International Court of Justice"], answer: "b" },
+            { q: "5. Globalization primarily refers to:", options: ["a) Political unification of nations", "b) Economic and cultural interconnectedness", "c) Military alliances", "d) Formation of regional blocs"], answer: "b" },
+            { q: "6. Which country is NOT a permanent member of the UN Security Council?", options: ["a) China", "b) Japan", "c) Russia", "d) United States"], answer: "b" },
+            { q: "7. The ‘Hegemony’ of the USA after the Cold War refers to:", options: ["a) Military dominance", "b) Economic collapse", "c) Cultural isolation", "d) Political instability"], answer: "a" },
+            { q: "8. Which challenge was faced by India immediately after independence?", options: ["a) Economic liberalization", "b) Partition-related violence", "c) Globalization", "d) Coalition politics"], answer: "b" },
+            { q: "9. The first general election in India was held in:", options: ["a) 1947", "b) 1950", "c) 1951-52", "d) 1962"], answer: "c" },
+            { q: "10. The Emergency in India was declared on:", options: ["a) June 25, 1975", "b) August 15, 1975", "c) January 26, 1976", "d) March 31, 1977"], answer: "a" },
+            { q: "11. The Mandal Commission recommended reservations for:", options: ["a) Scheduled Castes", "b) Other Backward Classes (OBCs)", "c) Scheduled Tribes", "d) Economically Weaker Sections"], answer: "b" },
+            { q: "12. A coalition government in India first came to power at the center in:", options: ["a) 1967", "b) 1977", "c) 1989", "d) 1991"], answer: "b" },
+            { q: "13. The Green Revolution in India aimed to:", options: ["a) Increase industrial production", "b) Boost agricultural productivity", "c) Promote urbanization", "d) Reduce population growth"], answer: "b" },
+            { q: "14. India adopted a secular state to:", options: ["a) Promote one religion", "b) Ensure equality of all religions", "c) Ban religious practices", "d) Favor the majority religion"], answer: "b" },
+            { q: "15. Which movement led to the formation of Telangana as a separate state?", options: ["a) Naxalite Movement", "b) Telangana Movement", "c) Chipko Movement", "d) Anti-Arrack Movement"], answer: "b" },
+            { q: "16. Which party dominated Indian politics during the initial years after independence?", options: ["a) Bharatiya Janata Party (BJP)", "b) Communist Party of India (CPI)", "c) Indian National Congress (INC)", "d) Janata Party"], answer: "c" },
+            { q: "17. The Planning Commission was replaced by:", options: ["a) NITI Aayog", "b) Finance Commission", "c) National Development Council", "d) Economic Advisory Council"], answer: "a" }
+        ];
 
-        <section class="part">
-            <h2>Part B: Politics in India Since Independence</h2>
-            <div class="qa">
-                <h3>6. What were the main challenges India faced after independence?</h3>
-                <p>India faced three big challenges:<br>
-                - <strong>Partition:</strong> Violence and migration due to the split into India and Pakistan.<br>
-                - <strong>Unity:</strong> Bringing 500+ princely states into one nation.<br>
-                - <strong>Development:</strong> Fighting poverty and building a strong economy.</p>
-            </div>
-            <div class="qa">
-                <h3>7. Why was the first election in India important?</h3>
-                <p>The first election in 1951-52 was important because it showed India’s commitment to democracy. Everyone, even illiterate people, got to vote for their leaders, making it a huge success.</p>
-            </div>
-            <div class="qa">
-                <h3>8. What was the Emergency in India (1975-77)?</h3>
-                <p>The Emergency was when PM Indira Gandhi suspended democracy from June 25, 1975, to 1977. She jailed opponents and controlled the press because she said the country was in danger. It was controversial.</p>
-            </div>
-            <div class="qa">
-                <h3>9. What is the Mandal Commission?</h3>
-                <p>The Mandal Commission (1980) suggested giving 27% reservation in government jobs and education to backward classes (OBCs). It caused protests but aimed to help weaker sections.</p>
-            </div>
-            <div class="qa">
-                <h3>10. What is coalition government in India?</h3>
-                <p>A coalition government is when many political parties join together to rule because no single party gets a majority in elections. It started happening more in India after the 1980s.</p>
-            </div>
-        </section>
+        let currentQuestion = 0;
 
-        <section class="part">
-            <h2>Additional Key Questions</h2>
-            <div class="qa">
-                <h3>11. What is the difference between traditional and non-traditional security?</h3>
-                <p>- <strong>Traditional Security:</strong> Focuses on military threats, like war or invasion.<br>
-                - <strong>Non-Traditional Security:</strong> Focuses on non-military issues, like climate change, terrorism, or pandemics.</p>
-            </div>
-            <div class="qa">
-                <h3>12. Why did India choose a secular state?</h3>
-                <p>India chose to be secular to treat all religions equally and avoid conflicts in a diverse country with Hindus, Muslims, Christians, Sikhs, and others living together.</p>
-            </div>
-            <div class="qa">
-                <h3>13. What was the Green Revolution?</h3>
-                <p>The Green Revolution (1960s-70s) was when India used new farming methods, seeds, and fertilizers to grow more food, especially wheat and rice. It helped reduce hunger but caused some environmental issues.</p>
-            </div>
-            <div class="qa">
-                <h3>14. What is regionalism in India?</h3>
-                <p>Regionalism is when people focus on their state or region’s needs over the nation’s, like demands for separate states (e.g., Telangana) or more power for local languages.</p>
-            </div>
-            <div class="qa">
-                <h3>15. How has globalization affected India?</h3>
-                <p>Globalization brought more jobs, technology, and foreign companies to India (like IT and mobile brands). But it also increased inequality and harmed small farmers and businesses.</p>
-            </div>
-        </section>
-    </main>
+        const questionText = document.getElementById('question-text');
+        const quizForm = document.getElementById('quiz-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const feedback = document.getElementById('feedback');
 
-    <footer>
-        <p>© 2025 Class 12 Political Science Revision | Powered by xAI</p>
-    </footer>
+        function loadQuestion() {
+            const q = questions[currentQuestion];
+            questionText.textContent = q.q;
+            quizForm.innerHTML = '';
+            q.options.forEach((option, index) => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="radio" name="answer" value="${String.fromCharCode(97 + index)}"> ${option}`;
+                quizForm.appendChild(label);
+            });
+            feedback.style.display = 'none';
+            submitBtn.textContent = 'Submit';
+        }
+
+        function showFeedback(isCorrect) {
+            feedback.style.display = 'block';
+            if (isCorrect) {
+                feedback.textContent = 'Shabash Putra!';
+                feedback.className = 'correct';
+            } else {
+                feedback.textContent = 'Chal Sala Fuddu Padh Penchoda';
+                feedback.className = 'wrong';
+            }
+        }
+
+        submitBtn.addEventListener('click', () => {
+            const selected = quizForm.querySelector('input[name="answer"]:checked');
+            if (!selected) {
+                alert('Please select an answer!');
+                return;
+            }
+
+            const userAnswer = selected.value;
+            const correctAnswer = questions[currentQuestion].answer;
+
+            showFeedback(userAnswer === correctAnswer);
+
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    loadQuestion();
+                } else {
+                    questionText.textContent = 'Quiz Completed!';
+                    quizForm.innerHTML = '';
+                    submitBtn.style.display = 'none';
+                    feedback.textContent = 'Well Done, Chad!';
+                    feedback.className = 'correct';
+                    feedback.style.display = 'block';
+                }
+            }, 1500); // Delay before next question
+        });
+
+        // Load the first question
+        loadQuestion();
+    </script>
 </body>
 </html>
