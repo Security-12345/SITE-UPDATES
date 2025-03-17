@@ -3,207 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Political Science Quiz - Class 12 CBSE</title>
+    <title>Class 12 CBSE Political Science Quiz</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
         body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: #fff;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px;
+            min-height: 100vh;
         }
-
         .quiz-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
+            background-color: white;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
             width: 100%;
-            max-width: 500px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
         }
-
         h1 {
             text-align: center;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #ffd700;
+            color: #333;
+            font-size: 24px;
         }
-
-        .progress-bar {
-            width: 100%;
-            height: 10px;
-            background: #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-
-        .progress {
-            height: 100%;
-            background: #00cc00;
-            width: 0;
-            transition: width 0.3s ease;
-        }
-
         .question {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            color: #fff;
+            margin-bottom: 20px;
         }
-
+        .question p {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
         .options label {
             display: block;
-            background: rgba(255, 255, 255, 0.2);
+            margin: 10px 0;
             padding: 10px;
-            margin: 5px 0;
-            border-radius: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s ease;
         }
-
-        .options label:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
         .options input {
             margin-right: 10px;
         }
-
-        .btn {
+        button {
             display: block;
             width: 100%;
-            padding: 12px;
-            background: #ffd700;
-            color: #1e3c72;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 1em;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
             margin-top: 20px;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #ffcc00;
-        }
-
-        .result {
             text-align: center;
-            font-size: 1.2em;
-            margin-top: 20px;
-            display: none;
+            font-size: 18px;
         }
-
-        @media (max-width: 400px) {
+        #result p {
+            margin: 5px 0;
+        }
+        @media (max-width: 480px) {
+            .quiz-container {
+                padding: 15px;
+            }
             h1 {
-                font-size: 1.2em;
+                font-size: 20px;
             }
-            .question {
-                font-size: 1em;
-            }
-            .options label {
-                font-size: 0.9em;
-            }
-            .btn {
-                font-size: 0.9em;
+            button {
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
     <div class="quiz-container">
-        <h1>Political Science Quiz - Class 12 CBSE</h1>
-        <div class="progress-bar">
-            <div class="progress"></div>
-        </div>
+        <h1>Class 12 CBSE Political Science Quiz</h1>
         <div id="quiz"></div>
-        <button class="btn" onclick="submitAnswer()">Next</button>
-        <div class="result" id="result"></div>
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>
+        <div id="result"></div>
     </div>
 
     <script>
-        const quizData = [
-            { question: "The Cold War was primarily a conflict between which two superpowers?", options: ["USA and China", "USA and Soviet Union", "Soviet Union and India", "USA and Japan"], answer: "USA and Soviet Union" },
-            { question: "Which event marked the end of the Cold War?", options: ["Cuban Missile Crisis", "Fall of the Berlin Wall", "Formation of NATO", "Signing of the Warsaw Pact"], answer: "Fall of the Berlin Wall" },
-            { question: "What was the main objective of the Non-Aligned Movement (NAM)?", options: ["To align with the USA", "To avoid alignment with either superpower bloc", "To join the Soviet Union", "To promote military alliances"], answer: "To avoid alignment with either superpower bloc" },
-            { question: "The term ‘Shock Therapy’ is associated with which process?", options: ["Disintegration of the Soviet Union", "Formation of the European Union", "Cuban Missile Crisis", "Globalization"], answer: "Disintegration of the Soviet Union" },
-            { question: "Which organization was established in 1945 to maintain international peace and security?", options: ["NATO", "ASEAN", "United Nations", "European Union"], answer: "United Nations" },
-            { question: "Which country is NOT a permanent member of the UN Security Council?", options: ["USA", "Germany", "Russia", "China"], answer: "Germany" },
-            { question: "The Maastricht Treaty is associated with the formation of which entity?", options: ["NATO", "European Union", "ASEAN", "SAARC"], answer: "European Union" },
-            { question: "What is the primary source of US hegemony in the contemporary world?", options: ["Military power", "Cultural influence", "Economic dominance", "All of the above"], answer: "All of the above" },
-            { question: "Which state was created first after India’s independence due to linguistic demands?", options: ["Andhra Pradesh", "Gujarat", "Haryana", "Punjab"], answer: "Andhra Pradesh" },
-            { question: "The ‘Two-Nation Theory’ was the basis for the creation of which country?", options: ["Bangladesh", "Pakistan", "Sri Lanka", "Nepal"], answer: "Pakistan" },
-            { question: "Who was the leader of the ‘Total Revolution’ movement in India?", options: ["Indira Gandhi", "Jayaprakash Narayan", "Morarji Desai", "Atal Bihari Vajpayee"], answer: "Jayaprakash Narayan" },
-            { question: "The Emergency in India was imposed on which date?", options: ["25 June 1975", "15 August 1975", "26 January 1976", "2 October 1975"], answer: "25 June 1975" },
-            { question: "The Mandal Commission recommended reservations for which group?", options: ["Scheduled Castes", "Scheduled Tribes", "Other Backward Classes (OBCs)", "Economically Weaker Sections (EWS)"], answer: "Other Backward Classes (OBCs)" },
-            { question: "Which party dominated Indian politics during the ‘Era of One-Party Dominance’?", options: ["Bharatiya Janata Party (BJP)", "Indian National Congress", "Communist Party of India (CPI)", "Janata Party"], answer: "Indian National Congress" },
-            { question: "Operation Blue Star was conducted in which year?", options: ["1980", "1982", "1984", "1986"], answer: "1984" },
-            { question: "Which movement demanded a separate state for Telugu-speaking people?", options: ["Dravidian Movement", "Telangana Movement", "Andhra Movement", "Vishalandhra Movement"], answer: "Andhra Movement" }
+        const questions = [
+            { question: "When did the Soviet Union disintegrate?", options: ["1989", "1990", "1991", "1992"], answer: "1991" },
+            { question: "The Cold War was primarily a competition between which two superpowers?", options: ["USA and China", "USA and Soviet Union", "Soviet Union and UK", "USA and Germany"], answer: "USA and Soviet Union" },
+            { question: "Which of the following was a key feature of Gorbachev’s policy of Glasnost?", options: ["Economic reforms", "Political openness", "Military expansion", "Isolationism"], answer: "Political openness" },
+            { question: "How many pillars does the ASEAN Community, established in 2003, comprise?", options: ["Two", "Three", "Four", "Five"], answer: "Three" },
+            { question: "Which countries resisted the Maastricht Treaty?", options: ["France and Germany", "UK and Italy", "Denmark and Sweden", "Spain and Portugal"], answer: "Denmark and Sweden" },
+            { question: "The term ‘Hegemony’ refers to:", options: ["Economic cooperation", "Dominance of one state over others", "Military alliance", "Cultural exchange"], answer: "Dominance of one state over others" },
+            { question: "The Non-Aligned Movement (NAM) was founded during which period?", options: ["World War I", "Cold War", "Post-Cold War", "World War II"], answer: "Cold War" },
+            { question: "Which state was carved out of Assam in 1972?", options: ["Nagaland", "Meghalaya", "Mizoram", "Arunachal Pradesh"], answer: "Meghalaya" },
+            { question: "The first general elections in India were held in which year?", options: ["1947", "1950", "1951-52", "1955"], answer: "1951-52" },
+            { question: "Who was the leader associated with the call for ‘Total Revolution’ in India?", options: ["Indira Gandhi", "Jayaprakash Narayan", "Morarji Desai", "Atal Bihari Vajpayee"], answer: "Jayaprakash Narayan" },
+            { question: "The Emergency in India was imposed on:", options: ["June 25, 1975", "October 2, 1975", "March 15, 1977", "December 31, 1974"], answer: "June 25, 1975" },
+            { question: "The Mandal Commission recommended reservations for:", options: ["Scheduled Castes", "Other Backward Classes (OBCs)", "Scheduled Tribes", "Economically Weaker Sections"], answer: "Other Backward Classes (OBCs)" },
+            { question: "Which operation was launched to remove militants from the Golden Temple in 1984?", options: ["Operation Blue Star", "Operation Black Thunder", "Operation Vijay", "Operation Meghdoot"], answer: "Operation Blue Star" },
+            { question: "The Panchsheel Agreement was signed between India and which country in 1954?", options: ["Pakistan", "China", "Nepal", "Bhutan"], answer: "China" },
+            { question: "Which of the following was a major challenge during India’s nation-building process?", options: ["Integration of princely states", "Economic liberalization", "Formation of NATO", "Digital revolution"], answer: "Integration of princely states" },
+            { question: "Which organization was established in 1945 to maintain international peace and security?", options: ["NATO", "United Nations", "European Union", "Warsaw Pact"], answer: "United Nations" },
+            { question: "The ‘Shock Therapy’ was associated with the transition of which type of economies?", options: ["Capitalist to Socialist", "Socialist to Capitalist", "Feudal to Industrial", "Agrarian to Industrial"], answer: "Socialist to Capitalist" },
+            { question: "Which country became the first to grant the European Union the status of a full dialogue partner?", options: ["India", "China", "Japan", "USA"], answer: "India" },
+            { question: "The Kyoto Protocol, signed in 1997, primarily aimed to address:", options: ["Nuclear disarmament", "Global warming", "Trade barriers", "Terrorism"], answer: "Global warming" },
+            { question: "Which of the following is NOT a permanent member of the UN Security Council?", options: ["Russia", "Germany", "China", "France"], answer: "Germany" },
+            { question: "The term ‘Globalization’ refers to:", options: ["Isolation of economies", "Integration of economies and societies", "Regional conflicts", "Military alliances"], answer: "Integration of economies and societies" },
+            { question: "India conducted its first nuclear test in:", options: ["1964", "1974", "1984", "1998"], answer: "1974" },
+            { question: "Who was the first Prime Minister of India to resign from office?", options: ["Jawaharlal Nehru", "Indira Gandhi", "Morarji Desai", "Lal Bahadur Shastri"], answer: "Morarji Desai" },
+            { question: "The ‘Garibi Hatao’ slogan was popularized by:", options: ["Rajiv Gandhi", "Indira Gandhi", "V.P. Singh", "Narendra Modi"], answer: "Indira Gandhi" },
+            { question: "Which political party was formed after the split in the Indian National Congress in 1969?", options: ["Congress (I)", "Janata Party", "Bharatiya Janata Party", "Swatantra Party"], answer: "Congress (I)" },
+            { question: "The Anti-Defection Law was introduced in India under which amendment?", options: ["42nd Amendment", "44th Amendment", "52nd Amendment", "61st Amendment"], answer: "52nd Amendment" },
+            { question: "Which movement demanded the creation of a separate state of Andhra Pradesh?", options: ["Dravidian Movement", "Telangana Movement", "Vishalandhra Movement", "Naxalite Movement"], answer: "Vishalandhra Movement" },
+            { question: "The National Emergency of 1975 was lifted in which year?", options: ["1976", "1977", "1978", "1979"], answer: "1977" },
+            { question: "The Babri Masjid demolition took place on:", options: ["December 6, 1992", "January 26, 1993", "August 15, 1990", "October 2, 1991"], answer: "December 6, 1992" },
+            { question: "Which Five-Year Plan focused on rapid industrialization in India?", options: ["First Five-Year Plan", "Second Five-Year Plan", "Third Five-Year Plan", "Fourth Five-Year Plan"], answer: "Second Five-Year Plan" }
         ];
 
         let currentQuestion = 0;
         let score = 0;
-        const totalQuestions = quizData.length;
+        let userAnswers = [];
 
         function loadQuestion() {
-            const quizContainer = document.getElementById("quiz");
-            const q = quizData[currentQuestion];
-            quizContainer.innerHTML = `
-                <div class="question">${q.question}</div>
-                <div class="options">
-                    ${q.options.map((option, index) => `
-                        <label><input type="radio" name="answer" value="${option}">${option}</label>
-                    `).join('')}
+            const quizDiv = document.getElementById("quiz");
+            const q = questions[currentQuestion];
+            quizDiv.innerHTML = `
+                <div class="question">
+                    <p>${currentQuestion + 1}. ${q.question}</p>
+                    <div class="options">
+                        ${q.options.map((option, index) => `
+                            <label><input type="radio" name="q${currentQuestion}" value="${option}"> ${option}</label>
+                        `).join("")}
+                    </div>
                 </div>
             `;
-            updateProgress();
+            document.getElementById("nextBtn").textContent = currentQuestion === questions.length - 1 ? "Submit" : "Next";
         }
 
-        function updateProgress() {
-            const progress = document.querySelector(".progress");
-            const percentage = ((currentQuestion + 1) / totalQuestions) * 100;
-            progress.style.width = `${percentage}%`;
-        }
-
-        function submitAnswer() {
-            const selectedOption = document.querySelector('input[name="answer"]:checked');
-            const result = document.getElementById("result");
-            
+        function nextQuestion() {
+            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
             if (!selectedOption) {
                 alert("Please select an answer!");
                 return;
             }
-
-            const userAnswer = selectedOption.value;
-            const correctAnswer = quizData[currentQuestion].answer;
-
-            if (userAnswer === correctAnswer) {
-                score++;
-            }
+            userAnswers.push(selectedOption.value);
+            if (selectedOption.value === questions[currentQuestion].answer) score++;
 
             currentQuestion++;
-
-            if (currentQuestion < totalQuestions) {
+            if (currentQuestion < questions.length) {
                 loadQuestion();
             } else {
-                quizContainer.style.display = "none";
-                document.querySelector(".btn").style.display = "none";
-                result.style.display = "block";
-                result.innerHTML = `Quiz Completed!<br>Your Score: ${score}/${totalQuestions}`;
+                showResult();
             }
         }
 
-        // Load the first question
+        function showResult() {
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `
+                <p>Your Score: ${score} out of ${questions.length}</p>
+                <h2>Correct Answers:</h2>
+                ${questions.map((q, index) => `
+                    <p>${index + 1}. ${q.question} <br> <strong>Correct Answer:</strong> ${q.answer}</p>
+                `).join("")}
+            `;
+            document.getElementById("nextBtn").style.display = "none";
+            document.getElementById("quiz").style.display = "none";
+        }
+
         loadQuestion();
     </script>
 </body>
