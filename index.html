@@ -3,178 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 12 CBSE Political Science Quiz</title>
+    <title>Anmol Singh's Political Science Quiz</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
             margin: 0;
             padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .quiz-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
+            color: #333;
         }
         h1 {
             text-align: center;
-            color: #333;
-            font-size: 24px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
         .question {
             margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
         }
-        .question p {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #555;
+        .question h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
         }
         .options label {
             display: block;
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
+            margin: 5px 0;
             cursor: pointer;
-        }
-        .options input {
-            margin-right: 10px;
         }
         button {
             display: block;
-            width: 100%;
+            width: 200px;
+            margin: 20px auto;
             padding: 10px;
-            background-color: #007bff;
-            color: white;
+            background: #27ae60;
+            color: #fff;
             border: none;
             border-radius: 5px;
+            font-size: 18px;
             cursor: pointer;
-            font-size: 16px;
+            transition: background 0.3s;
         }
         button:hover {
-            background-color: #0056b3;
+            background: #219653;
         }
         #result {
+            display: none;
             margin-top: 20px;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 10px;
             text-align: center;
-            font-size: 18px;
+        }
+        #result h2 {
+            color: #e74c3c;
         }
         #result p {
-            margin: 5px 0;
-        }
-        @media (max-width: 480px) {
-            .quiz-container {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 20px;
-            }
-            button {
-                font-size: 14px;
-            }
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
+    <h1>Anmol Singh's Political Science Quiz</h1>
     <div class="quiz-container">
-        <h1>Class 12 CBSE Political Science Quiz</h1>
-        <div id="quiz"></div>
-        <button id="nextBtn" onclick="nextQuestion()">Next</button>
-        <div id="result"></div>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. Which event marked the end of the Cold War?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> Fall of the Berlin Wall</label>
+                    <label><input type="radio" name="q1" value="b"> Cuban Missile Crisis</label>
+                    <label><input type="radio" name="q1" value="c"> Formation of NATO</label>
+                    <label><input type="radio" name="q1" value="d"> Signing of the Warsaw Pact</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. The United Nations was established on:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> October 24, 1945</label>
+                    <label><input type="radio" name="q2" value="b"> June 26, 1945</label>
+                    <label><input type="radio" name="q2" value="c"> August 15, 1947</label>
+                    <label><input type="radio" name="q2" value="d"> January 1, 1950</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>3. Which country launched the ‘Operation Enduring Freedom’ after the 9/11 attacks?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> Russia</label>
+                    <label><input type="radio" name="q3" value="b"> USA</label>
+                    <label><input type="radio" name="q3" value="c"> UK</label>
+                    <label><input type="radio" name="q3" value="d"> France</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>4. The main objective of the Non-Aligned Movement (NAM) was to:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> Support the USA</label>
+                    <label><input type="radio" name="q4" value="b"> Oppose the Soviet Union</label>
+                    <label><input type="radio" name="q4" value="c"> Stay away from power blocs</label>
+                    <label><input type="radio" name="q4" value="d"> Promote military alliances</label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. Which of the following is a permanent member of the UN Security Council?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> India</label>
+                    <label><input type="radio" name="q5" value="b"> Japan</label>
+                    <label><input type="radio" name="q5" value="c"> China</label>
+                    <label><input type="radio" name="q5" value="d"> Germany</label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <h3>6. The term ‘BRICS’ refers to an association of which countries?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> Brazil, Russia, India, China, South Africa</label>
+                    <label><input type="radio" name="q6" value="b"> Britain, Russia, India, Canada, Spain</label>
+                    <label><input type="radio" name="q6" value="c"> Brazil, Romania, Italy, China, Sweden</label>
+                    <label><input type="radio" name="q6" value="d"> Belgium, Russia, India, Chile, Singapore</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <h3>7. India conducted its second nuclear test, known as Pokhran-II, in:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a"> 1974</label>
+                    <label><input type="radio" name="q7" value="b"> 1998</label>
+                    <label><input type="radio" name="q7" value="c"> 1984</label>
+                    <label><input type="radio" name="q7" value="d"> 2004</label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h3>8. Who was the first President of independent India?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="a"> Dr. Rajendra Prasad</label>
+                    <label><input type="radio" name="q8" value="b"> Jawaharlal Nehru</label>
+                    <label><input type="radio" name="q8" value="c"> Sardar Vallabhbhai Patel</label>
+                    <label><input type="radio" name="q8" value="d"> Dr. B.R. Ambedkar</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <h3>9. The States Reorganisation Act was passed in which year?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="a"> 1950</label>
+                    <label><input type="radio" name="q9" value="b"> 1952</label>
+                    <label><input type="radio" name="q9" value="c"> 1956</label>
+                    <label><input type="radio" name="q9" value="d"> 1960</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <h3>10. The leader of the opposition during the Emergency (1975-77) was:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="a"> Atal Bihari Vajpayee</label>
+                    <label><input type="radio" name="q10" value="b"> Jayaprakash Narayan</label>
+                    <label><input type="radio" name="q10" value="c"> Morarji Desai</label>
+                    <label><input type="radio" name="q10" value="d"> Charan Singh</label>
+                </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question">
+                <h3>11. Which article of the Indian Constitution was used to impose the Emergency in 1975?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="a"> Article 352</label>
+                    <label><input type="radio" name="q11" value="b"> Article 356</label>
+                    <label><input type="radio" name="q11" value="c"> Article 360</label>
+                    <label><input type="radio" name="q11" value="d"> Article 370</label>
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question">
+                <h3>12. The assassination of Indira Gandhi took place in:</h3>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="a"> 1980</label>
+                    <label><input type="radio" name="q12" value="b"> 1982</label>
+                    <label><input type="radio" name="q12" value="c"> 1984</label>
+                    <label><input type="radio" name="q12" value="d"> 1986</label>
+                </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question">
+                <h3>13. The Mandal Commission report was implemented by which Prime Minister?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="a"> Rajiv Gandhi</label>
+                    <label><input type="radio" name="q13" value="b"> V.P. Singh</label>
+                    <label><input type="radio" name="q13" value="c"> P.V. Narasimha Rao</label>
+                    <label><input type="radio" name="q13" value="d"> H.D. Deve Gowda</label>
+                </div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question">
+                <h3>14. The Planning Commission in India was replaced by which body in 2014?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="a"> NITI Aayog</label>
+                    <label><input type="radio" name="q14" value="b"> Finance Commission</label>
+                    <label><input type="radio" name="q14" value="c"> National Development Council</label>
+                    <label><input type="radio" name="q14" value="d"> Economic Advisory Council</label>
+                </div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question">
+                <h3>15. Which of the following was a major demand of the Chipko Movement?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q15" value="a"> Reservation for OBCs</label>
+                    <label><input type="radio" name="q15" value="b"> Protection of forests</label>
+                    <label><input type="radio" name="q15" value="c"> Separate statehood</label>
+                    <label><input type="radio" name="q15" value="d"> Agricultural reforms</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+        <div id="result">
+            <h2>Your Score</h2>
+            <p id="score"></p>
+            <h2>Correct Answers</h2>
+            <p id="answers"></p>
+        </div>
     </div>
 
     <script>
-        const questions = [
-            { question: "When did the Soviet Union disintegrate?", options: ["1989", "1990", "1991", "1992"], answer: "1991" },
-            { question: "The Cold War was primarily a competition between which two superpowers?", options: ["USA and China", "USA and Soviet Union", "Soviet Union and UK", "USA and Germany"], answer: "USA and Soviet Union" },
-            { question: "Which of the following was a key feature of Gorbachev’s policy of Glasnost?", options: ["Economic reforms", "Political openness", "Military expansion", "Isolationism"], answer: "Political openness" },
-            { question: "How many pillars does the ASEAN Community, established in 2003, comprise?", options: ["Two", "Three", "Four", "Five"], answer: "Three" },
-            { question: "Which countries resisted the Maastricht Treaty?", options: ["France and Germany", "UK and Italy", "Denmark and Sweden", "Spain and Portugal"], answer: "Denmark and Sweden" },
-            { question: "The term ‘Hegemony’ refers to:", options: ["Economic cooperation", "Dominance of one state over others", "Military alliance", "Cultural exchange"], answer: "Dominance of one state over others" },
-            { question: "The Non-Aligned Movement (NAM) was founded during which period?", options: ["World War I", "Cold War", "Post-Cold War", "World War II"], answer: "Cold War" },
-            { question: "Which state was carved out of Assam in 1972?", options: ["Nagaland", "Meghalaya", "Mizoram", "Arunachal Pradesh"], answer: "Meghalaya" },
-            { question: "The first general elections in India were held in which year?", options: ["1947", "1950", "1951-52", "1955"], answer: "1951-52" },
-            { question: "Who was the leader associated with the call for ‘Total Revolution’ in India?", options: ["Indira Gandhi", "Jayaprakash Narayan", "Morarji Desai", "Atal Bihari Vajpayee"], answer: "Jayaprakash Narayan" },
-            { question: "The Emergency in India was imposed on:", options: ["June 25, 1975", "October 2, 1975", "March 15, 1977", "December 31, 1974"], answer: "June 25, 1975" },
-            { question: "The Mandal Commission recommended reservations for:", options: ["Scheduled Castes", "Other Backward Classes (OBCs)", "Scheduled Tribes", "Economically Weaker Sections"], answer: "Other Backward Classes (OBCs)" },
-            { question: "Which operation was launched to remove militants from the Golden Temple in 1984?", options: ["Operation Blue Star", "Operation Black Thunder", "Operation Vijay", "Operation Meghdoot"], answer: "Operation Blue Star" },
-            { question: "The Panchsheel Agreement was signed between India and which country in 1954?", options: ["Pakistan", "China", "Nepal", "Bhutan"], answer: "China" },
-            { question: "Which of the following was a major challenge during India’s nation-building process?", options: ["Integration of princely states", "Economic liberalization", "Formation of NATO", "Digital revolution"], answer: "Integration of princely states" },
-            { question: "Which organization was established in 1945 to maintain international peace and security?", options: ["NATO", "United Nations", "European Union", "Warsaw Pact"], answer: "United Nations" },
-            { question: "The ‘Shock Therapy’ was associated with the transition of which type of economies?", options: ["Capitalist to Socialist", "Socialist to Capitalist", "Feudal to Industrial", "Agrarian to Industrial"], answer: "Socialist to Capitalist" },
-            { question: "Which country became the first to grant the European Union the status of a full dialogue partner?", options: ["India", "China", "Japan", "USA"], answer: "India" },
-            { question: "The Kyoto Protocol, signed in 1997, primarily aimed to address:", options: ["Nuclear disarmament", "Global warming", "Trade barriers", "Terrorism"], answer: "Global warming" },
-            { question: "Which of the following is NOT a permanent member of the UN Security Council?", options: ["Russia", "Germany", "China", "France"], answer: "Germany" },
-            { question: "The term ‘Globalization’ refers to:", options: ["Isolation of economies", "Integration of economies and societies", "Regional conflicts", "Military alliances"], answer: "Integration of economies and societies" },
-            { question: "India conducted its first nuclear test in:", options: ["1964", "1974", "1984", "1998"], answer: "1974" },
-            { question: "Who was the first Prime Minister of India to resign from office?", options: ["Jawaharlal Nehru", "Indira Gandhi", "Morarji Desai", "Lal Bahadur Shastri"], answer: "Morarji Desai" },
-            { question: "The ‘Garibi Hatao’ slogan was popularized by:", options: ["Rajiv Gandhi", "Indira Gandhi", "V.P. Singh", "Narendra Modi"], answer: "Indira Gandhi" },
-            { question: "Which political party was formed after the split in the Indian National Congress in 1969?", options: ["Congress (I)", "Janata Party", "Bharatiya Janata Party", "Swatantra Party"], answer: "Congress (I)" },
-            { question: "The Anti-Defection Law was introduced in India under which amendment?", options: ["42nd Amendment", "44th Amendment", "52nd Amendment", "61st Amendment"], answer: "52nd Amendment" },
-            { question: "Which movement demanded the creation of a separate state of Andhra Pradesh?", options: ["Dravidian Movement", "Telangana Movement", "Vishalandhra Movement", "Naxalite Movement"], answer: "Vishalandhra Movement" },
-            { question: "The National Emergency of 1975 was lifted in which year?", options: ["1976", "1977", "1978", "1979"], answer: "1977" },
-            { question: "The Babri Masjid demolition took place on:", options: ["December 6, 1992", "January 26, 1993", "August 15, 1990", "October 2, 1991"], answer: "December 6, 1992" },
-            { question: "Which Five-Year Plan focused on rapid industrialization in India?", options: ["First Five-Year Plan", "Second Five-Year Plan", "Third Five-Year Plan", "Fourth Five-Year Plan"], answer: "Second Five-Year Plan" }
-        ];
+        const correctAnswers = {
+            q1: 'a', q2: 'a', q3: 'b', q4: 'c', q5: 'c',
+            q6: 'a', q7: 'b', q8: 'a', q9: 'c', q10: 'b',
+            q11: 'a', q12: 'c', q13: 'b', q14: 'a', q15: 'b'
+        };
 
-        let currentQuestion = 0;
-        let score = 0;
-        let userAnswers = [];
+        function submitQuiz() {
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const result = document.getElementById('result');
+            const scoreDisplay = document.getElementById('score');
+            const answersDisplay = document.getElementById('answers');
+            let answersText = '';
 
-        function loadQuestion() {
-            const quizDiv = document.getElementById("quiz");
-            const q = questions[currentQuestion];
-            quizDiv.innerHTML = `
-                <div class="question">
-                    <p>${currentQuestion + 1}. ${q.question}</p>
-                    <div class="options">
-                        ${q.options.map((option, index) => `
-                            <label><input type="radio" name="q${currentQuestion}" value="${option}"> ${option}</label>
-                        `).join("")}
-                    </div>
-                </div>
-            `;
-            document.getElementById("nextBtn").textContent = currentQuestion === questions.length - 1 ? "Submit" : "Next";
-        }
-
-        function nextQuestion() {
-            const selectedOption = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
-            if (!selectedOption) {
-                alert("Please select an answer!");
-                return;
+            for (let i = 1; i <= 15; i++) {
+                const userAnswer = form.querySelector(`input[name="q${i}"]:checked`);
+                const correctAnswer = correctAnswers[`q${i}`];
+                if (userAnswer && userAnswer.value === correctAnswer) {
+                    score++;
+                }
+                answersText += `Q${i}: Correct Answer - ${correctAnswer.toUpperCase()}<br>`;
             }
-            userAnswers.push(selectedOption.value);
-            if (selectedOption.value === questions[currentQuestion].answer) score++;
 
-            currentQuestion++;
-            if (currentQuestion < questions.length) {
-                loadQuestion();
-            } else {
-                showResult();
-            }
+            scoreDisplay.innerHTML = `Anmol Singh, your score is: ${score} out of 15`;
+            answersDisplay.innerHTML = answersText;
+            result.style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
         }
-
-        function showResult() {
-            const resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = `
-                <p>Your Score: ${score} out of ${questions.length}</p>
-                <h2>Correct Answers:</h2>
-                ${questions.map((q, index) => `
-                    <p>${index + 1}. ${q.question} <br> <strong>Correct Answer:</strong> ${q.answer}</p>
-                `).join("")}
-            `;
-            document.getElementById("nextBtn").style.display = "none";
-            document.getElementById("quiz").style.display = "none";
-        }
-
-        loadQuestion();
     </script>
 </body>
 </html>
