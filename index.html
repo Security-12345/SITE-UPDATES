@@ -9,59 +9,55 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Helvetica', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #e9ecef, #ced4da);
+            background: #f5f5f5;
             min-height: 100vh;
             padding: 20px;
-            color: #212529;
+            color: #343a40;
             line-height: 1.6;
         }
 
         .news-container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            background: #ffffff;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             position: relative;
+            background-image: linear-gradient(45deg, #f5f5f5 25%, #e9ecef 25%, #e9ecef 50%, #f5f5f5 50%, #f5f5f5 75%, #e9ecef 75%, #e9ecef);
+            background-size: 20px 20px;
         }
 
         .header {
-            background: #dc3545;
-            padding: 30px 20px;
+            background: #212529;
+            padding: 40px 20px;
             text-align: center;
-            color: white;
-            border-bottom: 6px solid #b02a37;
+            color: #ffffff;
+            border-bottom: 6px solid #c0392b;
+            position: relative;
         }
 
         .site-heading {
-            font-size: clamp(2em, 5vw, 3.5em);
+            font-size: clamp(2.5em, 5vw, 4em);
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
         .ticker {
-            background: #212529;
-            color: #ffd43b;
-            padding: 12px;
-            font-size: clamp(1em, 2.5vw, 1.2em);
+            background: #c0392b;
+            color: #ffffff;
+            padding: 15px;
+            font-size: clamp(1em, 2.5vw, 1.3em);
             font-weight: bold;
             overflow: hidden;
             white-space: nowrap;
-            box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .ticker span {
@@ -76,84 +72,88 @@
         }
 
         .headline {
-            font-size: clamp(1.5em, 4vw, 2.5em);
-            color: #dc3545;
+            font-size: clamp(1.8em, 4vw, 2.8em);
+            color: #c0392b;
             text-align: center;
-            padding: 25px 15px;
-            background: #f8f9fa;
+            padding: 30px 15px;
+            background: #f5f5f5;
             font-weight: 700;
-            border-bottom: 6px solid #dc3545;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 6px solid #e74c3c;
+            text-transform: uppercase;
         }
 
         .content {
-            padding: 40px;
+            padding: 50px;
             display: grid;
             grid-template-columns: 3fr 1fr;
-            gap: 40px;
+            gap: 50px;
         }
 
         .updates-section {
-            background: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .updates-section h2 {
-            font-size: clamp(1.5em, 3vw, 2em);
-            color: #dc3545;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #dee2e6;
-            padding-bottom: 12px;
+            font-size: clamp(1.8em, 3vw, 2.2em);
+            color: #212529;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #c0392b;
+            padding-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .update-item {
-            background: linear-gradient(90deg, #f8f9fa, #e9ecef);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 6px solid #dc3545;
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 6px solid #c0392b;
             border-radius: 8px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .update-item.latest {
+            border-left: 6px solid #e74c3c;
+            background: #eceff1;
         }
 
         .update-item:hover {
-            transform: translateX(15px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: translateX(10px);
         }
 
         .update-item h3 {
-            font-size: clamp(1.2em, 2vw, 1.4em);
-            color: #343a40;
+            font-size: clamp(1.3em, 2vw, 1.6em);
+            color: #212529;
             margin-bottom: 15px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .update-item p {
             font-size: clamp(1em, 2vw, 1.2em);
             color: #343a40;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 15px 0;
+            margin: 20px 0;
+            background: #ffffff;
         }
 
         .schedule-table th, .schedule-table td {
-            padding: 10px;
+            padding: 15px;
             text-align: left;
             border-bottom: 1px solid #dee2e6;
         }
 
         .schedule-table th {
-            background: #dc3545;
-            color: white;
+            background: #212529;
+            color: #ffffff;
             font-weight: bold;
         }
 
@@ -162,58 +162,41 @@
         }
 
         .highlight {
-            color: #dc3545;
+            color: #e74c3c;
             font-weight: bold;
         }
 
         .timestamp {
-            font-size: clamp(0.8em, 1.5vw, 0.95em);
+            font-size: clamp(0.9em, 1.5vw, 1em);
             color: #868e96;
             font-style: italic;
+            display: inline-flex;
+            align-items: center;
+            background: #e9ecef;
+            padding: 8px 12px;
+            border-radius: 5px;
         }
 
-        .update-item::before {
-            content: 'NOTICE';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #dc3545;
-            color: white;
-            padding: 5px 12px;
-            font-size: 0.8em;
-            border-radius: 4px;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .policy-notice {
-            background: #fff3cd;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: clamp(0.9em, 1.8vw, 1em);
-            color: #856404;
-            border: 1px solid #ffeeba;
+        .timestamp::before {
+            content: '🕒';
+            margin-right: 5px;
         }
 
         .sidebar {
-            background: #f1f3f5;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: #343a40;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
         }
 
         .sidebar h3 {
-            font-size: clamp(1.2em, 2.5vw, 1.5em);
-            color: #dc3545;
-            margin-bottom: 20px;
+            font-size: clamp(1.3em, 2.5vw, 1.6em);
+            color: #ffffff;
+            margin-bottom: 25px;
             text-transform: uppercase;
-        }
-
-        .quick-links {
-            font-size: clamp(0.9em, 1.8vw, 1em);
-            color: #495057;
-            line-height: 1.6;
+            border-bottom: 3px solid #c0392b;
+            padding-bottom: 10px;
         }
 
         .quick-links ul {
@@ -221,17 +204,21 @@
         }
 
         .quick-links li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         .quick-links a {
-            color: #dc3545;
+            color: #e74c3c;
             text-decoration: none;
-            transition: color 0.3s ease;
+            padding: 12px 15px;
+            display: block;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         .quick-links a:hover {
-            color: #b02a37;
+            background: #e74c3c;
+            color: #ffffff;
         }
 
         .footer {
@@ -239,11 +226,11 @@
             color: #adb5bd;
             text-align: center;
             padding: 20px;
-            font-size: clamp(0.8em, 1.5vw, 0.85em);
+            font-size: clamp(0.9em, 1.5vw, 1em);
         }
 
         .footer a {
-            color: #dc3545;
+            color: #e74c3c;
             text-decoration: none;
             font-weight: bold;
         }
@@ -252,35 +239,63 @@
         @media (max-width: 768px) {
             .content {
                 grid-template-columns: 1fr;
+                padding: 25px;
+                gap: 30px;
+            }
+            .schedule-table {
+                display: block;
+            }
+            .schedule-table tr {
+                display: block;
+                margin-bottom: 20px;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                padding: 10px;
+                background: #ffffff;
+            }
+            .schedule-table th, .schedule-table td {
+                display: block;
+                text-align: left;
+                border: none;
+            }
+            .schedule-table th {
+                display: none;
+            }
+            .schedule-table td::before {
+                content: attr(data-label) ": ";
+                font-weight: bold;
+                color: #c0392b;
+            }
+            .ticker span {
+                animation: marquee 20s linear infinite;
+            }
+            .ticker:hover span {
+                animation-play-state: paused;
+            }
+            .update-item p {
+                font-size: 1em;
+            }
+            .update-item h3 {
+                font-size: 1.4em;
+            }
+            .sidebar {
                 padding: 20px;
-            }
-            .header {
-                padding: 20px 10px;
-            }
-            .ticker {
-                padding: 8px;
-            }
-            .headline {
-                padding: 15px 10px;
-            }
-            .updates-section, .sidebar {
-                padding: 15px;
-            }
-            .update-item {
-                padding: 15px;
             }
         }
 
         @media (max-width: 480px) {
             .site-heading {
-                font-size: 1.8em;
+                font-size: 2em;
             }
             .headline {
-                font-size: 1.2em;
+                font-size: 1.3em;
+                padding: 20px 10px;
             }
-            .update-item::before {
-                font-size: 0.7em;
-                padding: 4px 8px;
+            .update-item {
+                padding: 15px;
+            }
+            .schedule-table td {
+                padding: 10px;
             }
         }
     </style>
@@ -292,7 +307,7 @@
         </div>
 
         <div class="ticker">
-            <span>Security Team: Fan-Coil Maintenance Scheduled - Check Below for Details!</span>
+            <span>Security Team: New RV Updates Added - Check Below for Details!</span>
         </div>
 
         <h2 class="headline">Security Team Briefing</h2>
@@ -301,9 +316,59 @@
             <div class="updates-section">
                 <h2>Security Team Updates</h2>
 
-                <!-- Fan-Coil Maintenance Schedule -->
+                <!-- RV Updates Section -->
+                <div class="update-item latest">
+                    <h3>RV Updates: Fan-Coil Maintenance at 466 Eglinton Avenue East</h3>
+                    <p>We have scheduled the Fan-coil Unit Maintenance & LINT SCREEN CLEANING at 466 Eglinton Avenue East as follows:</p>
+                    <table class="schedule-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                            <th>Floors</th>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Tuesday</td>
+                            <td data-label="Date">March 25</td>
+                            <td data-label="Details">Day 1</td>
+                            <td data-label="Floors">PH 18, LPH Floor to 16th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">March 26</td>
+                            <td data-label="Details">Day 2</td>
+                            <td data-label="Floors">15th Floor to 12th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Thursday</td>
+                            <td data-label="Date">March 27</td>
+                            <td data-label="Details">Day 3</td>
+                            <td data-label="Floors">11th Floor to 8th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Friday</td>
+                            <td data-label="Date">March 28</td>
+                            <td data-label="Details">Day 4</td>
+                            <td data-label="Floors">7th Floor to 6th Floor inclusive</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">April 2</td>
+                            <td data-label="Details">Day 5</td>
+                            <td data-label="Floors">5th Floor to Ground Floor inclusive</td>
+                        </tr>
+                    </table>
+                    <p>This is a building function, and it is necessary to be done. Please ensure that access is granted during that time. If we cannot access your unit with our master key, please ensure to leave your key with the management office. It is not necessary that you be home during the day, as building staff will accompany the crew. Please also ensure that any entry alarm set up in the unit is deactivated.</p>
+                    <p class="highlight">For the crew to have clear access to the fan coil unit(s) and dryer, please remove all items at least 3 feet in front and beside the fan coil unit and dryer.</p>
+                    <p><strong>Oil Collection Drum:</strong> The drum is located outside the recycling room, in the loading dock area behind the building. You can open the lid and dump the oil inside the drum. We request all residents to use the drum to dispose of cooking oil/grease. When cooking oil/grease is disposed in the kitchen sink, it can clog the drains and cause back-ups & floods.</p>
+                    <p><strong>Resident Maintenance Responsibilities:</strong> Please be reminded that residents are responsible for the maintenance and repair of all items inside their unit, including any fixtures or systems that serve only your unit or an adjacent one. This includes but is not limited to plumbing, electrical, appliances, and other personal fixtures. The building management is only responsible for maintaining the Fancoil units in your suites.</p>
+                    <p><strong>Notify Gatehouse of Visitor Arrivals:</strong> To assist our security team, please inform the Gatehouse of expected visitors. Your cooperation enhances our community’s safety and helps regulate the high volume of traffic.</p>
+                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
+                </div>
+
+                <!-- Existing Updates -->
                 <div class="update-item">
-                    <h3>Support Fan-Coil Maintenance at 2466 Eglinton Avenue East</h3>
+                    <h3>Support Fan-Coil Maintenance at 466 Eglinton Avenue East</h3>
                     <p>Security Team, please be aware of the scheduled fan-coil unit maintenance and lint screen cleaning at 466 Eglinton Avenue East. Your role is to ensure smooth access for the maintenance crew and accompany them as needed. The schedule is as follows:</p>
                     <table class="schedule-table">
                         <tr>
@@ -313,34 +378,34 @@
                             <th>Floors</th>
                         </tr>
                         <tr>
-                            <td>Tuesday</td>
-                            <td>March 25</td>
-                            <td>Day 1</td>
-                            <td>PH 18, LPH Floor to 16th Floor inclusive</td>
+                            <td data-label="Day">Tuesday</td>
+                            <td data-label="Date">March 25</td>
+                            <td data-label="Details">Day 1</td>
+                            <td data-label="Floors">PH 18, LPH Floor to 16th Floor inclusive</td>
                         </tr>
                         <tr>
-                            <td>Wednesday</td>
-                            <td>March 26</td>
-                            <td>Day 2</td>
-                            <td>15th Floor to 12th Floor inclusive</td>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">March 26</td>
+                            <td data-label="Details">Day 2</td>
+                            <td data-label="Floors">15th Floor to 12th Floor inclusive</td>
                         </tr>
                         <tr>
-                            <td>Thursday</td>
-                            <td>March 27</td>
-                            <td>Day 3</td>
-                            <td>11th Floor to 8th Floor inclusive</td>
+                            <td data-label="Day">Thursday</td>
+                            <td data-label="Date">March 27</td>
+                            <td data-label="Details">Day 3</td>
+                            <td data-label="Floors">11th Floor to 8th Floor inclusive</td>
                         </tr>
                         <tr>
-                            <td>Friday</td>
-                            <td>March 28</td>
-                            <td>Day 4</td>
-                            <td>7th Floor to 6th Floor inclusive</td>
+                            <td data-label="Day">Friday</td>
+                            <td data-label="Date">March 28</td>
+                            <td data-label="Details">Day 4</td>
+                            <td data-label="Floors">7th Floor to 6th Floor inclusive</td>
                         </tr>
                         <tr>
-                            <td>Wednesday</td>
-                            <td>April 2</td>
-                            <td>Day 5</td>
-                            <td>5th Floor to Ground Floor inclusive</td>
+                            <td data-label="Day">Wednesday</td>
+                            <td data-label="Date">April 2</td>
+                            <td data-label="Details">Day 5</td>
+                            <td data-label="Floors">5th Floor to Ground Floor inclusive</td>
                         </tr>
                     </table>
                     <p>Please coordinate with the management office to ensure master key access to units. If a resident has not provided a key, you may need to facilitate entry. Ensure that any entry alarms in the units are deactivated during the maintenance period.</p>
@@ -348,7 +413,6 @@
                     <div class="timestamp">March 14, 2025 - 10:00 AM</div>
                 </div>
 
-                <!-- Oil Collection Drum -->
                 <div class="update-item">
                     <h3>Monitor Oil Collection Drum Usage</h3>
                     <p>Security Team, an oil collection drum is located outside the recycling room in the loading dock area behind the building. It is designated for residents to dispose of cooking oil/grease to prevent clogs and floods in the building’s plumbing system.</p>
@@ -356,7 +420,6 @@
                     <div class="timestamp">March 14, 2025 - 10:00 AM</div>
                 </div>
 
-                <!-- Resident Maintenance Responsibilities -->
                 <div class="update-item">
                     <h3>Clarify Maintenance Responsibilities for Residents</h3>
                     <p>Security Team, please note that residents are responsible for the maintenance and repair of all items within their units, including fixtures and systems that serve only their unit or an adjacent one (e.g., plumbing, electrical, appliances, and personal fixtures).</p>
@@ -364,7 +427,6 @@
                     <div class="timestamp">March 14, 2025 - 10:00 AM</div>
                 </div>
 
-                <!-- Notify Gatehouse of Visitor Arrivals -->
                 <div class="update-item">
                     <h3>Enforce Visitor Notification Protocol</h3>
                     <p>Security Team, to maintain safety and manage traffic flow, ensure that residents notify the Gatehouse of all expected visitors. Your team must enforce this protocol by verifying visitor logs and ensuring all visitors are pre-authorized by residents.</p>
