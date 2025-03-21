@@ -3,776 +3,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class 12 Political Science Quiz 2025</title>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>CBSE Class 12 Political Science Guide</title>
     <style>
-        /* General Styling */
-        body {
-            font-family: 'Poppins', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
         }
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            padding: 15px;
-        }
-        h1 {
-            text-align: center;
-            color: #fff;
-            font-size: 2em;
-            margin: 20px 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-        }
-        /* Header */
+
         header {
-            background: linear-gradient(90deg, #3498db, #2980b9);
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: rotate(30deg);
-            animation: shine 5s infinite;
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(30deg); }
-            50% { transform: translateX(100%) rotate(30deg); }
-            100% { transform: translateX(-100%) rotate(30deg); }
+
+        nav {
+            background: #333;
+            padding: 15px;
+            text-align: center;
         }
-        /* Quiz Styling */
-        .quiz-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            animation: fadeIn 0.5s ease-in;
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        nav a:hover {
+            color: #ffcc00;
         }
-        .question {
-            margin-bottom: 25px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-        }
-        .question h3 {
-            font-size: 1.3em;
-            color: #e74c3c;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-        }
-        .question h3 i {
-            margin-right: 10px;
-            color: #3498db;
-        }
-        .options label {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            margin: 8px 0;
-            border-radius: 8px;
+
+        .hamburger {
+            display: none;
+            font-size: 2em;
+            color: white;
             cursor: pointer;
-            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .options label:hover {
-            background: linear-gradient(135deg, #dfe9f3, #b0c4de);
-            transform: translateX(5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-        .options input[type="radio"] {
-            margin-right: 10px;
-            accent-color: #e74c3c;
-        }
-        /* Submit Button */
-        #submit-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(90deg, #e74c3c, #c0392b);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.2em;
+
+        .section h2 {
+            color: #1e3c72;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        #submit-btn:hover {
-            background: linear-gradient(90deg, #c0392b, #e74c3c);
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-        }
-        /* Results Styling */
-        #results {
-            display: none;
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.5s ease-in;
-        }
-        #results h2 {
-            color: #3498db;
-            text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-        #results p {
-            font-size: 1.2em;
-            text-align: center;
-            color: #2c3e50;
-        }
-        .correct-answers {
-            margin-top: 20px;
-        }
-        .correct-answers h3 {
-            color: #e74c3c;
-            font-size: 1.4em;
-            text-align: center;
-        }
-        .correct-answers p {
-            font-size: 1em;
-            padding: 8px;
-            background: #f9f9f9;
-            border-left: 4px solid #3498db;
-            margin: 5px 0;
+            padding: 10px;
+            background: #e9ecef;
             border-radius: 5px;
+            margin-bottom: 10px;
         }
-        /* Footer */
+
+        .section h2:hover {
+            background: #d3d9e4;
+        }
+
+        .content {
+            display: none;
+            padding: 15px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .content h3 {
+            color: #2a5298;
+            margin-top: 15px;
+        }
+
+        .content p, .content ul {
+            margin: 10px 0;
+        }
+
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
         footer {
+            background: #333;
+            color: white;
             text-align: center;
             padding: 15px;
-            background: linear-gradient(90deg, #2c3e50, #34495e);
-            color: white;
-            font-size: 0.9em;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-        /* Mobile Optimization */
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
             }
-            h1 {
-                font-size: 1.6em;
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #333;
+                padding: 20px 0;
             }
-            .question h3 {
-                font-size: 1.1em;
+
+            nav.active {
+                display: block;
             }
-            .options label {
-                font-size: 0.9em;
-                padding: 10px;
+
+            nav a {
+                display: block;
+                margin: 15px 0;
             }
-            #submit-btn {
-                font-size: 1.1em;
-                padding: 12px;
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
             }
-            #results h2 {
-                font-size: 1.5em;
-            }
-            #results p {
-                font-size: 1em;
+
+            .section h2 {
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>CBSE Class 12 Political Science Quiz 2025</h1>
-        <p>Test Your Knowledge with Style!</p>
+        <h1>CBSE Class 12 Political Science Exam Guide</h1>
+        <p>Your One-Stop Study Resource for March 22, 2025 Exam</p>
     </header>
 
-    <!-- Quiz Container -->
+    <nav>
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <a href="#part-a">Part A: Contemporary World Politics</a>
+        <a href="#part-b">Part B: Politics in India</a>
+        <a href="#sample-questions">Sample Questions</a>
+    </nav>
+
     <div class="container">
-        <div class="quiz-container" id="quiz">
-            <!-- Questions -->
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>1. What marked the end of the Cold War era?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="a"> a) Formation of NATO</label>
-                    <label><input type="radio" name="q1" value="b"> b) Fall of the Berlin Wall</label>
-                    <label><input type="radio" name="q1" value="c"> c) Cuban Missile Crisis</label>
-                    <label><input type="radio" name="q1" value="d"> d) Treaty of Versailles</label>
-                </div>
+        <div class="section" id="part-a">
+            <h2 onclick="toggleContent(this)">Part A: Contemporary World Politics</h2>
+            <div class="content">
+                <h3>1. The Cold War Era</h3>
+                <p><strong>What It Was:</strong> After World War II, the US (capitalist) and Soviet Union (communist) competed for power without fighting directly.</p>
+                <ul>
+                    <li><strong>Causes:</strong> Different ideas (capitalism vs. communism), distrust, power struggle.</li>
+                    <li><strong>Cuban Missile Crisis (1962):</strong> US and Soviet Union nearly started a nuclear war over missiles in Cuba.</li>
+                    <li><strong>Non-Aligned Movement (NAM):</strong> India and others stayed neutral.</li>
+                    <li><strong>Why Important:</strong> Expect questions on NAM or Cuban crisis.</li>
+                </ul>
+
+                <h3>2. The End of Bipolarity</h3>
+                <p><strong>What Happened:</strong> Soviet Union broke apart in 1991, ending the two-power world.</p>
+                <ul>
+                    <li>New countries like Russia formed.</li>
+                    <li>US became the only superpower.</li>
+                    <li>Global politics shifted to one dominant power.</li>
+                    <li><strong>Why Important:</strong> Questions on how this changed the world.</li>
+                </ul>
+
+                <h3>3. US Hegemony in World Politics</h3>
+                <p><strong>What It Means:</strong> One country (US) dominates others.</p>
+                <ul>
+                    <li>After 1991, US led decisions (e.g., Iraq wars).</li>
+                    <li>Power from military, economy, culture (Hollywood).</li>
+                    <li><strong>Why Important:</strong> Questions on US power or actions.</li>
+                </ul>
+
+                <h3>4. Alternative Centres of Power</h3>
+                <p><strong>What It’s About:</strong> Others challenging US dominance.</p>
+                <ul>
+                    <li><strong>China:</strong> Growing economy and military.</li>
+                    <li><strong>European Union (EU):</strong> Group of European countries.</li>
+                    <li><strong>ASEAN:</strong> Southeast Asian teamwork.</li>
+                    <li><strong>Why Important:</strong> Questions on China or EU.</li>
+                </ul>
+
+                <h3>5. Contemporary South Asia</h3>
+                <p><strong>What It Covers:</strong> Politics in India’s neighbors.</p>
+                <ul>
+                    <li><strong>Pakistan:</strong> Democracy struggles.</li>
+                    <li><strong>Sri Lanka:</strong> Sinhalese vs. Tamil fights.</li>
+                    <li><strong>India’s Relations:</strong> Issues with Pakistan (Kashmir), China (borders).</li>
+                    <li><strong>Why Important:</strong> India’s role in South Asia.</li>
+                </ul>
+
+                <h3>6. International Organizations</h3>
+                <p><strong>What It’s About:</strong> Groups like the UN helping the world.</p>
+                <ul>
+                    <li><strong>UN Structure:</strong> Security Council (5 permanent: US, UK, Russia, China, France), General Assembly.</li>
+                    <li><strong>UN Jobs:</strong> Peace, conflict resolution.</li>
+                    <li><strong>Reforms:</strong> Calls for UN changes.</li>
+                    <li><strong>Why Important:</strong> Questions on UN roles or members.</li>
+                </ul>
+
+                <h3>7. Security in the Contemporary World</h3>
+                <p><strong>What It Means:</strong> Safety from dangers.</p>
+                <ul>
+                    <li><strong>Traditional Threats:</strong> Country wars.</li>
+                    <li><strong>Non-Traditional Threats:</strong> Terrorism, pandemics, climate change.</li>
+                    <li><strong>Why Important:</strong> New security issues in exams.</li>
+                </ul>
+
+                <h3>8. Environment and Natural Resources</h3>
+                <p><strong>What It Covers:</strong> Global environmental challenges.</p>
+                <ul>
+                    <li><strong>Problems:</strong> Pollution, warming, deforestation.</li>
+                    <li><strong>Solutions:</strong> Agreements like Paris Agreement.</li>
+                    <li><strong>Why Important:</strong> Hot exam topic.</li>
+                </ul>
+
+                <h3>9. Globalization</h3>
+                <p><strong>What It Is:</strong> World getting connected.</p>
+                <ul>
+                    <li><strong>Economic:</strong> Global trade, companies.</li>
+                    <li><strong>Cultural:</strong> Sharing movies, food, ideas.</li>
+                    <li><strong>Impact on India:</strong> Jobs but inequality too.</li>
+                    <li><strong>Why Important:</strong> Questions on India and globalization.</li>
+                </ul>
             </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>2. Which leader introduced the policy of ‘Perestroika’ in the Soviet Union?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="a"> a) Joseph Stalin</label>
-                    <label><input type="radio" name="q2" value="b"> b) Vladimir Lenin</label>
-                    <label><input type="radio" name="q2" value="c"> c) Mikhail Gorbachev</label>
-                    <label><input type="radio" name="q2" value="d"> d) Boris Yeltsin</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>3. Which of these is NOT a permanent member of the UN Security Council?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="a"> a) France</label>
-                    <label><input type="radio" name="q3" value="b"> b) Germany</label>
-                    <label><input type="radio" name="q3" value="c"> c) China</label>
-                    <label><input type="radio" name="q3" value="d"> d) United Kingdom</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>4. The ‘Shock Therapy’ model was applied primarily in which region after 1991?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="a"> a) Latin America</label>
-                    <label><input type="radio" name="q4" value="b"> b) Post-Soviet states</label>
-                    <label><input type="radio" name="q4" value="c"> c) Southeast Asia</label>
-                    <label><input type="radio" name="q4" value="d"> d) Western Europe</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>5. India’s ‘Look East Policy’ was renamed to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="a"> a) Act East Policy</label>
-                    <label><input type="radio" name="q5" value="b"> b) Engage Asia Policy</label>
-                    <label><input type="radio" name="q5" value="c"> c) Eastward Expansion</label>
-                    <label><input type="radio" name="q5" value="d"> d) Neighbor First Policy</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>6. The Brundtland Report (1987) is linked to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q6" value="a"> a) Nuclear disarmament</label>
-                    <label><input type="radio" name="q6" value="b"> b) Sustainable Development</label>
-                    <label><input type="radio" name="q6" value="c"> c) Global trade agreements</label>
-                    <label><input type="radio" name="q6" value="d"> d) Human rights</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>7. Which organization promotes regional cooperation in Southeast Asia?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q7" value="a"> a) SAARC</label>
-                    <label><input type="radio" name="q7" value="b"> b) ASEAN</label>
-                    <label><input type="radio" name="q7" value="c"> c) NATO</label>
-                    <label><input type="radio" name="q7" value="d"> d) EU</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>8. Which of these is considered a ‘Global Common’?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q8" value="a"> a) Amazon Rainforest</label>
-                    <label><input type="radio" name="q8" value="b"> b) Outer Space</label>
-                    <label><input type="radio" name="q8" value="c"> c) National Highways</label>
-                    <label><input type="radio" name="q8" value="d"> d) Private Property</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>9. The European Union was primarily formed to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q9" value="a"> a) Promote military alliances</label>
-                    <label><input type="radio" name="q9" value="b"> b) Ensure economic integration</label>
-                    <label><input type="radio" name="q9" value="c"> c) Fight climate change</label>
-                    <label><input type="radio" name="q9" value="d"> d) Establish a single language</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>10. Which country leads the Belt and Road Initiative?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="a"> a) Russia</label>
-                    <label><input type="radio" name="q10" value="b"> b) China</label>
-                    <label><input type="radio" name="q10" value="c"> c) Japan</label>
-                    <label><input type="radio" name="q10" value="d"> d) USA</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>11. The concept of ‘Hegemony’ refers to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q11" value="a"> a) Equal power distribution</label>
-                    <label><input type="radio" name="q11" value="b"> b) Dominance of one state</label>
-                    <label><input type="radio" name="q11" value="c"> c) Regional cooperation</label>
-                    <label><input type="radio" name="q11" value="d"> d) Economic sanctions</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>12. The main objective of the Non-Aligned Movement was:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q12" value="a"> a) Support the USA</label>
-                    <label><input type="radio" name="q12" value="b"> b) Avoid superpower blocs</label>
-                    <label><input type="radio" name="q12" value="c"> c) Promote military alliances</label>
-                    <label><input type="radio" name="q12" value="d"> d) Join the Warsaw Pact</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>13. Which agreement focuses on reducing greenhouse gas emissions?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q13" value="a"> a) Kyoto Protocol</label>
-                    <label><input type="radio" name="q13" value="b"> b) WTO Agreement</label>
-                    <label><input type="radio" name="q13" value="c"> c) NATO Pact</label>
-                    <label><input type="radio" name="q13" value="d"> d) ASEAN Charter</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>14. The ‘ASEAN Way’ emphasizes:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q14" value="a"> a) Military dominance</label>
-                    <label><input type="radio" name="q14" value="b"> b) Consensus and non-interference</label>
-                    <label><input type="radio" name="q14" value="c"> c) Economic sanctions</label>
-                    <label><input type="radio" name="q14" value="d"> d) Political unification</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>15. Which country is NOT part of BRICS?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q15" value="a"> a) Brazil</label>
-                    <label><input type="radio" name="q15" value="b"> b) India</label>
-                    <label><input type="radio" name="q15" value="c"> c) Canada</label>
-                    <label><input type="radio" name="q15" value="d"> d) South Africa</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>16. The United Nations was officially established in:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q16" value="a"> a) 1939</label>
-                    <label><input type="radio" name="q16" value="b"> b) 1945</label>
-                    <label><input type="radio" name="q16" value="c"> c) 1950</label>
-                    <label><input type="radio" name="q16" value="d"> d) 1960</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>17. What replaced the League of Nations?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q17" value="a"> a) World Bank</label>
-                    <label><input type="radio" name="q17" value="b"> b) United Nations</label>
-                    <label><input type="radio" name="q17" value="c"> c) IMF</label>
-                    <label><input type="radio" name="q17" value="d"> d) NATO</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>18. The ‘Soft Power’ of a nation is exercised through:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q18" value="a"> a) Military strength</label>
-                    <label><input type="radio" name="q18" value="b"> b) Culture and ideology</label>
-                    <label><input type="radio" name="q18" value="c"> c) Economic sanctions</label>
-                    <label><input type="radio" name="q18" value="d"> d) Territorial control</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>19. Which of these countries resisted the Maastricht Treaty?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q19" value="a"> a) France</label>
-                    <label><input type="radio" name="q19" value="b"> b) Denmark</label>
-                    <label><input type="radio" name="q19" value="c"> c) Italy</label>
-                    <label><input type="radio" name="q19" value="d"> d) Spain</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>20. The collapse of the Soviet Union led to a world dominated by:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q20" value="a"> a) Bipolarity</label>
-                    <label><input type="radio" name="q20" value="b"> b) Multipolarity</label>
-                    <label><input type="radio" name="q20" value="c"> c) Unipolarity</label>
-                    <label><input type="radio" name="q20" value="d"> d) Neutrality</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>21. Which party dominated Indian politics from 1947 to 1967?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q21" value="a"> a) BJP</label>
-                    <label><input type="radio" name="q21" value="b"> b) CPI</label>
-                    <label><input type="radio" name="q21" value="c"> c) Congress</label>
-                    <label><input type="radio" name="q21" value="d"> d) Janata Party</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>22. The Green Revolution in India primarily aimed to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q22" value="a"> a) Boost industrial growth</label>
-                    <label><input type="radio" name="q22" value="b"> b) Increase agricultural productivity</label>
-                    <label><input type="radio" name="q22" value="c"> c) Promote tourism</label>
-                    <label><input type="radio" name="q22" value="d"> d) Enhance education</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>23. The Emergency in India (1975-77) was declared under:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q23" value="a"> a) Article 356</label>
-                    <label><input type="radio" name="q23" value="b"> b) Article 352</label>
-                    <label><input type="radio" name="q23" value="c"> c) Article 360</label>
-                    <label><input type="radio" name="q23" value="d"> d) Article 370</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>24. India’s political system is best described as:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q24" value="a"> a) Unitary</label>
-                    <label><input type="radio" name="q24" value="b"> b) Federal with a strong Centre</label>
-                    <label><input type="radio" name="q24" value="c"> c) Presidential</label>
-                    <label><input type="radio" name="q24" value="d"> d) Monarchy</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>25. Which was NOT a challenge to nation-building in India post-1947?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q25" value="a"> a) Partition</label>
-                    <label><input type="radio" name="q25" value="b"> b) Linguistic diversity</label>
-                    <label><input type="radio" name="q25" value="c"> c) Economic liberalization</label>
-                    <label><input type="radio" name="q25" value="d"> d) Integration of princely states</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>26. The ‘Panchsheel’ principles were agreed upon between India and:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q26" value="a"> a) Pakistan</label>
-                    <label><input type="radio" name="q26" value="b"> b) China</label>
-                    <label><input type="radio" name="q26" value="c"> c) Nepal</label>
-                    <label><input type="radio" name="q26" value="d"> d) Bangladesh</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>27. Which state was created first after independence based on language?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q27" value="a"> a) Andhra Pradesh</label>
-                    <label><input type="radio" name="q27" value="b"> b) Gujarat</label>
-                    <label><input type="radio" name="q27" value="c"> c) Maharashtra</label>
-                    <label><input type="radio" name="q27" value="d"> d) Tamil Nadu</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>28. The leader of the JP Movement was:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q28" value="a"> a) Indira Gandhi</label>
-                    <label><input type="radio" name="q28" value="b"> b) Jayaprakash Narayan</label>
-                    <label><input type="radio" name="q28" value="c"> c) Morarji Desai</label>
-                    <label><input type="radio" name="q28" value="d"> d) Atal Bihari Vajpayee</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>29. Which article of the Constitution provides for reservations for SC/ST?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q29" value="a"> a) Article 15</label>
-                    <label><input type="radio" name="q29" value="b"> b) Article 16</label>
-                    <label><input type="radio" name="q29" value="c"> c) Article 19</label>
-                    <label><input type="radio" name="q29" value="d"> d) Article 21</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>30. The Mandal Commission recommended reservations for:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q30" value="a"> a) Women</label>
-                    <label><input type="radio" name="q30" value="b"> b) OBCs</label>
-                    <label><input type="radio" name="q30" value="c"> c) Religious minorities</label>
-                    <label><input type="radio" name="q30" value="d"> d) Economically backward</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>31. Which event led to the imposition of Emergency in 1975?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q31" value="a"> a) Indo-Pak War</label>
-                    <label><input type="radio" name="q31" value="b"> b) Allahabad High Court verdict</label>
-                    <label><input type="radio" name="q31" value="c"> c) Economic crisis</label>
-                    <label><input type="radio" name="q31" value="d"> d) Naxal uprising</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>32. The first general election in India was held in:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q32" value="a"> a) 1947</label>
-                    <label><input type="radio" name="q32" value="b"> b) 1950</label>
-                    <label><input type="radio" name="q32" value="c"> c) 1952</label>
-                    <label><input type="radio" name="q32" value="d"> d) 1957</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>33. Which plan focused on rapid industrialization in India?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q33" value="a"> a) First Five-Year Plan</label>
-                    <label><input type="radio" name="q33" value="b"> b) Second Five-Year Plan</label>
-                    <label><input type="radio" name="q33" value="c"> c) Third Five-Year Plan</label>
-                    <label><input type="radio" name="q33" value="d"> d) Fourth Five-Year Plan</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>34. The ‘Garibi Hatao’ slogan was given by:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q34" value="a"> a) Jawaharlal Nehru</label>
-                    <label><input type="radio" name="q34" value="b"> b) Indira Gandhi</label>
-                    <label><input type="radio" name="q34" value="c"> c) Rajiv Gandhi</label>
-                    <label><input type="radio" name="q34" value="d"> d) Morarji Desai</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>35. Which state was bifurcated to create Telangana?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q35" value="a"> a) Andhra Pradesh</label>
-                    <label><input type="radio" name="q35" value="b"> b) Karnataka</label>
-                    <label><input type="radio" name="q35" value="c"> c) Tamil Nadu</label>
-                    <label><input type="radio" name="q35" value="d"> d) Maharashtra</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>36. The anti-defection law is included in which schedule of the Constitution?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q36" value="a"> a) 8th Schedule</label>
-                    <label><input type="radio" name="q36" value="b"> b) 9th Schedule</label>
-                    <label><input type="radio" name="q36" value="c"> c) 10th Schedule</label>
-                    <label><input type="radio" name="q36" value="d"> d) 11th Schedule</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>37. Which movement demanded a separate state for Sikhs?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q37" value="a"> a) Naxal Movement</label>
-                    <label><input type="radio" name="q37" value="b"> b) Khalistan Movement</label>
-                    <label><input type="radio" name="q37" value="c"> c) Dravidian Movement</label>
-                    <label><input type="radio" name="q37" value="d"> d) Chipko Movement</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>38. The ‘Operation Blue Star’ was conducted in:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q38" value="a"> a) 1980</label>
-                    <label><input type="radio" name="q38" value="b"> b) 1984</label>
-                    <label><input type="radio" name="q38" value="c"> c) 1986</label>
-                    <label><input type="radio" name="q38" value="d"> d) 1990</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>39. Which country is NOT a member of SAARC?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q39" value="a"> a) Bhutan</label>
-                    <label><input type="radio" name="q39" value="b"> b) Maldives</label>
-                    <label><input type="radio" name="q39" value="c"> c) Myanmar</label>
-                    <label><input type="radio" name="q39" value="d"> d) Sri Lanka</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>40. The ‘Coalition Era’ in India began prominently in:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q40" value="a"> a) 1970s</label>
-                    <label><input type="radio" name="q40" value="b"> b) 1980s</label>
-                    <label><input type="radio" name="q40" value="c"> c) 1990s</label>
-                    <label><input type="radio" name="q40" value="d"> d) 2000s</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>41. The Paris Agreement is associated with:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q41" value="a"> a) Trade liberalization</label>
-                    <label><input type="radio" name="q41" value="b"> b) Climate change</label>
-                    <label><input type="radio" name="q41" value="c"> c) Nuclear disarmament</label>
-                    <label><input type="radio" name="q41" value="d"> d) Human rights</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>42. Which Indian PM signed the Tashkent Agreement?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q42" value="a"> a) Jawaharlal Nehru</label>
-                    <label><input type="radio" name="q42" value="b"> b) Lal Bahadur Shastri</label>
-                    <label><input type="radio" name="q42" value="c"> c) Indira Gandhi</label>
-                    <label><input type="radio" name="q42" value="d"> d) Rajiv Gandhi</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>43. The concept of ‘Globalization’ primarily involves:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q43" value="a"> a) Isolation of nations</label>
-                    <label><input type="radio" name="q43" value="b"> b) Interconnectedness through trade</label>
-                    <label><input type="radio" name="q43" value="c"> c) Military alliances</label>
-                    <label><input type="radio" name="q43" value="d"> d) Regional conflicts</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>44. Which institution provides loans to developing countries?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q44" value="a"> a) WTO</label>
-                    <label><input type="radio" name="q44" value="b"> b) World Bank</label>
-                    <label><input type="radio" name="q44" value="c"> c) UNEP</label>
-                    <label><input type="radio" name="q44" value="d"> d) NATO</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>45. The ‘One Nation, One Election’ idea relates to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q45" value="a"> a) Economic reforms</label>
-                    <label><input type="radio" name="q45" value="b"> b) Electoral reforms</label>
-                    <label><input type="radio" name="q45" value="c"> c) Judicial reforms</label>
-                    <label><input type="radio" name="q45" value="d"> d) Educational reforms</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>46. Which country shares the longest border with India?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q46" value="a"> a) Pakistan</label>
-                    <label><input type="radio" name="q46" value="b"> b) China</label>
-                    <label><input type="radio" name="q46" value="c"> c) Bangladesh</label>
-                    <label><input type="radio" name="q46" value="d"> d) Nepal</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>47. The RTI Act was passed in India in:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q47" value="a"> a) 2000</label>
-                    <label><input type="radio" name="q47" value="b"> b) 2005</label>
-                    <label><input type="radio" name="q47" value="c"> c) 2010</label>
-                    <label><input type="radio" name="q47" value="d"> d) 2015</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>48. Which of these is a feature of India’s foreign policy?</h3>
-                <div class="options">
-                    <label><input type="radio" name="q48" value="a"> a) Military dominance</label>
-                    <label><input type="radio" name="q48" value="b"> b) Non-alignment</label>
-                    <label><input type="radio" name="q48" value="c"> c) Economic isolation</label>
-                    <label><input type="radio" name="q48" value="d"> d) Territorial expansion</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>49. The NITI Aayog replaced:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q49" value="a"> a) Planning Commission</label>
-                    <label><input type="radio" name="q49" value="b"> b) Finance Commission</label>
-                    <label><input type="radio" name="q49" value="c"> c) Election Commission</label>
-                    <label><input type="radio" name="q49" value="d"> d) UPSC</label>
-                </div>
-            </div>
-            <div class="question">
-                <h3><i class="fas fa-question-circle"></i>50. The ‘Chipko Movement’ was related to:</h3>
-                <div class="options">
-                    <label><input type="radio" name="q50" value="a"> a) Women’s rights</label>
-                    <label><input type="radio" name="q50" value="b"> b) Environmental conservation</label>
-                    <label><input type="radio" name="q50" value="c"> c) Labor rights</label>
-                    <label><input type="radio" name="q50" value="d"> d) Caste equality</label>
-                </div>
-            </div>
-            <!-- Submit Button -->
-            <button id="submit-btn">Submit Quiz</button>
         </div>
 
-        <!-- Results Container -->
-        <div id="results">
-            <h2>Your Results</h2>
-            <p id="score"></p>
-            <p id="motivation"></p>
-            <div class="correct-answers" id="correct-answers"></div>
+        <div class="section" id="part-b">
+            <h2 onclick="toggleContent(this)">Part B: Politics in India since Independence</h2>
+            <div class="content">
+                <h3>1. Challenges of Nation Building</h3>
+                <p><strong>What It Was:</strong> Making India one country after 1947.</p>
+                <ul>
+                    <li><strong>Princely States:</strong> 500+ joined India (e.g., Hyderabad, Junagadh).</li>
+                    <li><strong>State Reorganization:</strong> Language-based states (e.g., Andhra Pradesh 1953).</li>
+                    <li><strong>Diversity:</strong> Managing religions, cultures.</li>
+                    <li><strong>Why Important:</strong> Map or integration questions.</li>
+                </ul>
+
+                <h3>2. Era of One-Party Dominance</h3>
+                <p><strong>What It Means:</strong> Congress ruled for years.</p>
+                <ul>
+                    <li><strong>Why Congress Won:</strong> Freedom struggle, leaders like Nehru.</li>
+                    <li><strong>Decline:</strong> Corruption, party splits.</li>
+                    <li><strong>Why Important:</strong> Why Congress was strong.</li>
+                </ul>
+
+                <h3>3. Politics of Planned Development</h3>
+                <p><strong>What It Was:</strong> Economic growth plans.</p>
+                <ul>
+                    <li><strong>Five-Year Plans:</strong> Government projects (e.g., dams).</li>
+                    <li><strong>Green Revolution:</strong> More food but favored rich areas.</li>
+                    <li><strong>Why Important:</strong> Green Revolution effects.</li>
+                </ul>
+
+                <h3>4. India’s External Relations</h3>
+                <p><strong>What It Covers:</strong> India’s global ties.</p>
+                <ul>
+                    <li><strong>Non-Alignment:</strong> No US or Soviet side.</li>
+                    <li><strong>Key Events:</strong> Panchsheel (China), Pakistan wars.</li>
+                    <li><strong>Why Important:</strong> Foreign policy questions.</li>
+                </ul>
+
+                <h3>5. Challenges to and Restoration of the Congress System</h3>
+                <p><strong>What Happened:</strong> Congress lost, then returned.</p>
+                <ul>
+                    <li><strong>Decline:</strong> Opposition grew (Janata Party 1977).</li>
+                    <li><strong>Restoration:</strong> Back in 1980 with Indira Gandhi.</li>
+                    <li><strong>Why Important:</strong> Shows political shifts.</li>
+                </ul>
+
+                <h3>6. The Crisis of Democratic Order</h3>
+                <p><strong>What It Was:</strong> Emergency (1975-77).</p>
+                <ul>
+                    <li><strong>What Happened:</strong> Indira stopped rights, jailed foes.</li>
+                    <li><strong>Impact:</strong> Democracy fought back, got stronger.</li>
+                    <li><strong>Why Important:</strong> Emergency questions are common.</li>
+                </ul>
+
+                <h3>7. Rise of Popular Movements</h3>
+                <p><strong>What It Means:</strong> People fighting for rights.</p>
+                <ul>
+                    <li><strong>Chipko Movement:</strong> Saved trees in Uttarakhand.</li>
+                    <li><strong>Narmada Bachao Andolan:</strong> Anti-dam in Gujarat.</li>
+                    <li><strong>Why Important:</strong> Short answer topics.</li>
+                </ul>
+
+                <h3>8. Regional Aspirations</h3>
+                <p><strong>What It Covers:</strong> State issues.</p>
+                <ul>
+                    <li><strong>Punjab:</strong> Sikh demands, violence.</li>
+                    <li><strong>Kashmir:</strong> Status conflicts.</li>
+                    <li><strong>Northeast:</strong> Independence demands.</li>
+                    <li><strong>Why Important:</strong> Map or long questions.</li>
+                </ul>
+
+                <h3>9. Recent Developments in Indian Politics</h3>
+                <p><strong>What It’s About:</strong> Modern politics.</p>
+                <ul>
+                    <li><strong>Coalition Politics:</strong> Parties team up (NDA, UPA).</li>
+                    <li><strong>Issues:</strong> Caste, religion, new parties (AAP).</li>
+                    <li><strong>Why Important:</strong> Links to today.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="sample-questions">
+            <h2 onclick="toggleContent(this)">Sample Questions and Answers</h2>
+            <div class="content">
+                <h3>Multiple-Choice Questions (MCQs)</h3>
+                <p><strong>1. Which country is not a permanent member of the UN Security Council?</strong></p>
+                <ul>
+                    <li>A) China B) France C) Germany D) Russia</li>
+                    <li><strong>Answer:</strong> C) Germany</li>
+                    <li><strong>Explanation:</strong> Permanent members are US, UK, Russia, China, France.</li>
+                </ul>
+                <p><strong>2. What was the goal of the Non-Aligned Movement?</strong></p>
+                <ul>
+                    <li>A) Support US B) Stay neutral C) Join Soviet Union D) Fight wars</li>
+                    <li><strong>Answer:</strong> B) Stay neutral</li>
+                    <li><strong>Explanation:</strong> India didn’t pick a side in the Cold War.</li>
+                </ul>
+
+                <h3>Short Answer Questions (2-4 Marks)</h3>
+                <p><strong>1. What is hegemony? Give an example.</strong></p>
+                <p><strong>Answer:</strong> Hegemony is when one country controls others due to its strength. Example: US influences the world with wars and trade rules.</p>
+                <p><strong>2. What was the Green Revolution’s impact on India?</strong></p>
+                <p><strong>Answer:</strong> It increased food production with new seeds, but helped rich farmers more and hurt the environment.</p>
+
+                <h3>Long Answer Questions (6 Marks)</h3>
+                <p><strong>1. Explain the causes and effects of the Cold War.</strong></p>
+                <p><strong>Answer:</strong> Causes: US and Soviet Union had opposite ideas (capitalism vs. communism) and wanted power. They didn’t trust each other, built weapons. Effects: World split into two groups, fought via other countries (e.g., Vietnam), ended in 1991 with US on top.</p>
+                <p><strong>2. What happened during the Emergency in India, and how did it affect democracy?</strong></p>
+                <p><strong>Answer:</strong> In 1975, Indira Gandhi declared Emergency, stopped rights, jailed opponents. It hurt democracy, but after 1977, people voted her out, making democracy stronger.</p>
+
+                <h3>Map-Based Question</h3>
+                <p><strong>Locate the state where the Chipko Movement started.</strong></p>
+                <p><strong>Answer:</strong> Uttarakhand</p>
+                <p><strong>Explanation:</strong> Started in the 1970s to save trees.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2025 | Powered by xAI | Ace Your CBSE Exam with Confidence!</p>
+        <p>&copy; 2025 CBSE Political Science Guide | Designed for Exam Success</p>
     </footer>
 
-    <!-- JavaScript for Quiz Logic -->
     <script>
-        const correctAnswers = {
-            q1: 'b', q2: 'c', q3: 'b', q4: 'b', q5: 'a', q6: 'b', q7: 'b', q8: 'b', q9: 'b', q10: 'b',
-            q11: 'b', q12: 'b', q13: 'a', q14: 'b', q15: 'c', q16: 'b', q17: 'b', q18: 'b', q19: 'b', q20: 'c',
-            q21: 'c', q22: 'b', q23: 'b', q24: 'b', q25: 'c', q26: 'b', q27: 'a', q28: 'b', q29: 'b', q30: 'b',
-            q31: 'b', q32: 'c', q33: 'b', q34: 'b', q35: 'a', q36: 'c', q37: 'b', q38: 'b', q39: 'c', q40: 'c',
-            q41: 'b', q42: 'b', q43: 'b', q44: 'b', q45: 'b', q46: 'c', q47: 'b', q48: 'b', q49: 'a', q50: 'b'
-        };
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            content.classList.toggle('active');
+        }
 
-        const questions = [
-            "What marked the end of the Cold War era? b) Fall of the Berlin Wall",
-            "Which leader introduced the policy of ‘Perestroika’ in the Soviet Union? c) Mikhail Gorbachev",
-            "Which of these is NOT a permanent member of the UN Security Council? b) Germany",
-            "The ‘Shock Therapy’ model was applied primarily in which region after 1991? b) Post-Soviet states",
-            "India’s ‘Look East Policy’ was renamed to: a) Act East Policy",
-            "The Brundtland Report (1987) is linked to: b) Sustainable Development",
-            "Which organization promotes regional cooperation in Southeast Asia? b) ASEAN",
-            "Which of these is considered a ‘Global Common’? b) Outer Space",
-            "The European Union was primarily formed to: b) Ensure economic integration",
-            "Which country leads the Belt and Road Initiative? b) China",
-            "The concept of ‘Hegemony’ refers to: b) Dominance of one state",
-            "The main objective of the Non-Aligned Movement was: b) Avoid superpower blocs",
-            "Which agreement focuses on reducing greenhouse gas emissions? a) Kyoto Protocol",
-            "The ‘ASEAN Way’ emphasizes: b) Consensus and non-interference",
-            "Which country is NOT part of BRICS? c) Canada",
-            "The United Nations was officially established in: b) 1945",
-            "What replaced the League of Nations? b) United Nations",
-            "The ‘Soft Power’ of a nation is exercised through: b) Culture and ideology",
-            "Which of these countries resisted the Maastricht Treaty? b) Denmark",
-            "The collapse of the Soviet Union led to a world dominated by: c) Unipolarity",
-            "Which party dominated Indian politics from 1947 to 1967? c) Congress",
-            "The Green Revolution in India primarily aimed to: b) Increase agricultural productivity",
-            "The Emergency in India (1975-77) was declared under: b) Article 352",
-            "India’s political system is best described as: b) Federal with a strong Centre",
-            "Which was NOT a challenge to nation-building in India post-1947? c) Economic liberalization",
-            "The ‘Panchsheel’ principles were agreed upon between India and: b) China",
-            "Which state was created first after independence based on language? a) Andhra Pradesh",
-            "The leader of the JP Movement was: b) Jayaprakash Narayan",
-            "Which article of the Constitution provides for reservations for SC/ST? b) Article 16",
-            "The Mandal Commission recommended reservations for: b) OBCs",
-            "Which event led to the imposition of Emergency in 1975? b) Allahabad High Court verdict",
-            "The first general election in India was held in: c) 1952",
-            "Which plan focused on rapid industrialization in India? b) Second Five-Year Plan",
-            "The ‘Garibi Hatao’ slogan was given by: b) Indira Gandhi",
-            "Which state was bifurcated to create Telangana? a) Andhra Pradesh",
-            "The anti-defection law is included in which schedule of the Constitution? c) 10th Schedule",
-            "Which movement demanded a separate state for Sikhs? b) Khalistan Movement",
-            "The ‘Operation Blue Star’ was conducted in: b) 1984",
-            "Which country is NOT a member of SAARC? c) Myanmar",
-            "The ‘Coalition Era’ in India began prominently in: c) 1990s",
-            "The Paris Agreement is associated with: b) Climate change",
-            "Which Indian PM signed the Tashkent Agreement? b) Lal Bahadur Shastri",
-            "The concept of ‘Globalization’ primarily involves: b) Interconnectedness through trade",
-            "Which institution provides loans to developing countries? b) World Bank",
-            "The ‘One Nation, One Election’ idea relates to: b) Electoral reforms",
-            "Which country shares the longest border with India? c) Bangladesh",
-            "The RTI Act was passed in India in: b) 2005",
-            "Which of these is a feature of India’s foreign policy? b) Non-alignment",
-            "The NITI Aayog replaced: a) Planning Commission",
-            "The ‘Chipko Movement’ was related to: b) Environmental conservation"
-        ];
-
-        document.getElementById('submit-btn').addEventListener('click', function() {
-            let score = 0;
-            const totalQuestions = 50;
-
-            for (let i = 1; i <= totalQuestions; i++) {
-                const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                if (selected && selected.value === correctAnswers[`q${i}`]) {
-                    score++;
-                }
-            }
-
-            const quizDiv = document.getElementById('quiz');
-            const resultsDiv = document.getElementById('results');
-            quizDiv.style.display = 'none';
-            resultsDiv.style.display = 'block';
-
-            document.getElementById('score').innerText = `Your Score: ${score} out of ${totalQuestions}`;
-            
-            let motivation;
-            if (score >= 40) {
-                motivation = "Wow, you're a Political Science rockstar! Keep this energy—you’re ready to conquer the exam!";
-            } else if (score >= 30) {
-                motivation = "Impressive work! Polish a few areas, and you’ll be unstoppable—keep pushing!";
-            } else if (score >= 20) {
-                motivation = "Solid foundation! Build on this with more practice—you’re closer than you think!";
-            } else {
-                motivation = "Every champion starts somewhere! Stay determined, study hard, and watch your score soar!";
-            }
-            document.getElementById('motivation').innerText = motivation;
-
-            const correctAnswersDiv = document.getElementById('correct-answers');
-            correctAnswersDiv.innerHTML = '<h3>Correct Answers:</h3>';
-            questions.forEach((q, index) => {
-                correctAnswersDiv.innerHTML += `<p>${index + 1}. ${q}</p>`;
-            });
-        });
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
