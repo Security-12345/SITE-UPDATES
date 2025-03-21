@@ -3,129 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Political Science Exam Prep - Class 12 CBSE</title>
+    <title>CBSE Class 12 Political Science Quiz 2025</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
-            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .quiz-container {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         h1 {
             text-align: center;
-            color: #333;
-            font-size: 1.8em;
-        }
-        .question-container {
-            background-color: #fff;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .question {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2c3e50;
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease;
         }
-        .answer {
-            display: none;
-            background-color: #ecf0f1;
-            padding: 10px;
-            border-left: 4px solid #3498db;
-            margin-top: 10px;
+        .question:hover {
+            transform: translateY(-5px);
         }
-        .toggle-btn {
-            background-color: #3498db;
+        .question p {
+            font-weight: 600;
+            color: #34495e;
+            margin: 0 0 10px;
+        }
+        .options label {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+            transition: background 0.3s;
+        }
+        .options label:hover {
+            background: #ecf0f1;
+            border-radius: 5px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        #submit {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #e74c3c;
             color: white;
             border: none;
-            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
             cursor: pointer;
-            border-radius: 3px;
-            font-size: 0.9em;
+            margin-top: 20px;
+            transition: background 0.3s;
         }
-        .toggle-btn:hover {
-            background-color: #2980b9;
+        #submit:hover {
+            background: #c0392b;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            .question-container {
-                padding: 10px;
-            }
-            .toggle-btn {
-                width: 100%;
-                padding: 10px;
-            }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #2ecc71;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.3em;
+            display: none;
+        }
+        #answers {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            display: none;
+        }
+        #answers p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #2c3e50;
+        }
+        .correct { color: #27ae60; }
+        .incorrect { color: #e74c3c; }
+        /* Graphics Placeholder */
+        .quiz-container::before {
+            content: '📚'; /* Replace with an icon/image */
+            font-size: 3em;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            opacity: 0.1;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Political Science Exam Prep - Class 12 CBSE</h1>
+    <div class="quiz-container">
+        <h1>CBSE Class 12 Political Science Quiz 2025</h1>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Which of the following was a key outcome of the end of the Cold War?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> a) Formation of NATO</label>
+                    <label><input type="radio" name="q1" value="b"> b) Dissolution of the Soviet Union</label>
+                    <label><input type="radio" name="q1" value="c"> c) Start of World War II</label>
+                    <label><input type="radio" name="q1" value="d"> d) Creation of the European Union</label>
+                </div>
+            </div>
 
-    <!-- Part A: Contemporary World Politics -->
-    <div class="question-container">
-        <div class="question">1. (MCQ) Which of the following countries is a permanent member of the UN Security Council?</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">c) China<br><strong>Explanation:</strong> The five permanent members of the UN Security Council are the United States, Russia, China, France, and the United Kingdom.</div>
-    </div>
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. The ‘ASEAN Way’ refers to:</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> a) Military alliances in Southeast Asia</label>
+                    <label><input type="radio" name="q2" value="b"> b) Consensus-based decision-making</label>
+                    <label><input type="radio" name="q2" value="c"> c) Economic competition with China</label>
+                    <label><input type="radio" name="q2" value="d"> d) A single currency system</label>
+                </div>
+            </div>
 
-    <div class="question-container">
-        <div class="question">2. (2 Marks) What were the main reasons for the end of the Cold War?</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">The Cold War ended due to:<br>- The economic and military exhaustion of the Soviet Union, which could no longer sustain the arms race with the USA.<br>- Internal reforms like Gorbachev’s Glasnost (openness) and Perestroika (restructuring), which weakened the Soviet system and led to its disintegration by 1991.</div>
-    </div>
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Which country launched the ‘Belt and Road Initiative’ to expand its global influence?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> a) Russia</label>
+                    <label><input type="radio" name="q3" value="b"> b) China</label>
+                    <label><input type="radio" name="q3" value="c"> c) India</label>
+                    <label><input type="radio" name="q3" value="d"> d) Japan</label>
+                </div>
+            </div>
 
-    <div class="question-container">
-        <div class="question">3. (4 Marks) Explain the concept of ‘Shock Therapy’ and its impact on Russia.</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">Shock Therapy refers to the sudden transition from a socialist to a capitalist economy in post-Soviet states after 1991. In Russia, it involved rapid privatization and market liberalization. Its impacts included:<br>- Economic collapse, with industries disappearing and inflation soaring.<br>- Increased poverty and inequality, creating a divide between rich oligarchs and the poor.<br>- Weakened state control, leading to corruption and instability.<br>- Loss of social welfare systems, making life harder for citizens.</div>
-    </div>
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. The primary objective of the United Nations is:</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> a) Economic development</label>
+                    <label><input type="radio" name="q4" value="b"> b) Maintaining international peace and security</label>
+                    <label><input type="radio" name="q4" value="c"> c) Promoting trade agreements</label>
+                    <label><input type="radio" name="q4" value="d"> d) Cultural exchange</label>
+                </div>
+            </div>
 
-    <div class="question-container">
-        <div class="question">4. (6 Marks) “The rise of China has reshaped global politics.” Justify this statement with suitable arguments.</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">China’s rise has transformed global politics through:<br>- <strong>Economic Power:</strong> Its rapid economic growth and initiatives like the Belt and Road Initiative have increased its global influence, challenging Western dominance.<br>- <strong>Military Strength:</strong> Expansion of its military, especially in the South China Sea, has shifted power dynamics in Asia.<br>- <strong>Diplomatic Influence:</strong> China’s role in international organizations and veto power in the UN Security Council amplify its voice.<br>- <strong>India’s Perspective:</strong> India faces border tensions (e.g., Galwan 2020) but also cooperates economically, reflecting a complex relationship.<br>This multipolar shift reduces US unipolarity, reshaping global alliances.</div>
-    </div>
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. ‘Operation Enduring Freedom’ was launched by the USA in response to:</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> a) The Gulf War</label>
+                    <label><input type="radio" name="q5" value="b"> b) 9/11 terrorist attacks</label>
+                    <label><input type="radio" name="q5" value="c"> c) Cuban Missile Crisis</label>
+                    <label><input type="radio" name="q5" value="d"> d) Vietnam War</label>
+                </div>
+            </div>
 
-    <!-- Part B: Politics in India Since Independence -->
-    <div class="question-container">
-        <div class="question">5. (MCQ) Which event led to the imposition of the National Emergency in India on June 25, 1975?</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">b) Allahabad High Court verdict<br><strong>Explanation:</strong> The Emergency was declared after the Allahabad High Court invalidated Indira Gandhi’s election in 1975, triggering political unrest.</div>
-    </div>
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. Which of these is NOT a feature of globalization?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> a) Free flow of goods</label>
+                    <label><input type="radio" name="q6" value="b"> b) Increased state control over markets</label>
+                    <label><input type="radio" name="q6" value="c"> c) Spread of technology</label>
+                    <label><input type="radio" name="q6" value="d"> d) Cultural exchange</label>
+                </div>
+            </div>
 
-    <div class="question-container">
-        <div class="question">6. (2 Marks) Briefly explain the Mandal Issue and one reason for the anti-Mandal protests.</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">The Mandal Issue refers to the 1990 decision to implement the Mandal Commission’s recommendation, reserving 27% of government jobs for Other Backward Classes (OBCs). One reason for anti-Mandal protests was the fear among upper-caste students that it would reduce their job opportunities.</div>
-    </div>
+            <!-- Question 7 -->
+            <div class="question">
+                <p>7. The first general elections in India were held in:</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a"> a) 1947</label>
+                    <label><input type="radio" name="q7" value="b"> b) 1950</label>
+                    <label><input type="radio" name="q7" value="c"> c) 1951-52</label>
+                    <label><input type="radio" name="q7" value="d"> d) 1957</label>
+                </div>
+            </div>
 
-    <div class="question-container">
-        <div class="question">7. (4 Marks) What were the challenges faced by the Election Commission during India’s first general elections?</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">The Election Commission faced:<br>- <strong>Illiteracy:</strong> Most voters couldn’t read, so symbols were used for parties.<br>- <strong>Logistical Issues:</strong> Organizing polling across a vast, diverse country with poor infrastructure was daunting.<br>- <strong>Voter Registration:</strong> Creating an electoral roll for millions, many without documentation, was complex.<br>- <strong>Awareness:</strong> Educating people about voting in a new democracy was a significant task.</div>
-    </div>
+            <!-- Question 8 -->
+            <div class="question">
+                <p>8. Who was the chairman of the Drafting Committee of the Indian Constitution?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="a"> a) Jawaharlal Nehru</label>
+                    <label><input type="radio" name="q8" value="b"> b) B.R. Ambedkar</label>
+                    <label><input type="radio" name="q8" value="c"> c) Sardar Patel</label>
+                    <label><input type="radio" name="q8" value="d"> d) Rajendra Prasad</label>
+                </div>
+            </div>
 
-    <div class="question-container">
-        <div class="question">8. (6 Marks) “Regional demands in India exemplify the principle of unity in diversity.” Do you agree? Support with arguments.</div>
-        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
-        <div class="answer">Yes, I agree. Regional demands reflect India’s diversity while reinforcing unity:<br>- <strong>Linguistic States:</strong> Formation of states like Andhra Pradesh (1953) based on language preserved cultural identity within a united India.<br>- <strong>Northeast Autonomy:</strong> Granting autonomy to states like Nagaland balances regional aspirations with national integrity.<br>- <strong>Federal Structure:</strong> Power-sharing through federalism accommodates diverse demands (e.g., Tamil Nadu’s language protests) without breaking unity.<br>However, excessive demands (e.g., separatism in Kashmir) sometimes challenge unity, though resolved through dialogue, showing India’s strength in managing diversity.</div>
+            <!-- Question 9 -->
+            <div class="question">
+                <p>9. The ‘Navnirman Movement’ took place in which state?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="a"> a) Gujarat</label>
+                    <label><input type="radio" name="q9" value="b"> b) Punjab</label>
+                    <label><input type="radio" name="q9" value="c"> c) Tamil Nadu</label>
+                    <label><input type="radio" name="q9" value="d"> d) West Bengal</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <p>10. The Mandal Commission recommended reservations for:</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="a"> a) Scheduled Castes</label>
+                    <label><input type="radio" name="q10" value="b"> b) Scheduled Tribes</label>
+                    <label><input type="radio" name="q10" value="c"> c) Other Backward Classes</label>
+                    <label><input type="radio" name="q10" value="d"> d) Economically Weaker Sections</label>
+                </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question">
+                <p>11. Which political party dominated India’s politics during the ‘Congress System’ phase?</p>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="a"> a) Bharatiya Janata Party</label>
+                    <label><input type="radio" name="q11" value="b"> b) Indian National Congress</label>
+                    <label><input type="radio" name="q11" value="c"> c) Communist Party of India</label>
+                    <label><input type="radio" name="q11" value="d"> d) Janata Party</label>
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question">
+                <p>12. The anti-Sikh riots in 1984 followed the assassination of:</p>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="a"> a) Mahatma Gandhi</label>
+                    <label><input type="radio" name="q12" value="b"> b) Indira Gandhi</label>
+                    <label><input type="radio" name="q12" value="c"> c) Rajiv Gandhi</label>
+                    <label><input type="radio" name="q12" value="d"> d) Lal Bahadur Shastri</label>
+                </div>
+            </div>
+
+            <button type="button" id="submit">Submit Quiz</button>
+        </form>
+        <div id="result"></div>
+        <div id="answers"></div>
     </div>
 
     <script>
-        function toggleAnswer(button) {
-            const answer = button.nextElementSibling;
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-                button.textContent = "Show Answer";
-            } else {
-                answer.style.display = "block";
-                button.textContent = "Hide Answer";
+        document.getElementById('submit').addEventListener('click', function() {
+            const answers = {
+                q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b', q6: 'b',
+                q7: 'c', q8: 'b', q9: 'a', q10: 'c', q11: 'b', q12: 'b'
+            };
+            const answerText = {
+                q1: 'b) Dissolution of the Soviet Union', q2: 'b) Consensus-based decision-making',
+                q3: 'b) China', q4: 'b) Maintaining international peace and security',
+                q5: 'b) 9/11 terrorist attacks', q6: 'b) Increased state control over markets',
+                q7: 'c) 1951-52', q8: 'b) B.R. Ambedkar', q9: 'a) Gujarat',
+                q10: 'c) Other Backward Classes', q11: 'b) Indian National Congress',
+                q12: 'b) Indira Gandhi'
+            };
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            let resultHTML = '';
+
+            for (let i = 1; i <= 12; i++) {
+                const selected = form.querySelector(`input[name="q${i}"]:checked`);
+                const userAnswer = selected ? selected.value : 'Not answered';
+                const correctAnswer = answers[`q${i}`];
+                if (userAnswer === correctAnswer) {
+                    score++;
+                    resultHTML += `<p class="correct">Q${i}: Correct! (${answerText[`q${i}`]})</p>`;
+                } else {
+                    resultHTML += `<p class="incorrect">Q${i}: Wrong. You chose: ${userAnswer ? userAnswer + ')' : 'None'}, Correct: ${answerText[`q${i}`]}</p>`;
+                }
             }
-        }
+
+            const result = document.getElementById('result');
+            result.style.display = 'block';
+            result.innerHTML = `Your Score: ${score} out of 12<br>` +
+                (score === 12 ? 'Perfect! You’re a Political Science Pro!' :
+                 score >= 8 ? 'Great Work! Almost there!' :
+                 'Keep Practicing! You’ll ace it next time!');
+
+            const answersDiv = document.getElementById('answers');
+            answersDiv.style.display = 'block';
+            answersDiv.innerHTML = '<h3>Your Answers vs Correct Answers:</h3>' + resultHTML;
+
+            this.disabled = true; // Prevent multiple submissions
+        });
     </script>
 </body>
 </html>
