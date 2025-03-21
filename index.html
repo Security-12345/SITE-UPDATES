@@ -3,305 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class 12 Political Science Quiz 2025</title>
+    <title>CBSE Class 12 Political Science Mobile Quiz</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 10px;
+            color: #333;
         }
-        .quiz-container {
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
             background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            width: 100%;
-            max-width: 900px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         h1 {
+            font-size: 1.5em;
             text-align: center;
             color: #2c3e50;
-            font-size: 2.5em;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #2980b9;
+            margin-top: 20px;
         }
         .question {
             background: #f9f9f9;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border-left: 5px solid #3498db;
-            transition: transform 0.3s ease;
-        }
-        .question:hover {
-            transform: translateY(-5px);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
         }
         .question p {
-            font-weight: 600;
-            color: #34495e;
+            font-size: 1em;
             margin: 0 0 10px;
+            font-weight: bold;
         }
         .options label {
-            display: flex;
-            align-items: center;
-            margin: 8px 0;
-            color: #555;
-            cursor: pointer;
+            display: block;
+            font-size: 0.9em;
+            margin: 5px 0;
             padding: 5px;
-            transition: background 0.3s;
-        }
-        .options label:hover {
-            background: #ecf0f1;
-            border-radius: 5px;
+            cursor: pointer;
         }
         .options input {
-            margin-right: 10px;
+            margin-right: 8px;
         }
-        #submit {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: #e74c3c;
+        .answer-btn {
+            background: #e67e22;
             color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 1.2em;
+            padding: 8px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 0.9em;
             cursor: pointer;
-            margin-top: 20px;
-            transition: background 0.3s;
+            margin-top: 10px;
         }
-        #submit:hover {
-            background: #c0392b;
+        .answer-btn:hover {
+            background: #d35400;
         }
-        #result {
-            margin-top: 30px;
-            padding: 20px;
-            background: #2ecc71;
-            color: white;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.3em;
+        .answer {
             display: none;
-        }
-        #answers {
-            margin-top: 20px;
-            padding: 15px;
             background: #ecf0f1;
-            border-radius: 10px;
-            display: none;
-        }
-        #answers p {
-            margin: 5px 0;
-            font-size: 1em;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
             color: #2c3e50;
         }
-        .correct { color: #27ae60; }
-        .incorrect { color: #e74c3c; }
-        /* Graphics Placeholder */
-        .quiz-container::before {
-            content: '📚'; /* Replace with an icon/image */
-            font-size: 3em;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            opacity: 0.1;
+        #submit {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #submit:hover {
+            background: #219653;
+        }
+        #result {
+            margin-top: 15px;
+            padding: 10px;
+            background: #2ecc71;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1em;
+            display: none;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            h2 {
+                font-size: 1.1em;
+            }
+            .question p {
+                font-size: 0.95em;
+            }
+            .options label {
+                font-size: 0.85em;
+            }
+            .answer-btn, #submit {
+                padding: 10px;
+                font-size: 0.9em;
+            }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="quiz-container">
+    <div class="container">
         <h1>CBSE Class 12 Political Science Quiz 2025</h1>
+
+        <!-- MCQs Section -->
+        <h2>MCQs (1 Mark)</h2>
         <form id="quizForm">
-            <!-- Question 1 -->
             <div class="question">
-                <p>1. Which of the following was a key outcome of the end of the Cold War?</p>
+                <p>1. What ended the Cold War?</p>
                 <div class="options">
-                    <label><input type="radio" name="q1" value="a"> a) Formation of NATO</label>
-                    <label><input type="radio" name="q1" value="b"> b) Dissolution of the Soviet Union</label>
-                    <label><input type="radio" name="q1" value="c"> c) Start of World War II</label>
-                    <label><input type="radio" name="q1" value="d"> d) Creation of the European Union</label>
+                    <label><input type="radio" name="q1" value="a"> a) USA won a war</label>
+                    <label><input type="radio" name="q1" value="b"> b) Soviet Union broke apart</label>
+                    <label><input type="radio" name="q1" value="c"> c) China joined NATO</label>
+                    <label><input type="radio" name="q1" value="d"> d) India became a superpower</label>
                 </div>
             </div>
-
-            <!-- Question 2 -->
             <div class="question">
-                <p>2. The ‘ASEAN Way’ refers to:</p>
+                <p>2. Which country started the Belt and Road Initiative?</p>
                 <div class="options">
-                    <label><input type="radio" name="q2" value="a"> a) Military alliances in Southeast Asia</label>
-                    <label><input type="radio" name="q2" value="b"> b) Consensus-based decision-making</label>
-                    <label><input type="radio" name="q2" value="c"> c) Economic competition with China</label>
-                    <label><input type="radio" name="q2" value="d"> d) A single currency system</label>
+                    <label><input type="radio" name="q2" value="a"> a) Japan</label>
+                    <label><input type="radio" name="q2" value="b"> b) China</label>
+                    <label><input type="radio" name="q2" value="c"> c) Russia</label>
+                    <label><input type="radio" name="q2" value="d"> d) USA</label>
                 </div>
             </div>
-
-            <!-- Question 3 -->
             <div class="question">
-                <p>3. Which country launched the ‘Belt and Road Initiative’ to expand its global influence?</p>
+                <p>3. What’s the UN’s main job?</p>
                 <div class="options">
-                    <label><input type="radio" name="q3" value="a"> a) Russia</label>
-                    <label><input type="radio" name="q3" value="b"> b) China</label>
-                    <label><input type="radio" name="q3" value="c"> c) India</label>
-                    <label><input type="radio" name="q3" value="d"> d) Japan</label>
+                    <label><input type="radio" name="q3" value="a"> a) Make money</label>
+                    <label><input type="radio" name="q3" value="b"> b) Keep peace</label>
+                    <label><input type="radio" name="q3" value="c"> c) Build schools</label>
+                    <label><input type="radio" name="q3" value="d"> d) Trade goods</label>
                 </div>
             </div>
-
-            <!-- Question 4 -->
             <div class="question">
-                <p>4. The primary objective of the United Nations is:</p>
+                <p>4. When were India’s first elections?</p>
                 <div class="options">
-                    <label><input type="radio" name="q4" value="a"> a) Economic development</label>
-                    <label><input type="radio" name="q4" value="b"> b) Maintaining international peace and security</label>
-                    <label><input type="radio" name="q4" value="c"> c) Promoting trade agreements</label>
-                    <label><input type="radio" name="q4" value="d"> d) Cultural exchange</label>
+                    <label><input type="radio" name="q4" value="a"> a) 1947</label>
+                    <label><input type="radio" name="q4" value="b"> b) 1950</label>
+                    <label><input type="radio" name="q4" value="c"> c) 1951-52</label>
+                    <label><input type="radio" name="q4" value="d"> d) 1957</label>
                 </div>
             </div>
-
-            <!-- Question 5 -->
             <div class="question">
-                <p>5. ‘Operation Enduring Freedom’ was launched by the USA in response to:</p>
+                <p>5. Who led the Constitution’s drafting?</p>
                 <div class="options">
-                    <label><input type="radio" name="q5" value="a"> a) The Gulf War</label>
-                    <label><input type="radio" name="q5" value="b"> b) 9/11 terrorist attacks</label>
-                    <label><input type="radio" name="q5" value="c"> c) Cuban Missile Crisis</label>
-                    <label><input type="radio" name="q5" value="d"> d) Vietnam War</label>
+                    <label><input type="radio" name="q5" value="a"> a) Nehru</label>
+                    <label><input type="radio" name="q5" value="b"> b) Ambedkar</label>
+                    <label><input type="radio" name="q5" value="c"> c) Patel</label>
+                    <label><input type="radio" name="q5" value="d"> d) Gandhi</label>
                 </div>
             </div>
-
-            <!-- Question 6 -->
             <div class="question">
-                <p>6. Which of these is NOT a feature of globalization?</p>
+                <p>6. What caused the 1975 Emergency?</p>
                 <div class="options">
-                    <label><input type="radio" name="q6" value="a"> a) Free flow of goods</label>
-                    <label><input type="radio" name="q6" value="b"> b) Increased state control over markets</label>
-                    <label><input type="radio" name="q6" value="c"> c) Spread of technology</label>
-                    <label><input type="radio" name="q6" value="d"> d) Cultural exchange</label>
+                    <label><input type="radio" name="q6" value="a"> a) War with Pakistan</label>
+                    <label><input type="radio" name="q6" value="b"> b) Court ruling against Indira Gandhi</label>
+                    <label><input type="radio" name="q6" value="c"> c) Food shortage</label>
+                    <label><input type="radio" name="q6" value="d"> d) Student protests</label>
                 </div>
             </div>
-
-            <!-- Question 7 -->
-            <div class="question">
-                <p>7. The first general elections in India were held in:</p>
-                <div class="options">
-                    <label><input type="radio" name="q7" value="a"> a) 1947</label>
-                    <label><input type="radio" name="q7" value="b"> b) 1950</label>
-                    <label><input type="radio" name="q7" value="c"> c) 1951-52</label>
-                    <label><input type="radio" name="q7" value="d"> d) 1957</label>
-                </div>
-            </div>
-
-            <!-- Question 8 -->
-            <div class="question">
-                <p>8. Who was the chairman of the Drafting Committee of the Indian Constitution?</p>
-                <div class="options">
-                    <label><input type="radio" name="q8" value="a"> a) Jawaharlal Nehru</label>
-                    <label><input type="radio" name="q8" value="b"> b) B.R. Ambedkar</label>
-                    <label><input type="radio" name="q8" value="c"> c) Sardar Patel</label>
-                    <label><input type="radio" name="q8" value="d"> d) Rajendra Prasad</label>
-                </div>
-            </div>
-
-            <!-- Question 9 -->
-            <div class="question">
-                <p>9. The ‘Navnirman Movement’ took place in which state?</p>
-                <div class="options">
-                    <label><input type="radio" name="q9" value="a"> a) Gujarat</label>
-                    <label><input type="radio" name="q9" value="b"> b) Punjab</label>
-                    <label><input type="radio" name="q9" value="c"> c) Tamil Nadu</label>
-                    <label><input type="radio" name="q9" value="d"> d) West Bengal</label>
-                </div>
-            </div>
-
-            <!-- Question 10 -->
-            <div class="question">
-                <p>10. The Mandal Commission recommended reservations for:</p>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="a"> a) Scheduled Castes</label>
-                    <label><input type="radio" name="q10" value="b"> b) Scheduled Tribes</label>
-                    <label><input type="radio" name="q10" value="c"> c) Other Backward Classes</label>
-                    <label><input type="radio" name="q10" value="d"> d) Economically Weaker Sections</label>
-                </div>
-            </div>
-
-            <!-- Question 11 -->
-            <div class="question">
-                <p>11. Which political party dominated India’s politics during the ‘Congress System’ phase?</p>
-                <div class="options">
-                    <label><input type="radio" name="q11" value="a"> a) Bharatiya Janata Party</label>
-                    <label><input type="radio" name="q11" value="b"> b) Indian National Congress</label>
-                    <label><input type="radio" name="q11" value="c"> c) Communist Party of India</label>
-                    <label><input type="radio" name="q11" value="d"> d) Janata Party</label>
-                </div>
-            </div>
-
-            <!-- Question 12 -->
-            <div class="question">
-                <p>12. The anti-Sikh riots in 1984 followed the assassination of:</p>
-                <div class="options">
-                    <label><input type="radio" name="q12" value="a"> a) Mahatma Gandhi</label>
-                    <label><input type="radio" name="q12" value="b"> b) Indira Gandhi</label>
-                    <label><input type="radio" name="q12" value="c"> c) Rajiv Gandhi</label>
-                    <label><input type="radio" name="q12" value="d"> d) Lal Bahadur Shastri</label>
-                </div>
-            </div>
-
-            <button type="button" id="submit">Submit Quiz</button>
+            <button type="button" id="submit">Submit MCQs</button>
         </form>
         <div id="result"></div>
-        <div id="answers"></div>
+
+        <!-- Short Answer Section -->
+        <h2>Short Answers (2 & 4 Marks)</h2>
+        <div class="question">
+            <p>7. Why did the Soviet Union fall? (2 Marks)</p>
+            <button class="answer-btn" onclick="toggleAnswer('answer7')">Show Answer</button>
+            <div id="answer7" class="answer">
+                The Soviet Union fell because it ran out of money to keep up with the USA in the arms race. Also, Gorbachev’s changes—like opening up (Glasnost) and fixing the economy (Perestroika)—made people want freedom, and it broke apart in 1991.
+            </div>
+        </div>
+        <div class="question">
+            <p>8. What is globalization in easy words? (2 Marks)</p>
+            <button class="answer-btn" onclick="toggleAnswer('answer8')">Show Answer</button>
+            <div id="answer8" class="answer">
+                Globalization means the world getting connected—like sharing goods, ideas, and tech across countries. It’s about less borders and more trade, like buying phones from China or watching Hollywood movies in India.
+            </div>
+        </div>
+        <div class="question">
+            <p>9. What happened in Russia after Shock Therapy? (4 Marks)</p>
+            <button class="answer-btn" onclick="toggleAnswer('answer9')">Show Answer</button>
+            <div id="answer9" class="answer">
+                Shock Therapy was when Russia quickly changed from a government-run economy to a free market after 1991. It caused big problems: Factories shut down, people lost jobs. Prices shot up, money became worthless. Rich guys (oligarchs) got super rich, most people got poor. No more free healthcare or help—life got tough.
+            </div>
+        </div>
+        <div class="question">
+            <p>10. What problems did India face right after 1947? (4 Marks)</p>
+            <button class="answer-btn" onclick="toggleAnswer('answer10')">Show Answer</button>
+            <div id="answer10" class="answer">
+                After 1947, India had big challenges: Partition Mess—Millions moved, fights broke out, like Hindu-Muslim riots. Princely States—500+ states had to join India, some like Hyderabad didn’t want to. Poverty—Most people were poor, no food or jobs. Unity—Different languages and cultures had to stick together.
+            </div>
+        </div>
+
+        <!-- Long Answer Section -->
+        <h2>Long Answers (6 Marks)</h2>
+        <div class="question">
+            <p>11. How has China’s rise changed the world? Explain simply. (6 Marks)</p>
+            <button class="answer-btn" onclick="toggleAnswer('answer11')">Show Answer</button>
+            <div id="answer11" class="answer">
+                China’s rise has shaken up the world in big ways: Money Power—China’s economy grew fast—it makes stuff cheap and sells everywhere. Projects like Belt and Road help it control trade. Army Power—China’s building a strong military—like ships in the South China Sea—making neighbors like India nervous (think 2020 border fights). World Voice—As a UN Security Council member, it says no to things USA wants. India’s Side—We trade a lot with China but also argue over borders. It’s making the world less about just the USA and more about many powers.
+            </div>
+        </div>
+        <div class="question">
+            <p>12. Was the Emergency in 1975 good or bad for India? Explain simply. (6 Marks)</p>
+            <button class="answer-btn" onclick="toggleAnswer('answer12')">Show Answer</button>
+            <div id="answer12" class="answer">
+                The Emergency (1975-77) happened when Indira Gandhi got scared after a court said she cheated in elections. Here’s what happened: Bad Stuff—She stopped democracy—jailed leaders, shut newspapers, and forced rules like sterilization. People lost freedom. Good Stuff—Trains ran on time, government worked faster, and some poor got help. Long Run—It hurt trust in Congress, but people fought back, ending it in 1977 with elections. It showed democracy can bounce back, but it was mostly bad for rights.
+            </div>
+        </div>
     </div>
 
     <script>
+        // MCQ Submission
         document.getElementById('submit').addEventListener('click', function() {
-            const answers = {
-                q1: 'b', q2: 'b', q3: 'b', q4: 'b', q5: 'b', q6: 'b',
-                q7: 'c', q8: 'b', q9: 'a', q10: 'c', q11: 'b', q12: 'b'
-            };
-            const answerText = {
-                q1: 'b) Dissolution of the Soviet Union', q2: 'b) Consensus-based decision-making',
-                q3: 'b) China', q4: 'b) Maintaining international peace and security',
-                q5: 'b) 9/11 terrorist attacks', q6: 'b) Increased state control over markets',
-                q7: 'c) 1951-52', q8: 'b) B.R. Ambedkar', q9: 'a) Gujarat',
-                q10: 'c) Other Backward Classes', q11: 'b) Indian National Congress',
-                q12: 'b) Indira Gandhi'
-            };
+            const answers = { q1: 'b', q2: 'b', q3: 'b', q4: 'c', q5: 'b', q6: 'b' };
             let score = 0;
             const form = document.getElementById('quizForm');
-            let resultHTML = '';
-
-            for (let i = 1; i <= 12; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const selected = form.querySelector(`input[name="q${i}"]:checked`);
-                const userAnswer = selected ? selected.value : 'Not answered';
-                const correctAnswer = answers[`q${i}`];
-                if (userAnswer === correctAnswer) {
+                if (selected && selected.value === answers[`q${i}`]) {
                     score++;
-                    resultHTML += `<p class="correct">Q${i}: Correct! (${answerText[`q${i}`]})</p>`;
-                } else {
-                    resultHTML += `<p class="incorrect">Q${i}: Wrong. You chose: ${userAnswer ? userAnswer + ')' : 'None'}, Correct: ${answerText[`q${i}`]}</p>`;
                 }
             }
-
             const result = document.getElementById('result');
             result.style.display = 'block';
-            result.innerHTML = `Your Score: ${score} out of 12<br>` +
-                (score === 12 ? 'Perfect! You’re a Political Science Pro!' :
-                 score >= 8 ? 'Great Work! Almost there!' :
-                 'Keep Practicing! You’ll ace it next time!');
-
-            const answersDiv = document.getElementById('answers');
-            answersDiv.style.display = 'block';
-            answersDiv.innerHTML = '<h3>Your Answers vs Correct Answers:</h3>' + resultHTML;
-
-            this.disabled = true; // Prevent multiple submissions
+            result.innerHTML = `Your MCQ Score: ${score} out of 6<br>` +
+                (score === 6 ? 'Awesome! You nailed it!' : score >= 4 ? 'Good job! Almost there!' : 'Keep practicing!');
+            this.disabled = true;
         });
+
+        // Toggle Answer Visibility
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>
