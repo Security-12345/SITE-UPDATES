@@ -3,453 +3,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainbow Village Security Updates</title>
+    <title>CBSE Class 12 Political Science Practice Paper 2024-2025</title>
     <style>
-        * {
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background: #f5f5f5;
-            min-height: 100vh;
-            padding: 20px;
-            color: #343a40;
+            background-color: #f4f4f9;
+            color: #333;
             line-height: 1.6;
         }
-
-        .news-container {
-            max-width: 1200px;
+        .container {
+            width: 80%;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            position: relative;
-            background-image: linear-gradient(45deg, #f5f5f5 25%, #e9ecef 25%, #e9ecef 50%, #f5f5f5 50%, #f5f5f5 75%, #e9ecef 75%, #e9ecef);
-            background-size: 20px 20px;
+            padding: 20px;
         }
-
-        .header {
-            background: #212529;
-            padding: 40px 20px;
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
             text-align: center;
-            color: #ffffff;
-            border-bottom: 6px solid #c0392b;
-            position: relative;
+            margin-bottom: 20px;
+            font-size: 2.5em;
         }
-
-        .site-heading {
-            font-size: clamp(2.5em, 5vw, 4em);
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
         }
-
-        .ticker {
-            background: #c0392b;
-            color: #ffffff;
-            padding: 15px;
-            font-size: clamp(1em, 2.5vw, 1.3em);
-            font-weight: bold;
-            overflow: hidden;
-            white-space: nowrap;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .ticker span {
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 15s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .headline {
-            font-size: clamp(1.8em, 4vw, 2.8em);
-            color: #c0392b;
-            text-align: center;
-            padding: 30px 15px;
-            background: #f5f5f5;
-            font-weight: 700;
-            border-bottom: 6px solid #e74c3c;
-            text-transform: uppercase;
-        }
-
-        .content {
-            padding: 50px;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 50px;
-        }
-
-        .updates-section {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .updates-section h2 {
-            font-size: clamp(1.8em, 3vw, 2.2em);
-            color: #212529;
-            margin-bottom: 30px;
-            border-bottom: 4px solid #c0392b;
-            padding-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .update-item {
-            background: #f8f9fa;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-left: 6px solid #c0392b;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .update-item.latest {
-            border-left: 6px solid #e74c3c;
-            background: #eceff1;
-        }
-
-        .update-item:hover {
-            transform: translateX(10px);
-        }
-
-        .update-item h3 {
-            font-size: clamp(1.3em, 2vw, 1.6em);
-            color: #212529;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .update-item p {
-            font-size: clamp(1em, 2vw, 1.2em);
-            color: #343a40;
+        p, ol, ul {
             margin-bottom: 15px;
         }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: #ffffff;
+        /* Header Styling */
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        .schedule-table th, .schedule-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #dee2e6;
+        /* Navigation Menu */
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
         }
-
-        .schedule-table th {
-            background: #212529;
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .schedule-table td {
-            background: #f8f9fa;
-        }
-
-        .highlight {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-
-        .timestamp {
-            font-size: clamp(0.9em, 1.5vw, 1em);
-            color: #868e96;
-            font-style: italic;
-            display: inline-flex;
-            align-items: center;
-            background: #e9ecef;
-            padding: 8px 12px;
-            border-radius: 5px;
-        }
-
-        .timestamp::before {
-            content: '🕒';
-            margin-right: 5px;
-        }
-
-        .sidebar {
-            background: #343a40;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            color: #ffffff;
-        }
-
-        .sidebar h3 {
-            font-size: clamp(1.3em, 2.5vw, 1.6em);
-            color: #ffffff;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            border-bottom: 3px solid #c0392b;
-            padding-bottom: 10px;
-        }
-
-        .quick-links ul {
-            list-style: none;
-        }
-
-        .quick-links li {
-            margin: 15px 0;
-        }
-
-        .quick-links a {
-            color: #e74c3c;
+        nav a {
+            color: white;
             text-decoration: none;
-            padding: 12px 15px;
-            display: block;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #e74c3c;
+        }
+        /* Search Bar */
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            transition: background 0.3s ease, color 0.3s ease;
         }
-
-        .quick-links a:hover {
-            background: #e74c3c;
-            color: #ffffff;
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-
-        .footer {
-            background: #212529;
-            color: #adb5bd;
+        .search-bar button:hover {
+            background-color: #c0392b;
+        }
+        /* Section Styling */
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #e74c3c;
+        }
+        /* Answer Styling */
+        .answer {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 10px;
+        }
+        /* Button Styling */
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #c0392b;
+        }
+        /* Footer Styling */
+        footer {
             text-align: center;
             padding: 20px;
-            font-size: clamp(0.9em, 1.5vw, 1em);
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-
-        .footer a {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
-            .content {
-                grid-template-columns: 1fr;
-                padding: 25px;
-                gap: 30px;
+            .container {
+                width: 95%;
             }
-            .schedule-table {
-                display: block;
-            }
-            .schedule-table tr {
-                display: block;
-                margin-bottom: 20px;
-                border: 1px solid #dee2e6;
-                border-radius: 8px;
-                padding: 10px;
-                background: #ffffff;
-            }
-            .schedule-table th, .schedule-table td {
-                display: block;
-                text-align: left;
-                border: none;
-            }
-            .schedule-table th {
-                display: none;
-            }
-            .schedule-table td::before {
-                content: attr(data-label) ": ";
-                font-weight: bold;
-                color: #c0392b;
-            }
-            .ticker span {
-                animation: marquee 20s linear infinite;
-            }
-            .ticker:hover span {
-                animation-play-state: paused;
-            }
-            .update-item p {
-                font-size: 1em;
-            }
-            .update-item h3 {
-                font-size: 1.4em;
-            }
-            .sidebar {
-                padding: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .site-heading {
+            h1 {
                 font-size: 2em;
             }
-            .headline {
-                font-size: 1.3em;
-                padding: 20px 10px;
+            nav a {
+                display: block;
+                margin: 10px 0;
             }
-            .update-item {
-                padding: 15px;
-            }
-            .schedule-table td {
-                padding: 10px;
+            .search-bar input {
+                width: 80%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="news-container">
-        <div class="header">
-            <h1 class="site-heading">Rainbow Village Security Updates</h1>
-        </div>
+    <!-- Header -->
+    <header>
+        <h1>CBSE Class 12 Political Science Practice Paper 2024-2025</h1>
+        <p>Prepare Effectively with Comprehensive Questions and Answers!</p>
+    </header>
 
-        <div class="ticker">
-            <span>Security Team: New RV Updates Added - Check Below for Details!</span>
-        </div>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#section-a">Section A</a>
+        <a href="#section-b">Section B</a>
+        <a href="#section-c">Section C</a>
+        <a href="#section-d">Section D</a>
+        <a href="#section-e">Section E</a>
+    </nav>
 
-        <h2 class="headline">Security Team Briefing</h2>
-
-        <div class="content">
-            <div class="updates-section">
-                <h2>Security Team Updates</h2>
-
-                <!-- RV Updates Section -->
-                <div class="update-item latest">
-                    <h3>RV Updates: Fan-Coil Maintenance at 2466 Eglinton Avenue East</h3>
-                    <p>We have scheduled the Fan-coil Unit Maintenance & LINT SCREEN CLEANING at 466 Eglinton Avenue East as follows:</p>
-                    <table class="schedule-table">
-                        <tr>
-                            <th>Day</th>
-                            <th>Date</th>
-                            <th>Details</th>
-                            <th>Floors</th>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Tuesday</td>
-                            <td data-label="Date">March 25</td>
-                            <td data-label="Details">Day 1</td>
-                            <td data-label="Floors">PH 18, LPH Floor to 16th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Wednesday</td>
-                            <td data-label="Date">March 26</td>
-                            <td data-label="Details">Day 2</td>
-                            <td data-label="Floors">15th Floor to 12th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Thursday</td>
-                            <td data-label="Date">March 27</td>
-                            <td data-label="Details">Day 3</td>
-                            <td data-label="Floors">11th Floor to 8th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Friday</td>
-                            <td data-label="Date">March 28</td>
-                            <td data-label="Details">Day 4</td>
-                            <td data-label="Floors">7th Floor to 6th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Wednesday</td>
-                            <td data-label="Date">April 2</td>
-                            <td data-label="Details">Day 5</td>
-                            <td data-label="Floors">5th Floor to Ground Floor inclusive</td>
-                        </tr>
-                    </table>
-                    <p>This is a building function, and it is necessary to be done. Please ensure that access is granted during that time. If we cannot access your unit with our master key, please ensure to leave your key with the management office. It is not necessary that you be home during the day, as building staff will accompany the crew. Please also ensure that any entry alarm set up in the unit is deactivated.</p>
-                    <p class="highlight">For the crew to have clear access to the fan coil unit(s) and dryer, please remove all items at least 3 feet in front and beside the fan coil unit and dryer.</p>
-                    <p><strong>Oil Collection Drum:</strong> The drum is located outside the recycling room, in the loading dock area behind the building. You can open the lid and dump the oil inside the drum. We request all residents to use the drum to dispose of cooking oil/grease. When cooking oil/grease is disposed in the kitchen sink, it can clog the drains and cause back-ups & floods.</p>
-                    <p><strong>Resident Maintenance Responsibilities:</strong> Please be reminded that residents are responsible for the maintenance and repair of all items inside their unit, including any fixtures or systems that serve only your unit or an adjacent one. This includes but is not limited to plumbing, electrical, appliances, and other personal fixtures. The building management is only responsible for maintaining the Fancoil units in your suites.</p>
-                    <p><strong>Notify Gatehouse of Visitor Arrivals:</strong> To assist our security team, please inform the Gatehouse of expected visitors. Your cooperation enhances our community’s safety and helps regulate the high volume of traffic.</p>
-                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
-                </div>
-
-                <!-- Existing Updates -->
-                <div class="update-item">
-                    <h3>Support Fan-Coil Maintenance at 2466 Eglinton Avenue East</h3>
-                    <p>Security Team, please be aware of the scheduled fan-coil unit maintenance and lint screen cleaning at 466 Eglinton Avenue East. Your role is to ensure smooth access for the maintenance crew and accompany them as needed. The schedule is as follows:</p>
-                    <table class="schedule-table">
-                        <tr>
-                            <th>Day</th>
-                            <th>Date</th>
-                            <th>Details</th>
-                            <th>Floors</th>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Tuesday</td>
-                            <td data-label="Date">March 25</td>
-                            <td data-label="Details">Day 1</td>
-                            <td data-label="Floors">PH 18, LPH Floor to 16th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Wednesday</td>
-                            <td data-label="Date">March 26</td>
-                            <td data-label="Details">Day 2</td>
-                            <td data-label="Floors">15th Floor to 12th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Thursday</td>
-                            <td data-label="Date">March 27</td>
-                            <td data-label="Details">Day 3</td>
-                            <td data-label="Floors">11th Floor to 8th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Friday</td>
-                            <td data-label="Date">March 28</td>
-                            <td data-label="Details">Day 4</td>
-                            <td data-label="Floors">7th Floor to 6th Floor inclusive</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Day">Wednesday</td>
-                            <td data-label="Date">April 2</td>
-                            <td data-label="Details">Day 5</td>
-                            <td data-label="Floors">5th Floor to Ground Floor inclusive</td>
-                        </tr>
-                    </table>
-                    <p>Please coordinate with the management office to ensure master key access to units. If a resident has not provided a key, you may need to facilitate entry. Ensure that any entry alarms in the units are deactivated during the maintenance period.</p>
-                    <p class="highlight">Action Required: Verify that residents have cleared at least 3 feet of space in front of and beside the fan-coil units and dryers to allow the crew to work efficiently.</p>
-                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
-                </div>
-
-                <div class="update-item">
-                    <h3>Monitor Oil Collection Drum Usage</h3>
-                    <p>Security Team, an oil collection drum is located outside the recycling room in the loading dock area behind the building. It is designated for residents to dispose of cooking oil/grease to prevent clogs and floods in the building’s plumbing system.</p>
-                    <p>Please monitor the area to ensure residents are using the drum correctly and report any misuse or overflow to management. Unauthorized disposal in kitchen sinks can lead to significant plumbing issues, so your vigilance is critical.</p>
-                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
-                </div>
-
-                <div class="update-item">
-                    <h3>Clarify Maintenance Responsibilities for Residents</h3>
-                    <p>Security Team, please note that residents are responsible for the maintenance and repair of all items within their units, including fixtures and systems that serve only their unit or an adjacent one (e.g., plumbing, electrical, appliances, and personal fixtures).</p>
-                    <p>The building management handles maintenance of the fan-coil units. If residents report issues related to their personal fixtures, direct them to handle repairs themselves or contact the appropriate service provider. Your role is to ensure clarity on this division of responsibility during interactions with residents.</p>
-                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
-                </div>
-
-                <div class="update-item">
-                    <h3>Enforce Visitor Notification Protocol</h3>
-                    <p>Security Team, to maintain safety and manage traffic flow, ensure that residents notify the Gatehouse of all expected visitors. Your team must enforce this protocol by verifying visitor logs and ensuring all visitors are pre-authorized by residents.</p>
-                    <p>Failure to follow this protocol can lead to unauthorized access and increased security risks. Please maintain strict oversight of visitor arrivals and report any issues to management immediately.</p>
-                    <div class="timestamp">March 14, 2025 - 10:00 AM</div>
-                </div>
-            </div>
-
-            <div class="sidebar">
-                <h3>Quick Links</h3>
-                <div class="quick-links">
-                    <ul>
-                        <li><a href="#">Security Protocols</a></li>
-                        <li><a href="#">Contact Management</a></li>
-                        <li><a href="#">Site Map (Coming Soon)</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            © 2025 Rainbow Village Security Updates | Crafted with precision by <a href="#" title="Jagroop Singh">JS</a>
-        </div>
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for a question or topic...">
+        <button>Search</button>
     </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- General Instructions -->
+        <section>
+            <h2>General Instructions</h2>
+            <ul>
+                <li>All questions are compulsory.</li>
+                <li><strong>Section A:</strong> 18 Multiple Choice Questions (1 mark each, 18 marks total).</li>
+                <li><strong>Section B:</strong> 7 Short Answer Questions (2 marks each, 14 marks total).</li>
+                <li><strong>Section C:</strong> 5 Questions (4 marks each, 20 marks total).</li>
+                <li><strong>Section D:</strong> 3 Questions based on passage, cartoon, and map (6 marks each, 18 marks total).</li>
+                <li><strong>Section E:</strong> 2 Long Answer Questions (5 marks each, 10 marks total).</li>
+                <li>Answer according to the marks allotted; be concise for short answers and detailed for long answers.</li>
+            </ul>
+        </section>
+
+        <!-- Section A: MCQs -->
+        <section id="section-a">
+            <h2 class="section-title">Section A: Multiple Choice Questions (18 Marks)</h2>
+            <p><strong>Instructions:</strong> Choose the correct option for each question.</p>
+            <ol>
+                <li>Which event marked the end of bipolarity in global politics?<br>
+                    a) Formation of NATO<br>
+                    b) Disintegration of the USSR<br>
+                    c) Cuban Missile Crisis<br>
+                    d) Berlin Wall construction<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Disintegration of the USSR
+                    </div>
+                </li>
+                <li>The term 'Glasnost' is associated with which Soviet policy?<br>
+                    a) Economic restructuring<br>
+                    b) Openness in governance<br>
+                    c) Military expansion<br>
+                    d) Collectivization<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Openness in governance
+                    </div>
+                </li>
+                <li>Which of the following is a permanent member of the UN Security Council?<br>
+                    a) Japan<br>
+                    b) India<br>
+                    c) Russia<br>
+                    d) Brazil<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> c) Russia
+                    </div>
+                </li>
+                <li>India’s ‘Act East Policy’ primarily focuses on strengthening ties with:<br>
+                    a) Western Europe<br>
+                    b) Southeast Asia<br>
+                    c) Middle East<br>
+                    d) Latin America<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Southeast Asia
+                    </div>
+                </li>
+                <li>The Brundtland Report is associated with which concept?<br>
+                    a) Globalization<br>
+                    b) Sustainable Development<br>
+                    c) Bipolarity<br>
+                    d) Hegemony<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Sustainable Development
+                    </div>
+                </li>
+                <li>Which party dominated Indian politics during the first two decades after independence?<br>
+                    a) Bharatiya Janata Party<br>
+                    b) Communist Party of India<br>
+                    c) Indian National Congress<br>
+                    d) Janata Party<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> c) Indian National Congress
+                    </div>
+                </li>
+                <li>The ‘ASEAN Way’ emphasizes:<br>
+                    a) Military cooperation<br>
+                    b) Consensus and non-interference<br>
+                    c) Economic sanctions<br>
+                    d) Political integration<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Consensus and non-interference
+                    </div>
+                </li>
+                <li>Which of the following is considered a ‘Global Common’?<br>
+                    a) National parks<br>
+                    b) Antarctica<br>
+                    c) Private forests<br>
+                    d) Urban infrastructure<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Antarctica
+                    </div>
+                </li>
+                <li>Which was NOT a major challenge to nation-building in India post-independence?<br>
+                    a) Partition<br>
+                    b) Integration of princely states<br>
+                    c) Economic liberalization<br>
+                    d) Linguistic diversity<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> c) Economic liberalization
+                    </div>
+                </li>
+                <li>‘Shock Therapy’ was primarily implemented in:<br>
+                    a) Western Europe<br>
+                    b) Post-Soviet states<br>
+                    c) South Asia<br>
+                    d) Latin America<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Post-Soviet states
+                    </div>
+                </li>
+                <li>The ‘Panchsheel’ principles guide India’s relations with:<br>
+                    a) Neighboring countries<br>
+                    b) NATO members<br>
+                    c) European Union<br>
+                    d) OPEC nations<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> a) Neighboring countries
+                    </div>
+                </li>
+                <li>India’s political system is best described as:<br>
+                    a) Unitary<br>
+                    b) Federal with strong Centre<br>
+                    c) Presidential<br>
+                    d) Absolute monarchy<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Federal with strong Centre
+                    </div>
+                </li>
+                <li>The Green Revolution in India aimed to improve:<br>
+                    a) Industrial output<br>
+                    b) Agricultural productivity<br>
+                    c) Service sector<br>
+                    d) Tourism<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) Agricultural productivity
+                    </div>
+                </li>
+                <li>The concept of ‘Soft Power’ relates to influence through:<br>
+                    a) Military strength<br>
+                    b) Economic sanctions<br>
+                    c) Culture and ideology<br>
+                    d) Territorial expansion<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> c) Culture and ideology
+                    </div>
+                </li>
+                <li>Which country is NOT a member of SAARC?<br>
+                    a) Afghanistan<br>
+                    b) Maldives<br>
+                    c) Thailand<br>
+                    d) Nepal<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> c) Thailand
+                    </div>
+                </li>
+                <li>The Emergency in India (1975-1977) was declared under:<br>
+                    a) Article 352<br>
+                    b) Article 356<br>
+                    c) Article 360<br>
+                    d) Article 370<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> a) Article 352
+                    </div>
+                </li>
+                <li>The Belt and Road Initiative is a project led by:<br>
+                    a) USA<br>
+                    b) China<br>
+                    c) Russia<br>
+                    d) Japan<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> b) China
+                    </div>
+                </li>
+                <li>Which best explains India’s multi-party system today?<br>
+                    a) Dominance of one party<br>
+                    b) Two-party competition<br>
+                    c) Coalition governments<br>
+                    d) No political parties<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> c) Coalition governments
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Section B: Short Answer Questions -->
+        <section id="section-b">
+            <h2 class="section-title">Section B: Short Answer Questions (14 Marks)</h2>
+            <p><strong>Instructions:</strong> Answer in 30-40 words each.</p>
+            <ol>
+                <li>Define ‘Hegemony’ in the context of international relations.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Hegemony refers to the dominance of one state over others in political, economic, or military spheres, often exercised through influence rather than direct control, e.g., US hegemony post-Cold War.
+                    </div>
+                </li>
+                <li>What was the significance of the Non-Aligned Movement during the Cold War?<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> It allowed countries like India to avoid superpower blocs, maintain sovereignty, and promote peace by fostering cooperation among newly independent nations.
+                    </div>
+                </li>
+                <li>Explain ‘Federalism’ as it applies to Indian politics.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Federalism in India involves a division of powers between the Centre and states, with a strong Centre, as outlined in the Constitution, balancing unity and regional diversity.
+                    </div>
+                </li>
+                <li>List the main objectives of the United Nations.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Maintain international peace and security, promote cooperation, protect human rights, and provide humanitarian aid.
+                    </div>
+                </li>
+                <li>What was the Green Revolution in India?<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> A 1960s initiative to increase agricultural productivity through high-yield seeds, fertilizers, and irrigation, reducing food scarcity.
+                    </div>
+                </li>
+                <li>What is meant by ‘Panchsheel’ in India’s foreign policy?<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Panchsheel refers to five principles of peaceful coexistence, including mutual respect and non-interference, guiding India’s relations with other nations.
+                    </div>
+                </li>
+                <li>Describe the concept of ‘Globalisation’.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Globalisation is the process of increasing interconnectedness through trade, culture, and technology, impacting economies and societies worldwide.
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Section C: Questions -->
+        <section id="section-c">
+            <h2 class="section-title">Section C: Questions (20 Marks)</h2>
+            <p><strong>Instructions:</strong> Answer in 100-120 words each.</p>
+            <ol>
+                <li>Discuss the impact of globalization on developing countries.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Globalization has boosted trade and technology access in developing countries, fostering economic growth (e.g., India’s IT sector). However, it has also widened inequality, exploited labor, and eroded cultural identities due to Western influence.
+                    </div>
+                </li>
+                <li>Analyze the role of the United Nations in maintaining international peace and security.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> The UN mediates conflicts (e.g., Cyprus peacekeeping), imposes sanctions, and authorizes interventions. Its effectiveness is limited by veto power in the Security Council and lack of enforcement mechanisms.
+                    </div>
+                </li>
+                <li>Explain the challenges faced by India during the era of one-party dominance.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> From 1947-1967, Congress dominance faced challenges like opposition weakness, internal factionalism, and managing diversity (language, caste), yet it ensured stability and nation-building.
+                    </div>
+                </li>
+                <li>Compare and contrast the foreign policies of India and China with their neighbors.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> India emphasizes non-alignment and peaceful coexistence (e.g., Panchsheel with China), while China pursues assertive policies (e.g., Belt and Road). Both seek regional influence but differ in approach—India diplomatic, China economic/military.
+                    </div>
+                </li>
+                <li>Evaluate the effectiveness of the Indian Constitution in addressing social inequalities.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> The Constitution provides reservations and fundamental rights to reduce inequalities (e.g., caste, gender). Successes include upliftment of marginalized groups, but challenges like poverty and discrimination persist.
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Section D: Passage, Cartoon, and Map-Based Questions -->
+        <section id="section-d">
+            <h2 class="section-title">Section D: Passage, Cartoon, and Map-Based Questions (18 Marks)</h2>
+            <h3>1. Passage-Based Question (6 Marks)</h3>
+            <p><strong>Passage:</strong> "The European Union (EU) is a political and economic union of 27 member states. It promotes a single market and common policies, but faces challenges like Brexit and economic disparities among members."</p>
+            <ol>
+                <li>What are the main objectives of the European Union? (2 marks)<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Promote peace, economic integration, and cooperation through a single market and shared policies.
+                    </div>
+                </li>
+                <li>Discuss the challenges faced by the EU in recent years. (4 marks)<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Brexit disrupted unity, economic gaps between rich (e.g., Germany) and poor (e.g., Greece) nations strain cohesion, and rising nationalism challenges integration.
+                    </div>
+                </li>
+            </ol>
+            <h3>2. Cartoon-Based Question (6 Marks)</h3>
+            <p><strong>Description:</strong> A cartoon shows two figures labeled ‘USA’ and ‘USSR’ arm wrestling, with smaller nations watching nervously.</p>
+            <ol>
+                <li>What does this cartoon represent in the context of the Cold War? (3 marks)<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> It depicts the intense rivalry and power struggle between the USA and USSR, with smaller nations caught in their ideological conflict.
+                    </div>
+                </li>
+                <li>How does it relate to the concept of bipolarity? (3 marks)<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Bipolarity refers to the division of global power into two blocs (USA and USSR), as shown by their dominance over smaller nations.
+                    </div>
+                </li>
+            </ol>
+            <h3>3. Map-Based Question (6 Marks)</h3>
+            <p><strong>Instructions:</strong> Imagine a blank map of South Asia is provided.</p>
+            <ol>
+                <li>Identify the country sharing borders with India, Pakistan, and China. (2 marks)<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> Afghanistan
+                    </div>
+                </li>
+                <li>Name the island nation that is a member of SAARC. (2 marks)<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> Sri Lanka
+                    </div>
+                </li>
+                <li>Locate the country formerly known as East Pakistan. (2 marks)<br>
+                    <div class="answer">
+                        <strong>Answer:</strong> Bangladesh
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Section E: Long Answer Questions -->
+        <section id="section-e">
+            <h2 class="section-title">Section E: Long Answer Questions (10 Marks)</h2>
+            <p><strong>Instructions:</strong> Answer in 150-200 words each.</p>
+            <ol>
+                <li>Critically analyze the role of political parties in Indian democracy.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Political parties are vital to Indian democracy, mobilizing voters, forming governments, and shaping policies. Congress dominated initially, ensuring stability, while multi-party systems later reflected diversity (e.g., BJP, regional parties). However, issues like corruption, dynastic politics, and vote-bank strategies weaken democratic values. Their role in coalition governments shows adaptability but often compromises governance efficiency.
+                    </div>
+                </li>
+                <li>Discuss the impact of coalition politics on governance in India.<br>
+                    <div class="answer">
+                        <strong>Expected Answer:</strong> Coalition politics, prominent since the 1990s, reflects India’s diversity but complicates governance. It ensures broader representation (e.g., NDA, UPA) but leads to policy delays, compromises, and instability due to conflicting interests. While it curbs authoritarianism, it often prioritizes political survival over development.
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Download Button -->
+        <section style="text-align: center;">
+            <a href="#" class="download-btn">Download PDF</a>
+            <p><em>Note: PDF download is a demo. Link a real file to enable functionality.</em></p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 | Created for CBSE Students | Best of Luck!</p>
+    </footer>
+
+    <!-- JavaScript for Search -->
+    <script>
+        document.querySelector('.search-bar button').addEventListener('click', function() {
+            const query = document.querySelector('.search-bar input').value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
