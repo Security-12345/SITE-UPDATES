@@ -3,384 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class 12 Political Science Guide</title>
+    <title>Political Science Exam Prep - Class 12 CBSE</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
             background-color: #f4f4f4;
-            color: #333;
             line-height: 1.6;
         }
-
-        header {
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 20px;
+        h1 {
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            color: #333;
+            font-size: 1.8em;
         }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            background: #333;
+        .question-container {
+            background-color: #fff;
             padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 2em;
-            color: white;
-            cursor: pointer;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            color: #1e3c72;
-            cursor: pointer;
-            padding: 10px;
-            background: #e9ecef;
+            margin-bottom: 15px;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question {
+            font-weight: bold;
             margin-bottom: 10px;
+            color: #2c3e50;
         }
-
-        .section h2:hover {
-            background: #d3d9e4;
-        }
-
-        .content {
+        .answer {
             display: none;
-            padding: 15px;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-top: 10px;
         }
-
-        .content.active {
-            display: block;
-        }
-
-        .content h3 {
-            color: #2a5298;
-            margin-top: 15px;
-        }
-
-        .content p, .content ul {
-            margin: 10px 0;
-        }
-
-        .content ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        footer {
-            background: #333;
+        .toggle-btn {
+            background-color: #3498db;
             color: white;
-            text-align: center;
-            padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 0.9em;
         }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
+        .toggle-btn:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
             }
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 60px;
-                left: 0;
+            .question-container {
+                padding: 10px;
+            }
+            .toggle-btn {
                 width: 100%;
-                background: #333;
-                padding: 20px 0;
-            }
-
-            nav.active {
-                display: block;
-            }
-
-            nav a {
-                display: block;
-                margin: 15px 0;
-            }
-
-            .hamburger {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-
-            .section h2 {
-                font-size: 1.2em;
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>CBSE Class 12 Political Science Exam Guide</h1>
-        <p>Your One-Stop Study Resource for March 22, 2025 Exam</p>
-    </header>
+    <h1>Political Science Exam Prep - Class 12 CBSE</h1>
 
-    <nav>
-        <span class="hamburger" onclick="toggleMenu()">☰</span>
-        <a href="#part-a">Part A: Contemporary World Politics</a>
-        <a href="#part-b">Part B: Politics in India</a>
-        <a href="#sample-questions">Sample Questions</a>
-    </nav>
-
-    <div class="container">
-        <div class="section" id="part-a">
-            <h2 onclick="toggleContent(this)">Part A: Contemporary World Politics</h2>
-            <div class="content">
-                <h3>1. The Cold War Era</h3>
-                <p><strong>What It Was:</strong> After World War II, the US (capitalist) and Soviet Union (communist) competed for power without fighting directly.</p>
-                <ul>
-                    <li><strong>Causes:</strong> Different ideas (capitalism vs. communism), distrust, power struggle.</li>
-                    <li><strong>Cuban Missile Crisis (1962):</strong> US and Soviet Union nearly started a nuclear war over missiles in Cuba.</li>
-                    <li><strong>Non-Aligned Movement (NAM):</strong> India and others stayed neutral.</li>
-                    <li><strong>Why Important:</strong> Expect questions on NAM or Cuban crisis.</li>
-                </ul>
-
-                <h3>2. The End of Bipolarity</h3>
-                <p><strong>What Happened:</strong> Soviet Union broke apart in 1991, ending the two-power world.</p>
-                <ul>
-                    <li>New countries like Russia formed.</li>
-                    <li>US became the only superpower.</li>
-                    <li>Global politics shifted to one dominant power.</li>
-                    <li><strong>Why Important:</strong> Questions on how this changed the world.</li>
-                </ul>
-
-                <h3>3. US Hegemony in World Politics</h3>
-                <p><strong>What It Means:</strong> One country (US) dominates others.</p>
-                <ul>
-                    <li>After 1991, US led decisions (e.g., Iraq wars).</li>
-                    <li>Power from military, economy, culture (Hollywood).</li>
-                    <li><strong>Why Important:</strong> Questions on US power or actions.</li>
-                </ul>
-
-                <h3>4. Alternative Centres of Power</h3>
-                <p><strong>What It’s About:</strong> Others challenging US dominance.</p>
-                <ul>
-                    <li><strong>China:</strong> Growing economy and military.</li>
-                    <li><strong>European Union (EU):</strong> Group of European countries.</li>
-                    <li><strong>ASEAN:</strong> Southeast Asian teamwork.</li>
-                    <li><strong>Why Important:</strong> Questions on China or EU.</li>
-                </ul>
-
-                <h3>5. Contemporary South Asia</h3>
-                <p><strong>What It Covers:</strong> Politics in India’s neighbors.</p>
-                <ul>
-                    <li><strong>Pakistan:</strong> Democracy struggles.</li>
-                    <li><strong>Sri Lanka:</strong> Sinhalese vs. Tamil fights.</li>
-                    <li><strong>India’s Relations:</strong> Issues with Pakistan (Kashmir), China (borders).</li>
-                    <li><strong>Why Important:</strong> India’s role in South Asia.</li>
-                </ul>
-
-                <h3>6. International Organizations</h3>
-                <p><strong>What It’s About:</strong> Groups like the UN helping the world.</p>
-                <ul>
-                    <li><strong>UN Structure:</strong> Security Council (5 permanent: US, UK, Russia, China, France), General Assembly.</li>
-                    <li><strong>UN Jobs:</strong> Peace, conflict resolution.</li>
-                    <li><strong>Reforms:</strong> Calls for UN changes.</li>
-                    <li><strong>Why Important:</strong> Questions on UN roles or members.</li>
-                </ul>
-
-                <h3>7. Security in the Contemporary World</h3>
-                <p><strong>What It Means:</strong> Safety from dangers.</p>
-                <ul>
-                    <li><strong>Traditional Threats:</strong> Country wars.</li>
-                    <li><strong>Non-Traditional Threats:</strong> Terrorism, pandemics, climate change.</li>
-                    <li><strong>Why Important:</strong> New security issues in exams.</li>
-                </ul>
-
-                <h3>8. Environment and Natural Resources</h3>
-                <p><strong>What It Covers:</strong> Global environmental challenges.</p>
-                <ul>
-                    <li><strong>Problems:</strong> Pollution, warming, deforestation.</li>
-                    <li><strong>Solutions:</strong> Agreements like Paris Agreement.</li>
-                    <li><strong>Why Important:</strong> Hot exam topic.</li>
-                </ul>
-
-                <h3>9. Globalization</h3>
-                <p><strong>What It Is:</strong> World getting connected.</p>
-                <ul>
-                    <li><strong>Economic:</strong> Global trade, companies.</li>
-                    <li><strong>Cultural:</strong> Sharing movies, food, ideas.</li>
-                    <li><strong>Impact on India:</strong> Jobs but inequality too.</li>
-                    <li><strong>Why Important:</strong> Questions on India and globalization.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section" id="part-b">
-            <h2 onclick="toggleContent(this)">Part B: Politics in India since Independence</h2>
-            <div class="content">
-                <h3>1. Challenges of Nation Building</h3>
-                <p><strong>What It Was:</strong> Making India one country after 1947.</p>
-                <ul>
-                    <li><strong>Princely States:</strong> 500+ joined India (e.g., Hyderabad, Junagadh).</li>
-                    <li><strong>State Reorganization:</strong> Language-based states (e.g., Andhra Pradesh 1953).</li>
-                    <li><strong>Diversity:</strong> Managing religions, cultures.</li>
-                    <li><strong>Why Important:</strong> Map or integration questions.</li>
-                </ul>
-
-                <h3>2. Era of One-Party Dominance</h3>
-                <p><strong>What It Means:</strong> Congress ruled for years.</p>
-                <ul>
-                    <li><strong>Why Congress Won:</strong> Freedom struggle, leaders like Nehru.</li>
-                    <li><strong>Decline:</strong> Corruption, party splits.</li>
-                    <li><strong>Why Important:</strong> Why Congress was strong.</li>
-                </ul>
-
-                <h3>3. Politics of Planned Development</h3>
-                <p><strong>What It Was:</strong> Economic growth plans.</p>
-                <ul>
-                    <li><strong>Five-Year Plans:</strong> Government projects (e.g., dams).</li>
-                    <li><strong>Green Revolution:</strong> More food but favored rich areas.</li>
-                    <li><strong>Why Important:</strong> Green Revolution effects.</li>
-                </ul>
-
-                <h3>4. India’s External Relations</h3>
-                <p><strong>What It Covers:</strong> India’s global ties.</p>
-                <ul>
-                    <li><strong>Non-Alignment:</strong> No US or Soviet side.</li>
-                    <li><strong>Key Events:</strong> Panchsheel (China), Pakistan wars.</li>
-                    <li><strong>Why Important:</strong> Foreign policy questions.</li>
-                </ul>
-
-                <h3>5. Challenges to and Restoration of the Congress System</h3>
-                <p><strong>What Happened:</strong> Congress lost, then returned.</p>
-                <ul>
-                    <li><strong>Decline:</strong> Opposition grew (Janata Party 1977).</li>
-                    <li><strong>Restoration:</strong> Back in 1980 with Indira Gandhi.</li>
-                    <li><strong>Why Important:</strong> Shows political shifts.</li>
-                </ul>
-
-                <h3>6. The Crisis of Democratic Order</h3>
-                <p><strong>What It Was:</strong> Emergency (1975-77).</p>
-                <ul>
-                    <li><strong>What Happened:</strong> Indira stopped rights, jailed foes.</li>
-                    <li><strong>Impact:</strong> Democracy fought back, got stronger.</li>
-                    <li><strong>Why Important:</strong> Emergency questions are common.</li>
-                </ul>
-
-                <h3>7. Rise of Popular Movements</h3>
-                <p><strong>What It Means:</strong> People fighting for rights.</p>
-                <ul>
-                    <li><strong>Chipko Movement:</strong> Saved trees in Uttarakhand.</li>
-                    <li><strong>Narmada Bachao Andolan:</strong> Anti-dam in Gujarat.</li>
-                    <li><strong>Why Important:</strong> Short answer topics.</li>
-                </ul>
-
-                <h3>8. Regional Aspirations</h3>
-                <p><strong>What It Covers:</strong> State issues.</p>
-                <ul>
-                    <li><strong>Punjab:</strong> Sikh demands, violence.</li>
-                    <li><strong>Kashmir:</strong> Status conflicts.</li>
-                    <li><strong>Northeast:</strong> Independence demands.</li>
-                    <li><strong>Why Important:</strong> Map or long questions.</li>
-                </ul>
-
-                <h3>9. Recent Developments in Indian Politics</h3>
-                <p><strong>What It’s About:</strong> Modern politics.</p>
-                <ul>
-                    <li><strong>Coalition Politics:</strong> Parties team up (NDA, UPA).</li>
-                    <li><strong>Issues:</strong> Caste, religion, new parties (AAP).</li>
-                    <li><strong>Why Important:</strong> Links to today.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section" id="sample-questions">
-            <h2 onclick="toggleContent(this)">Sample Questions and Answers</h2>
-            <div class="content">
-                <h3>Multiple-Choice Questions (MCQs)</h3>
-                <p><strong>1. Which country is not a permanent member of the UN Security Council?</strong></p>
-                <ul>
-                    <li>A) China B) France C) Germany D) Russia</li>
-                    <li><strong>Answer:</strong> C) Germany</li>
-                    <li><strong>Explanation:</strong> Permanent members are US, UK, Russia, China, France.</li>
-                </ul>
-                <p><strong>2. What was the goal of the Non-Aligned Movement?</strong></p>
-                <ul>
-                    <li>A) Support US B) Stay neutral C) Join Soviet Union D) Fight wars</li>
-                    <li><strong>Answer:</strong> B) Stay neutral</li>
-                    <li><strong>Explanation:</strong> India didn’t pick a side in the Cold War.</li>
-                </ul>
-
-                <h3>Short Answer Questions (2-4 Marks)</h3>
-                <p><strong>1. What is hegemony? Give an example.</strong></p>
-                <p><strong>Answer:</strong> Hegemony is when one country controls others due to its strength. Example: US influences the world with wars and trade rules.</p>
-                <p><strong>2. What was the Green Revolution’s impact on India?</strong></p>
-                <p><strong>Answer:</strong> It increased food production with new seeds, but helped rich farmers more and hurt the environment.</p>
-
-                <h3>Long Answer Questions (6 Marks)</h3>
-                <p><strong>1. Explain the causes and effects of the Cold War.</strong></p>
-                <p><strong>Answer:</strong> Causes: US and Soviet Union had opposite ideas (capitalism vs. communism) and wanted power. They didn’t trust each other, built weapons. Effects: World split into two groups, fought via other countries (e.g., Vietnam), ended in 1991 with US on top.</p>
-                <p><strong>2. What happened during the Emergency in India, and how did it affect democracy?</strong></p>
-                <p><strong>Answer:</strong> In 1975, Indira Gandhi declared Emergency, stopped rights, jailed opponents. It hurt democracy, but after 1977, people voted her out, making democracy stronger.</p>
-
-                <h3>Map-Based Question</h3>
-                <p><strong>Locate the state where the Chipko Movement started.</strong></p>
-                <p><strong>Answer:</strong> Uttarakhand</p>
-                <p><strong>Explanation:</strong> Started in the 1970s to save trees.</p>
-            </div>
-        </div>
+    <!-- Part A: Contemporary World Politics -->
+    <div class="question-container">
+        <div class="question">1. (MCQ) Which of the following countries is a permanent member of the UN Security Council?</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">c) China<br><strong>Explanation:</strong> The five permanent members of the UN Security Council are the United States, Russia, China, France, and the United Kingdom.</div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 CBSE Political Science Guide | Designed for Exam Success</p>
-    </footer>
+    <div class="question-container">
+        <div class="question">2. (2 Marks) What were the main reasons for the end of the Cold War?</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">The Cold War ended due to:<br>- The economic and military exhaustion of the Soviet Union, which could no longer sustain the arms race with the USA.<br>- Internal reforms like Gorbachev’s Glasnost (openness) and Perestroika (restructuring), which weakened the Soviet system and led to its disintegration by 1991.</div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">3. (4 Marks) Explain the concept of ‘Shock Therapy’ and its impact on Russia.</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">Shock Therapy refers to the sudden transition from a socialist to a capitalist economy in post-Soviet states after 1991. In Russia, it involved rapid privatization and market liberalization. Its impacts included:<br>- Economic collapse, with industries disappearing and inflation soaring.<br>- Increased poverty and inequality, creating a divide between rich oligarchs and the poor.<br>- Weakened state control, leading to corruption and instability.<br>- Loss of social welfare systems, making life harder for citizens.</div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">4. (6 Marks) “The rise of China has reshaped global politics.” Justify this statement with suitable arguments.</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">China’s rise has transformed global politics through:<br>- <strong>Economic Power:</strong> Its rapid economic growth and initiatives like the Belt and Road Initiative have increased its global influence, challenging Western dominance.<br>- <strong>Military Strength:</strong> Expansion of its military, especially in the South China Sea, has shifted power dynamics in Asia.<br>- <strong>Diplomatic Influence:</strong> China’s role in international organizations and veto power in the UN Security Council amplify its voice.<br>- <strong>India’s Perspective:</strong> India faces border tensions (e.g., Galwan 2020) but also cooperates economically, reflecting a complex relationship.<br>This multipolar shift reduces US unipolarity, reshaping global alliances.</div>
+    </div>
+
+    <!-- Part B: Politics in India Since Independence -->
+    <div class="question-container">
+        <div class="question">5. (MCQ) Which event led to the imposition of the National Emergency in India on June 25, 1975?</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">b) Allahabad High Court verdict<br><strong>Explanation:</strong> The Emergency was declared after the Allahabad High Court invalidated Indira Gandhi’s election in 1975, triggering political unrest.</div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">6. (2 Marks) Briefly explain the Mandal Issue and one reason for the anti-Mandal protests.</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">The Mandal Issue refers to the 1990 decision to implement the Mandal Commission’s recommendation, reserving 27% of government jobs for Other Backward Classes (OBCs). One reason for anti-Mandal protests was the fear among upper-caste students that it would reduce their job opportunities.</div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">7. (4 Marks) What were the challenges faced by the Election Commission during India’s first general elections?</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">The Election Commission faced:<br>- <strong>Illiteracy:</strong> Most voters couldn’t read, so symbols were used for parties.<br>- <strong>Logistical Issues:</strong> Organizing polling across a vast, diverse country with poor infrastructure was daunting.<br>- <strong>Voter Registration:</strong> Creating an electoral roll for millions, many without documentation, was complex.<br>- <strong>Awareness:</strong> Educating people about voting in a new democracy was a significant task.</div>
+    </div>
+
+    <div class="question-container">
+        <div class="question">8. (6 Marks) “Regional demands in India exemplify the principle of unity in diversity.” Do you agree? Support with arguments.</div>
+        <button class="toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
+        <div class="answer">Yes, I agree. Regional demands reflect India’s diversity while reinforcing unity:<br>- <strong>Linguistic States:</strong> Formation of states like Andhra Pradesh (1953) based on language preserved cultural identity within a united India.<br>- <strong>Northeast Autonomy:</strong> Granting autonomy to states like Nagaland balances regional aspirations with national integrity.<br>- <strong>Federal Structure:</strong> Power-sharing through federalism accommodates diverse demands (e.g., Tamil Nadu’s language protests) without breaking unity.<br>However, excessive demands (e.g., separatism in Kashmir) sometimes challenge unity, though resolved through dialogue, showing India’s strength in managing diversity.</div>
+    </div>
 
     <script>
-        function toggleContent(element) {
-            const content = element.nextElementSibling;
-            content.classList.toggle('active');
-        }
-
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
+        function toggleAnswer(button) {
+            const answer = button.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = "Show Answer";
+            } else {
+                answer.style.display = "block";
+                button.textContent = "Hide Answer";
+            }
         }
     </script>
 </body>
