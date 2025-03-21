@@ -3,273 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE Class 12 Political Science Mobile Quiz</title>
+    <title>Under Construction</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+        * {
             margin: 0;
-            padding: 10px;
-            color: #333;
-        }
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            font-size: 1.5em;
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 1.2em;
-            color: #2980b9;
-            margin-top: 20px;
-        }
-        .question {
-            background: #f9f9f9;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-        }
-        .question p {
-            font-size: 1em;
-            margin: 0 0 10px;
-            font-weight: bold;
-        }
-        .options label {
-            display: block;
-            font-size: 0.9em;
-            margin: 5px 0;
-            padding: 5px;
-            cursor: pointer;
-        }
-        .options input {
-            margin-right: 8px;
-        }
-        .answer-btn {
-            background: #e67e22;
-            color: white;
-            border: none;
-            padding: 8px;
-            width: 100%;
-            border-radius: 5px;
-            font-size: 0.9em;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .answer-btn:hover {
-            background: #d35400;
-        }
-        .answer {
-            display: none;
-            background: #ecf0f1;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-            color: #2c3e50;
-        }
-        #submit {
-            background: #27ae60;
-            color: white;
-            border: none;
-            padding: 12px;
-            width: 100%;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        #submit:hover {
-            background: #219653;
-        }
-        #result {
-            margin-top: 15px;
-            padding: 10px;
-            background: #2ecc71;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 1em;
-            display: none;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Mobile Optimization */
-        @media (max-width: 600px) {
-            body {
-                padding: 5px;
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            margin: 20px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .construction-text {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .gear {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            animation: spin 4s linear infinite;
+        }
+
+        .progress-bar {
+            width: 60%;
+            height: 20px;
+            background: #333;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #ff9800);
+            animation: progressAnimation 3s infinite;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            color: #ffd700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            color: #ff9800;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
             }
-            .container {
-                padding: 10px;
-            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+            50% { width: 75%; }
+            100% { width: 0%; }
+        }
+
+        /* Construction Cone Animation */
+        .cone {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .cone1 { left: 10%; top: 20%; }
+        .cone2 { right: 10%; bottom: 20%; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
             h1 {
-                font-size: 1.3em;
+                font-size: 2.5em;
             }
-            h2 {
-                font-size: 1.1em;
+
+            .construction-text {
+                font-size: 1.5em;
             }
-            .question p {
-                font-size: 0.95em;
+
+            .gear {
+                width: 80px;
+                height: 80px;
             }
-            .options label {
-                font-size: 0.85em;
+
+            .container {
+                padding: 20px;
             }
-            .answer-btn, #submit {
-                padding: 10px;
-                font-size: 0.9em;
+
+            p {
+                font-size: 1em;
+            }
+
+            .progress-bar {
+                width: 80 Contact Mr. Singh for deep info%;
+            }
+
+            .cone {
+                width: 40px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .construction-text {
+                font-size: 1.2em;
+            }
+
+            .gear {
+                width: 60px;
+                height: 60px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .cone {
+                display: none; /* Hide cones on very small screens */
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>CBSE Class 12 Political Science Quiz 2025</h1>
-
-        <!-- MCQs Section -->
-        <h2>MCQs (1 Mark)</h2>
-        <form id="quizForm">
-            <div class="question">
-                <p>1. What ended the Cold War?</p>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="a"> a) USA won a war</label>
-                    <label><input type="radio" name="q1" value="b"> b) Soviet Union broke apart</label>
-                    <label><input type="radio" name="q1" value="c"> c) China joined NATO</label>
-                    <label><input type="radio" name="q1" value="d"> d) India became a superpower</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>2. Which country started the Belt and Road Initiative?</p>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="a"> a) Japan</label>
-                    <label><input type="radio" name="q2" value="b"> b) China</label>
-                    <label><input type="radio" name="q2" value="c"> c) Russia</label>
-                    <label><input type="radio" name="q2" value="d"> d) USA</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>3. What’s the UN’s main job?</p>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="a"> a) Make money</label>
-                    <label><input type="radio" name="q3" value="b"> b) Keep peace</label>
-                    <label><input type="radio" name="q3" value="c"> c) Build schools</label>
-                    <label><input type="radio" name="q3" value="d"> d) Trade goods</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>4. When were India’s first elections?</p>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="a"> a) 1947</label>
-                    <label><input type="radio" name="q4" value="b"> b) 1950</label>
-                    <label><input type="radio" name="q4" value="c"> c) 1951-52</label>
-                    <label><input type="radio" name="q4" value="d"> d) 1957</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>5. Who led the Constitution’s drafting?</p>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="a"> a) Nehru</label>
-                    <label><input type="radio" name="q5" value="b"> b) Ambedkar</label>
-                    <label><input type="radio" name="q5" value="c"> c) Patel</label>
-                    <label><input type="radio" name="q5" value="d"> d) Gandhi</label>
-                </div>
-            </div>
-            <div class="question">
-                <p>6. What caused the 1975 Emergency?</p>
-                <div class="options">
-                    <label><input type="radio" name="q6" value="a"> a) War with Pakistan</label>
-                    <label><input type="radio" name="q6" value="b"> b) Court ruling against Indira Gandhi</label>
-                    <label><input type="radio" name="q6" value="c"> c) Food shortage</label>
-                    <label><input type="radio" name="q6" value="d"> d) Student protests</label>
-                </div>
-            </div>
-            <button type="button" id="submit">Submit MCQs</button>
-        </form>
-        <div id="result"></div>
-
-        <!-- Short Answer Section -->
-        <h2>Short Answers (2 & 4 Marks)</h2>
-        <div class="question">
-            <p>7. Why did the Soviet Union fall? (2 Marks)</p>
-            <button class="answer-btn" onclick="toggleAnswer('answer7')">Show Answer</button>
-            <div id="answer7" class="answer">
-                The Soviet Union fell because it ran out of money to keep up with the USA in the arms race. Also, Gorbachev’s changes—like opening up (Glasnost) and fixing the economy (Perestroika)—made people want freedom, and it broke apart in 1991.
-            </div>
+        <svg class="gear" viewBox="0 0 100 100" fill="#ffd700">
+            <path d="M50 10a40 40 0 0 0-40 40 40 40 0 0 0 40 40 40 40 0 0 0 40-40 40 40 0 0 0-40-40zm0 72a32 32 0 0 1-32-32 32 32 0 0 1 32-32 32 32 0 0 1 32 32 32 32 0 0 1-32 32zm28-32a28 28 0 0 0-28-28v-8a36 36 0 0 1 36 36h-8z"/>
+        </svg>
+        
+        <h1>Website Under Construction</h1>
+        <div class="construction-text">We're Building Something Great!</div>
+        
+        <div class="progress-bar">
+            <div class="progress"></div>
         </div>
-        <div class="question">
-            <p>8. What is globalization in easy words? (2 Marks)</p>
-            <button class="answer-btn" onclick="toggleAnswer('answer8')">Show Answer</button>
-            <div id="answer8" class="answer">
-                Globalization means the world getting connected—like sharing goods, ideas, and tech across countries. It’s about less borders and more trade, like buying phones from China or watching Hollywood movies in India.
-            </div>
-        </div>
-        <div class="question">
-            <p>9. What happened in Russia after Shock Therapy? (4 Marks)</p>
-            <button class="answer-btn" onclick="toggleAnswer('answer9')">Show Answer</button>
-            <div id="answer9" class="answer">
-                Shock Therapy was when Russia quickly changed from a government-run economy to a free market after 1991. It caused big problems: Factories shut down, people lost jobs. Prices shot up, money became worthless. Rich guys (oligarchs) got super rich, most people got poor. No more free healthcare or help—life got tough.
-            </div>
-        </div>
-        <div class="question">
-            <p>10. What problems did India face right after 1947? (4 Marks)</p>
-            <button class="answer-btn" onclick="toggleAnswer('answer10')">Show Answer</button>
-            <div id="answer10" class="answer">
-                After 1947, India had big challenges: Partition Mess—Millions moved, fights broke out, like Hindu-Muslim riots. Princely States—500+ states had to join India, some like Hyderabad didn’t want to. Poverty—Most people were poor, no food or jobs. Unity—Different languages and cultures had to stick together.
-            </div>
-        </div>
-
-        <!-- Long Answer Section -->
-        <h2>Long Answers (6 Marks)</h2>
-        <div class="question">
-            <p>11. How has China’s rise changed the world? Explain simply. (6 Marks)</p>
-            <button class="answer-btn" onclick="toggleAnswer('answer11')">Show Answer</button>
-            <div id="answer11" class="answer">
-                China’s rise has shaken up the world in big ways: Money Power—China’s economy grew fast—it makes stuff cheap and sells everywhere. Projects like Belt and Road help it control trade. Army Power—China’s building a strong military—like ships in the South China Sea—making neighbors like India nervous (think 2020 border fights). World Voice—As a UN Security Council member, it says no to things USA wants. India’s Side—We trade a lot with China but also argue over borders. It’s making the world less about just the USA and more about many powers.
-            </div>
-        </div>
-        <div class="question">
-            <p>12. Was the Emergency in 1975 good or bad for India? Explain simply. (6 Marks)</p>
-            <button class="answer-btn" onclick="toggleAnswer('answer12')">Show Answer</button>
-            <div id="answer12" class="answer">
-                The Emergency (1975-77) happened when Indira Gandhi got scared after a court said she cheated in elections. Here’s what happened: Bad Stuff—She stopped democracy—jailed leaders, shut newspapers, and forced rules like sterilization. People lost freedom. Good Stuff—Trains ran on time, government worked faster, and some poor got help. Long Run—It hurt trust in Congress, but people fought back, ending it in 1977 with elections. It showed democracy can bounce back, but it was mostly bad for rights.
-            </div>
-        </div>
+        
+        <p>Our team is working hard to bring you an amazing experience.<br>Please check back soon!</p>
+        
+        <div class="contact-info">Contact Mr. Singh for deep info</div>
     </div>
 
-    <script>
-        // MCQ Submission
-        document.getElementById('submit').addEventListener('click', function() {
-            const answers = { q1: 'b', q2: 'b', q3: 'b', q4: 'c', q5: 'b', q6: 'b' };
-            let score = 0;
-            const form = document.getElementById('quizForm');
-            for (let i = 1; i <= 6; i++) {
-                const selected = form.querySelector(`input[name="q${i}"]:checked`);
-                if (selected && selected.value === answers[`q${i}`]) {
-                    score++;
-                }
-            }
-            const result = document.getElementById('result');
-            result.style.display = 'block';
-            result.innerHTML = `Your MCQ Score: ${score} out of 6<br>` +
-                (score === 6 ? 'Awesome! You nailed it!' : score >= 4 ? 'Good job! Almost there!' : 'Keep practicing!');
-            this.disabled = true;
-        });
-
-        // Toggle Answer Visibility
-        function toggleAnswer(id) {
-            const answer = document.getElementById(id);
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-            } else {
-                answer.style.display = 'block';
-            }
-        }
-    </script>
+    <!-- Animated Construction Cones -->
+    <svg class="cone cone1" viewBox="0 0 24 24" fill="#ff9800">
+        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
+    </svg>
+    <svg class="cone cone2" viewBox="0 0 24 24" fill="#ff9800">
+        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
+    </svg>
 </body>
 </html>
