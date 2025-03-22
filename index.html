@@ -3,204 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <title>CBSE Updates</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            padding: 20px;
         }
 
         .container {
-            text-align: center;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            max-width: 800px;
-            margin: 20px;
-            width: 90%;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
-            color: #fff;
-            font-size: 3.5em;
+            font-size: 2.5em;
+            color: #2a5298;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .construction-text {
-            color: #ffd700;
-            font-size: 2em;
-            margin-bottom: 30px;
-            animation: pulse 2s infinite;
-        }
-
-        .gear {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 30px;
-            animation: spin 4s linear infinite;
-        }
-
-        .progress-bar {
-            width: 60%;
-            height: 20px;
-            background: #333;
-            margin: 20px auto;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .progress {
-            width: 75%;
-            height: 100%;
-            background: linear-gradient(90deg, #ffd700, #ff9800);
-            animation: progressAnimation 3s infinite;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         p {
-            color: #fff;
             font-size: 1.2em;
-            margin-bottom: 20px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 30px;
         }
 
-        .contact-info {
-            color: #ffd700;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
+        .highlight {
+            color: #e63946;
+            font-weight: bold;
         }
 
-        .contact-info:hover {
-            color: #ff9800;
+        .decorative-line {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #2a5298, #e63946);
+            margin: 0 auto 30px;
+            border-radius: 2px;
         }
 
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
+        .footer {
+            font-size: 0.9em;
+            color: #666;
         }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes progressAnimation {
-            0% { width: 0%; }
-            50% { width: 75%; }
-            100% { width: 0%; }
-        }
-
-        /* Construction Cone Animation */
-        .cone {
-            position: absolute;
-            width: 60px;
-            height: 80px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .cone1 { left: 10%; top: 20%; }
-        .cone2 { right: 10%; bottom: 20%; }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .construction-text {
-                font-size: 1.5em;
-            }
-
-            .gear {
-                width: 80px;
-                height: 80px;
-            }
-
             .container {
                 padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
             }
 
             p {
                 font-size: 1em;
             }
-
-            .progress-bar {
-                width: 80 Contact Mr. Singh for deep info%;
-            }
-
-            .cone {
-                width: 40px;
-                height: 60px;
-            }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2em;
+                font-size: 1.5em;
             }
 
-            .construction-text {
-                font-size: 1.2em;
-            }
-
-            .gear {
-                width: 60px;
-                height: 60px;
-            }
-
-            .container {
-                padding: 15px;
-            }
-
-            .cone {
-                display: none; /* Hide cones on very small screens */
+            p {
+                font-size: 0.9em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <svg class="gear" viewBox="0 0 100 100" fill="#ffd700">
-            <path d="M50 10a40 40 0 0 0-40 40 40 40 0 0 0 40 40 40 40 0 0 0 40-40 40 40 0 0 0-40-40zm0 72a32 32 0 0 1-32-32 32 32 0 0 1 32-32 32 32 0 0 1 32 32 32 32 0 0 1-32 32zm28-32a28 28 0 0 0-28-28v-8a36 36 0 0 1 36 36h-8z"/>
-        </svg>
-        
-        <h1>Website Under Construction</h1>
-        <div class="construction-text">We're Building Something Great!</div>
-        
-        <div class="progress-bar">
-            <div class="progress"></div>
-        </div>
-        
-        <p>Our team is working hard to bring you an amazing experience.<br>Please check back soon!</p>
-        
-        <div class="contact-info">Contact Mr. Singh for deep info</div>
+        <h1>CBSE Updates</h1>
+        <div class="decorative-line"></div>
+        <p>Great news! The admin will upload <span class="highlight">Class 12 CBSE Political Science Set 1 answers</span> soon. Stay tuned for the latest updates and resources!</p>
+        <div class="footer">Check back regularly for more information.</div>
     </div>
-
-    <!-- Animated Construction Cones -->
-    <svg class="cone cone1" viewBox="0 0 24 24" fill="#ff9800">
-        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
-    </svg>
-    <svg class="cone cone2" viewBox="0 0 24 24" fill="#ff9800">
-        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
-    </svg>
 </body>
 </html>
