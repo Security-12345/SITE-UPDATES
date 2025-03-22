@@ -3,366 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History & Civics Quiz Answers</title>
+    <title>Under Construction</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.8;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .question-card {
-            background-color: white;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-
-        .question-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .question-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .question-header h3 {
-            font-size: 1.25rem;
-            color: #2c3e50;
-        }
-
-        .toggle-btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #3498db;
-            cursor: pointer;
-        }
-
-        .answer {
-            display: none;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-            color: #555;
-        }
-
-        .answer.show {
-            display: block;
-        }
-
-        .answer p {
-            margin-bottom: 0.5rem;
-        }
-
-        .answer strong {
-            color: #2c3e50;
-        }
-
-        footer {
             text-align: center;
-            padding: 1rem 0;
-            background-color: #2c3e50;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            margin: 20px;
+            width: 90%;
         }
 
-        /* Responsive Design */
+        h1 {
+            color: #fff;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .construction-text {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .gear {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            animation: spin 4s linear infinite;
+        }
+
+        .progress-bar {
+            width: 60%;
+            height: 20px;
+            background: #333;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #ff9800);
+            animation: progressAnimation 3s infinite;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            color: #ffd700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            color: #ff9800;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+            50% { width: 75%; }
+            100% { width: 0%; }
+        }
+
+        /* Construction Cone Animation */
+        .cone {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .cone1 { left: 10%; top: 20%; }
+        .cone2 { right: 10%; bottom: 20%; }
+
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
+            h1 {
+                font-size: 2.5em;
             }
 
-            header p {
-                font-size: 1rem;
+            .construction-text {
+                font-size: 1.5em;
             }
 
-            .question-header h3 {
-                font-size: 1.1rem;
+            .gear {
+                width: 80px;
+                height: 80px;
             }
 
             .container {
-                padding: 0 0.5rem;
+                padding: 20px;
             }
 
-            .question-card {
-                padding: 1rem;
+            p {
+                font-size: 1em;
+            }
+
+            .progress-bar {
+                width: 80 Contact Mr. Singh for deep info%;
+            }
+
+            .cone {
+                width: 40px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .construction-text {
+                font-size: 1.2em;
+            }
+
+            .gear {
+                width: 60px;
+                height: 60px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .cone {
+                display: none; /* Hide cones on very small screens */
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>History & Civics Quiz Answers</h1>
-        <p>Accurate answers to your history and civics questions</p>
-    </header>
-
     <div class="container">
-        <!-- Question 1 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(1)">
-                <h3>1. Arrange the following in chronological order</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-1">
-                <p>(i) Formation of the European Economic Community (1957)<br>
-                   (ii) Establishment of ASEAN (1967)<br>
-                   (iii) Privatisation of Agriculture in China (1982)<br>
-                   (iv) India’s war with China (1962)</p>
-                <p><strong>Answer: (D) (i), (iv), (ii), (iii)</strong></p>
-                <p><strong>Explanation:</strong> The correct chronological order is 1957 (EEC), 1962 (India-China War), 1967 (ASEAN), 1982 (Privatisation in China).</p>
-            </div>
+        <svg class="gear" viewBox="0 0 100 100" fill="#ffd700">
+            <path d="M50 10a40 40 0 0 0-40 40 40 40 0 0 0 40 40 40 40 0 0 0 40-40 40 40 0 0 0-40-40zm0 72a32 32 0 0 1-32-32 32 32 0 0 1 32-32 32 32 0 0 1 32 32 32 32 0 0 1-32 32zm28-32a28 28 0 0 0-28-28v-8a36 36 0 0 1 36 36h-8z"/>
+        </svg>
+        
+        <h1>Website Under Construction</h1>
+        <div class="construction-text">We're Building Something Great!</div>
+        
+        <div class="progress-bar">
+            <div class="progress"></div>
         </div>
-
-        <!-- Question 2 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(2)">
-                <h3>2. Which one of the following was the third largest economy of the world in 2017?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-2">
-                <p>(A) Germany<br>(B) France<br>(C) South Korea<br>(D) Japan</p>
-                <p><strong>Answer: (D)</strong></p>
-                <p><strong>Explanation:</strong> In 2017, Japan was the third-largest economy by nominal GDP, after the United States and China.</p>
-            </div>
-        </div>
-
-        <!-- Question 3 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(3)">
-                <h3>3. Match the terms with their meaning</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-3">
-                <p>(a) Terrorism → (ii) Political violence<br>
-                   (b) Disarmament → (iv) Giving up certain kind of weapons<br>
-                   (c) Alliance → (i) Coalition of countries<br>
-                   (d) Security → (iii) Absence of threats</p>
-                <p><strong>Answer: (A)</strong></p>
-                <p><strong>Explanation:</strong> The terms are correctly matched with their meanings.</p>
-            </div>
-        </div>
-
-        <!-- Question 4 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(4)">
-                <h3>4. Assertion (A) and Reason (R)</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-4">
-                <p><strong>Assertion (A):</strong> Health epidemics such as HIV-AIDS, Bird Flu, and Coronavirus are the new threats to security.<br>
-                   <strong>Reason (R):</strong> Security goes beyond military threats to include a wide range of threats affecting human life.</p>
-                <p><strong>Answer: (A)</strong></p>
-                <p><strong>Explanation:</strong> Both the assertion and reason are true, and the reason correctly explains the assertion.</p>
-            </div>
-        </div>
-
-        <!-- Question 5 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(5)">
-                <h3>5. Which one of the following options is not a cause of globalisation?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-5">
-                <p>(A) Flow of capital<br>(B) Technological advancement<br>(C) Poverty of the underdeveloped countries<br>(D) Flow of ideas</p>
-                <p><strong>Answer: (C)</strong></p>
-                <p><strong>Explanation:</strong> Poverty is a consequence of globalization, not a cause, unlike the other options.</p>
-            </div>
-        </div>
-
-        <!-- Question 6 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(6)">
-                <h3>6. In which country was the first meeting of the World Social Forum (WSF) held in 2001?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-6">
-                <p>(A) Brazil<br>(B) South Africa<br>(C) Japan<br>(D) Italy</p>
-                <p><strong>Answer: (A)</strong></p>
-                <p><strong>Explanation:</strong> The first WSF meeting was held in Porto Alegre, Brazil, in 2001.</p>
-            </div>
-        </div>
-
-        <!-- Question 7 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(7)">
-                <h3>7. Choose the name of the political party that ruled Jammu and Kashmir from 1952 to 1957.</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-7">
-                <p>(A) Indian National Congress<br>(B) National Conference<br>(C) Swatantra Party<br>(D) People’s Democratic Front</p>
-                <p><strong>Answer: (B)</strong></p>
-                <p><strong>Explanation:</strong> The National Conference, led by Sheikh Abdullah, ruled Jammu and Kashmir during this period.</p>
-            </div>
-        </div>
-
-        <!-- Question 8 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(8)">
-                <h3>8. Who was the founder of Bharatiya Jana Sangh?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-8">
-                <p>(A) Atal Bihari Vajpayee<br>(B) Deen Dayal Upadhyaya<br>(C) Balraj Madhok<br>(D) Shyama Prasad Mukherjee</p>
-                <p><strong>Answer: (D)</strong></p>
-                <p><strong>Explanation:</strong> Shyama Prasad Mukherjee founded the Bharatiya Jana Sangh in 1951.</p>
-            </div>
-        </div>
-
-        <!-- Question 9 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(9)">
-                <h3>9. Which one of the following is the correct full form of NITI Aayog?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-9">
-                <p>(A) National Institute of Technological Innovation<br>(B) National Institute for Transforming India<br>(C) New Institute of Technology and Information<br>(D) National Institute of Training India</p>
-                <p><strong>Answer: (B)</strong></p>
-                <p><strong>Explanation:</strong> NITI Aayog stands for National Institution for Transforming India.</p>
-            </div>
-        </div>
-
-        <!-- Question 10 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(10)">
-                <h3>10. Who among the following was the Chairperson of the Planning Commission?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-10">
-                <p>(A) President of India<br>(B) Prime Minister of India<br>(C) Minister of Planning<br>(D) Home Minister</p>
-                <p><strong>Answer: (B)</strong></p>
-                <p><strong>Explanation:</strong> The Prime Minister of India was the ex-officio Chairperson of the Planning Commission.</p>
-            </div>
-        </div>
-
-        <!-- Question 11 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(11)">
-                <h3>11. Choose the correct name of the alliance made by the Indian National Congress in the elections of 2004.</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-11">
-                <p>(A) National Democratic Alliance<br>(B) United Progressive Alliance<br>(C) National Front<br>(D) United Front</p>
-                <p><strong>Answer: (B)</strong></p>
-                <p><strong>Explanation:</strong> The Indian National Congress formed the United Progressive Alliance (UPA) in 2004.</p>
-            </div>
-        </div>
-
-        <!-- Question 12 -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(12)">
-                <h3>12. Which one of the following political parties embraced ‘Gandhian Socialism’ as its ideology?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-12">
-                <p>(A) Bharatiya Janata Party<br>(B) Communist Party of India<br>(C) National Conference<br>(D) Socialist Party</p>
-                <p><strong>Answer: (D)</strong></p>
-                <p><strong>Explanation:</strong> The Socialist Party in India embraced Gandhian Socialism, focusing on decentralization and self-reliance.</p>
-            </div>
-        </div>
-
-        <!-- Question 24(i) -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(13)">
-                <h3>24(i). The above passage refers to which general elections to the Lok Sabha?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-13">
-                <p>(A) 4th<br>(B) 5th<br>(C) 6th<br>(D) 7th</p>
-                <p><strong>Answer: (C)</strong></p>
-                <p><strong>Explanation:</strong> The passage refers to the 1977 elections (6th Lok Sabha), when Congress was defeated for the first time post-independence.</p>
-            </div>
-        </div>
-
-        <!-- Question 24(ii) -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(14)">
-                <h3>24(ii). For how many total seats of the Lok Sabha are the elections held?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-14">
-                <p>(A) 540<br>(B) 541<br>(C) 542<br>(D) 543</p>
-                <p><strong>Answer: (C)</strong></p>
-                <p><strong>Explanation:</strong> In 1977, the total number of Lok Sabha seats was 542.</p>
-            </div>
-        </div>
-
-        <!-- Question 24(iii) -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(15)">
-                <h3>24(iii). Who among the following was the Deputy Prime Minister of India after the victory of the Janata Party?</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-15">
-                <p>(A) Ch. Charan Singh<br>(B) Atal Bihari Vajpayee<br>(C) L.K. Advani<br>(D) Chandra Shekhar</p>
-                <p><strong>Answer: (A)</strong></p>
-                <p><strong>Explanation:</strong> Charan Singh was one of the Deputy Prime Ministers after the Janata Party’s victory in 1977.</p>
-            </div>
-        </div>
-
-        <!-- Question 24(iv) -->
-        <div class="question-card">
-            <div class="question-header" onclick="toggleAnswer(16)">
-                <h3>24(iv). Name the state from where the Congress Party could win only one seat in the above-said elections.</h3>
-                <button class="toggle-btn">+</button>
-            </div>
-            <div class="answer" id="answer-16">
-                <p>(A) Gujarat<br>(B) West Bengal<br>(C) Rajasthan<br>(D) Jammu and Kashmir</p>
-                <p><strong>Answer: (D)</strong></p>
-                <p><strong>Explanation:</strong> Congress won only one seat in Jammu and Kashmir during the 1977 elections.</p>
-            </div>
-        </div>
+        
+        <p>Our team is working hard to bring you an amazing experience.<br>Please check back soon!</p>
+        
+        <div class="contact-info">Contact Mr. Singh for deep info</div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 History & Civics Quiz Answers. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function toggleAnswer(id) {
-            const answer = document.getElementById(`answer-${id}`);
-            const btn = answer.previousElementSibling.querySelector('.toggle-btn');
-            answer.classList.toggle('show');
-            btn.textContent = answer.classList.contains('show') ? '−' : '+';
-        }
-    </script>
+    <!-- Animated Construction Cones -->
+    <svg class="cone cone1" viewBox="0 0 24 24" fill="#ff9800">
+        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
+    </svg>
+    <svg class="cone cone2" viewBox="0 0 24 24" fill="#ff9800">
+        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
+    </svg>
 </body>
 </html>
