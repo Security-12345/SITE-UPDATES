@@ -3,93 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <title>Security Team Report - Rainbow Systems</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
             background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #ffffff;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
-        .container {
-            text-align: center;
-            padding: 40px;
+        .header {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
-            max-width: 800px;
-            margin: 20px;
-            width: 90%;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         h1 {
-            color: #fff;
-            font-size: 3.5em;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #ffd700;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 3rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: #ffd700;
+            margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        .construction-text {
-            color: #ffd700;
-            font-size: 2em;
-            margin-bottom: 30px;
-            animation: pulse 2s infinite;
+        p, ul {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: #e2e8f0;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            margin-left: 2rem;
+        }
+
+        ul li:before {
+            content: "⚙";
+            color: #ff9800;
+            margin-right: 0.75rem;
+        }
+
+        /* Construction Elements */
+        .construction {
+            position: relative;
+            padding: 3rem;
         }
 
         .gear {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 30px;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
             animation: spin 4s linear infinite;
         }
 
         .progress-bar {
-            width: 60%;
+            width: 70%;
             height: 20px;
             background: #333;
-            margin: 20px auto;
+            margin: 1.5rem auto;
             border-radius: 10px;
             overflow: hidden;
         }
 
         .progress {
-            width: 75%;
+            width: 80%;
             height: 100%;
             background: linear-gradient(90deg, #ffd700, #ff9800);
             animation: progressAnimation 3s infinite;
         }
 
-        p {
-            color: #fff;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
+        .construction-text {
+            font-size: 2rem;
             color: #ffd700;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
         }
 
-        .contact-info:hover {
-            color: #ff9800;
+        .cone {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            animation: float 3s ease-in-out infinite;
+            z-index: 0;
         }
 
+        .cone1 { left: 10%; top: 20%; }
+        .cone2 { right: 10%; bottom: 20%; }
+
+        /* Animations */
         @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
+            100% { transform: rotate(360deg); }
         }
 
         @keyframes pulse {
@@ -100,16 +145,8 @@
 
         @keyframes progressAnimation {
             0% { width: 0%; }
-            50% { width: 75%; }
+            50% { width: 80%; }
             100% { width: 0%; }
-        }
-
-        /* Construction Cone Animation */
-        .cone {
-            position: absolute;
-            width: 60px;
-            height: 80px;
-            animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
@@ -117,34 +154,43 @@
             50% { transform: translateY(-20px); }
         }
 
-        .cone1 { left: 10%; top: 20%; }
-        .cone2 { right: 10%; bottom: 20%; }
+        /* Footer */
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-top: auto;
+        }
 
-        /* Mobile Responsiveness */
+        footer p {
+            color: #ffd700;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsiveness */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 2.5rem;
             }
 
-            .construction-text {
-                font-size: 1.5em;
+            h2 {
+                font-size: 1.8rem;
             }
 
             .gear {
-                width: 80px;
-                height: 80px;
+                width: 100px;
+                height: 100px;
             }
 
-            .container {
-                padding: 20px;
-            }
-
-            p {
-                font-size: 1em;
+            .construction-text {
+                font-size: 1.5rem;
             }
 
             .progress-bar {
-                width: 80 Contact Mr. Singh for deep info%;
+                width: 80%;
             }
 
             .cone {
@@ -155,52 +201,93 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2em;
+                font-size: 2rem;
             }
 
-            .construction-text {
-                font-size: 1.2em;
+            h2 {
+                font-size: 1.5rem;
             }
 
             .gear {
-                width: 60px;
-                height: 60px;
+                width: 80px;
+                height: 80px;
             }
 
-            .container {
-                padding: 15px;
+            .construction-text {
+                font-size: 1.2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
             }
 
             .cone {
-                display: none; /* Hide cones on very small screens */
+                display: none;
             }
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <h1>Security Team Report</h1>
+    </header>
+
     <div class="container">
-        <svg class="gear" viewBox="0 0 100 100" fill="#ffd700">
-            <path d="M50 10a40 40 0 0 0-40 40 40 40 0 0 0 40 40 40 40 0 0 0 40-40 40 40 0 0 0-40-40zm0 72a32 32 0 0 1-32-32 32 32 0 0 1 32-32 32 32 0 0 1 32 32 32 32 0 0 1-32 32zm28-32a28 28 0 0 0-28-28v-8a36 36 0 0 1 36 36h-8z"/>
-        </svg>
-        
-        <h1>Website Under Construction</h1>
-        <div class="construction-text">We're Building Something Great!</div>
-        
-        <div class="progress-bar">
-            <div class="progress"></div>
+        <div class="card">
+            <h2>Purpose</h2>
+            <p>An overview of the "Rainbow Parking System" and "Rainbow Village Rules" websites, set to launch on April 1, 2025. Built for Rainbow Village to enhance parking management and community standards.</p>
+            <p><strong>Release:</strong> April 1, 2025</p>
         </div>
-        
-        <p>Our team is working hard to bring you an amazing experience.<br>Please check back soon!</p>
-        
-        <div class="contact-info">Contact Mr. Singh for deep info</div>
+
+        <div class="card">
+            <h2>Features</h2>
+            <h3>Rainbow Parking System</h3>
+            <ul>
+                <li>Visitor Permits: Easy creation and tracking.</li>
+                <li>Search & Export: Find and save permit info.</li>
+                <li>Monitoring: Check permit statuses.</li>
+                <li>Reporting: Quick issue flagging.</li>
+            </ul>
+            <h3>Rainbow Village Rules</h3>
+            <ul>
+                <li>Guidelines: Rules for parking, pets, etc.</li>
+                <li>Rentals: Community space booking.</li>
+                <li>Interactive: Expandable sections.</li>
+                <li>Access: Fast info links.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Design</h2>
+            <ul>
+                <li>Responsive: Works on all devices.</li>
+                <li>Modern: Sleek, bold visuals.</li>
+                <li>Navigation: Simple and fast.</li>
+                <li>Engaging: Dynamic elements.</li>
+            </ul>
+        </div>
+
+        <div class="card construction">
+            <svg class="gear" viewBox="0 0 100 100" fill="#ffd700">
+                <path d="M50 10a40 40 0 0 0-40 40 40 40 0 0 0 40 40 40 40 0 0 0 40-40 40 40 0 0 0-40-40zm0 72a32 32 0 0 1-32-32 32 32 0 0 1 32-32 32 32 0 0 1 32 32 32 32 0 0 1-32 32zm28-32a28 28 0 0 0-28-28v-8a36 36 0 0 1 36 36h-8z"/>
+            </svg>
+            <h2>Under Construction</h2>
+            <div class="construction-text">Launching April 1, 2025</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p>Our team is crafting something exceptional. Stay tuned!</p>
+            <svg class="cone cone1" viewBox="0 0 24 24" fill="#ff9800">
+                <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
+            </svg>
+            <svg class="cone cone2" viewBox="0 0 24 24" fill="#ff9800">
+                <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
+            </svg>
+        </div>
     </div>
 
-    <!-- Animated Construction Cones -->
-    <svg class="cone cone1" viewBox="0 0 24 24" fill="#ff9800">
-        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
-    </svg>
-    <svg class="cone cone2" viewBox="0 0 24 24" fill="#ff9800">
-        <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
-    </svg>
+    <footer>
+        <p>© 2025 Jagroop Singh | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
