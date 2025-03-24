@@ -3,291 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Team Report - Rainbow Systems</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Under Construction - Jagroop Singh</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Arial, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            color: #ffffff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            overflow-x: hidden;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: #ffd700;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-        }
-
-        .container {
-            max-width: 900px;
-            width: 90%;
-            margin: 3rem auto;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            text-align: center;
-        }
-
-        h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: #ffd700;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        p, ul {
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
-            color: #e2e8f0;
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            list-style: none;
-            text-align: left;
-            margin-left: 2rem;
-        }
-
-        ul li:before {
-            content: "⚙";
-            color: #ff9800;
-            margin-right: 0.75rem;
-        }
-
-        /* Construction Elements */
-        .construction {
-            position: relative;
-            padding: 3rem;
-        }
-
-        .gear {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
-            animation: spin 4s linear infinite;
-        }
-
-        .progress-bar {
-            width: 70%;
-            height: 20px;
-            background: #333;
-            margin: 1.5rem auto;
-            border-radius: 10px;
+            background: #f5f5f7;
+            color: #1d1d1f;
             overflow: hidden;
+            position: relative;
         }
 
-        .progress {
-            width: 80%;
-            height: 100%;
-            background: linear-gradient(90deg, #ffd700, #ff9800);
-            animation: progressAnimation 3s infinite;
-        }
-
-        .construction-text {
-            font-size: 2rem;
-            color: #ffd700;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-        }
-
-        .cone {
+        /* Subtle Background Element */
+        .bg-element {
             position: absolute;
-            width: 60px;
-            height: 80px;
-            animation: float 3s ease-in-out infinite;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+            transform: translate(-50%, -50%);
             z-index: 0;
         }
 
-        .cone1 { left: 10%; top: 20%; }
-        .cone2 { right: 10%; bottom: 20%; }
+        /* Container */
+        .container {
+            text-align: center;
+            padding: 60px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            max-width: 700px;
+        }
 
-        /* Animations */
+        h1 {
+            font-size: 4em;
+            font-weight: 600;
+            color: #1d1d1f;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #6e6e73;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #d2d2d7;
+            border-top: 4px solid #007aff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
         @keyframes spin {
+            0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes progressAnimation {
-            0% { width: 0%; }
-            50% { width: 80%; }
-            100% { width: 0%; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        /* Footer */
         footer {
-            padding: 1.5rem;
-            text-align: center;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            margin-top: auto;
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9em;
+            color: #6e6e73;
+            z-index: 1;
         }
 
-        footer p {
-            color: #ffd700;
-            font-size: 1.1rem;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        footer a {
+            color: #007aff;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        /* Responsiveness */
+        footer a:hover {
+            color: #005ecb;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .gear {
-                width: 100px;
-                height: 100px;
-            }
-
-            .construction-text {
-                font-size: 1.5rem;
-            }
-
-            .progress-bar {
-                width: 80%;
-            }
-
-            .cone {
-                width: 40px;
-                height: 60px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .gear {
-                width: 80px;
-                height: 80px;
-            }
-
-            .construction-text {
-                font-size: 1.2rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-            }
-
-            .cone {
-                display: none;
-            }
+            h1 { font-size: 2.5em; }
+            p { font-size: 1.2em; }
+            .container { padding: 30px; max-width: 90%; }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Security Team Report</h1>
-    </header>
-
+    <div class="bg-element"></div>
     <div class="container">
-        <div class="card">
-            <h2>Purpose</h2>
-            <p>An overview of the "Rainbow Parking System" and "Rainbow Village Rules" websites, set to launch on April 1, 2025. Built for Rainbow Village to enhance parking management and community standards.</p>
-            <p><strong>Release:</strong> April 1, 2025</p>
-        </div>
-
-        <div class="card">
-            <h2>Features</h2>
-            <h3>Rainbow Parking System</h3>
-            <ul>
-                <li>Visitor Permits: Easy creation and tracking.</li>
-                <li>Search & Export: Find and save permit info.</li>
-                <li>Monitoring: Check permit statuses.</li>
-                <li>Reporting: Quick issue flagging.</li>
-            </ul>
-            <h3>Rainbow Village Rules</h3>
-            <ul>
-                <li>Guidelines: Rules for parking, pets, etc.</li>
-                <li>Rentals: Community space booking.</li>
-                <li>Interactive: Expandable sections.</li>
-                <li>Access: Fast info links.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Design</h2>
-            <ul>
-                <li>Responsive: Works on all devices.</li>
-                <li>Modern: Sleek, bold visuals.</li>
-                <li>Navigation: Simple and fast.</li>
-                <li>Engaging: Dynamic elements.</li>
-            </ul>
-        </div>
-
-        <div class="card construction">
-            <svg class="gear" viewBox="0 0 100 100" fill="#ffd700">
-                <path d="M50 10a40 40 0 0 0-40 40 40 40 0 0 0 40 40 40 40 0 0 0 40-40 40 40 0 0 0-40-40zm0 72a32 32 0 0 1-32-32 32 32 0 0 1 32-32 32 32 0 0 1 32 32 32 32 0 0 1-32 32zm28-32a28 28 0 0 0-28-28v-8a36 36 0 0 1 36 36h-8z"/>
-            </svg>
-            <h2>Under Construction</h2>
-            <div class="construction-text">Launching April 1, 2025</div>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-            <p>Our team is crafting something exceptional. Stay tuned!</p>
-            <svg class="cone cone1" viewBox="0 0 24 24" fill="#ff9800">
-                <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
-            </svg>
-            <svg class="cone cone2" viewBox="0 0 24 24" fill="#ff9800">
-                <path d="M12 2l-10 20h20l-10-20zm0 4l6.5 13h-13l6.5-13z"/>
-            </svg>
-        </div>
+        <h1>Under Construction</h1>
+        <p> Admin working on it. Check back soon.</p>
+        <div class="spinner"></div>
     </div>
-
     <footer>
-        <p>© 2025 Jagroop Singh | All Rights Reserved</p>
+        © 2025 Jagroop Singh. All Rights Reserved.
     </footer>
 </body>
 </html>
