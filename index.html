@@ -24,7 +24,6 @@
             position: relative;
         }
 
-        /* Subtle Background Element */
         .bg-element {
             position: absolute;
             top: 50%;
@@ -36,7 +35,6 @@
             z-index: 0;
         }
 
-        /* Container */
         .container {
             text-align: center;
             padding: 60px;
@@ -48,7 +46,7 @@
         }
 
         h1 {
-            font-size: 4em;
+            font-size: 3em;
             font-weight: 600;
             color: #1d1d1f;
             letter-spacing: -0.02em;
@@ -62,26 +60,37 @@
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #6e6e73;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             line-height: 1.4;
             font-weight: 400;
         }
 
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #d2d2d7;
-            border-top: 4px solid #007aff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
+        .password-protected {
+            margin-top: 20px;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        input {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 1em;
+            background: #007aff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005ecb;
         }
 
         footer {
@@ -91,34 +100,32 @@
             color: #6e6e73;
             z-index: 1;
         }
-
-        footer a {
-            color: #007aff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #005ecb;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5em; }
-            p { font-size: 1.2em; }
-            .container { padding: 30px; max-width: 90%; }
-        }
     </style>
 </head>
 <body>
     <div class="bg-element"></div>
     <div class="container">
         <h1>Under Construction</h1>
-        <p> Admin working on it. Check back soon.</p>
-        <div class="spinner"></div>
+        <p>Our current parking system is down, and a new one will be launched on April 1st, 2025, at 08:30 hrs. For today, this system will remain down. Sorry for the inconvenience.</p>
+        <p>To open the new website, enter the password below:</p>
+        <div class="password-protected">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <p id="accessMessage" style="display:none; color: red; margin-top: 10px;">Incorrect password.</p>
     </div>
     <footer>
-        © 2025 Jagroop Singh. All Rights Reserved.
+        © 2025 Jagroop Singh. All Rights Reserved. | Regards, Punjab Production
     </footer>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password === "MELBIN") {
+                window.location.href = "https://security-12345.github.io/new-parking-system/index.html";
+            } else {
+                document.getElementById("accessMessage").style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
