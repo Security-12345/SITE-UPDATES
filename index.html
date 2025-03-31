@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
         }
 
         body {
@@ -18,7 +18,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #f5f5f7;
+            background: #f2f2f7;
             color: #1d1d1f;
             overflow: hidden;
             position: relative;
@@ -28,104 +28,223 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 800px;
-            height: 800px;
+            width: 1000px;
+            height: 1000px;
             background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
             transform: translate(-50%, -50%);
             z-index: 0;
+            animation: subtlePulse 10s infinite ease-in-out;
+        }
+
+        @keyframes subtlePulse {
+            0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
         }
 
         .container {
             text-align: center;
-            padding: 60px;
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             z-index: 1;
             max-width: 700px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.8em;
             font-weight: 600;
             color: #1d1d1f;
             letter-spacing: -0.02em;
             margin-bottom: 20px;
-            animation: fadeInText 1.5s ease-in-out;
-        }
-
-        @keyframes fadeInText {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
 
         p {
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #6e6e73;
             margin-bottom: 30px;
-            line-height: 1.4;
+            line-height: 1.6;
             font-weight: 400;
         }
 
         .password-protected {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
             margin-top: 20px;
         }
 
         input {
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 10px;
+            padding: 12px 15px;
+            font-size: 1.1em;
+            border: 1px solid #d2d2d7;
+            border-radius: 10px;
+            width: 220px;
+            background: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007aff;
+            box-shadow: 0 0 8px rgba(0, 122, 255, 0.3);
         }
 
         button {
-            padding: 10px 15px;
-            font-size: 1em;
+            padding: 12px 20px;
+            font-size: 1.1em;
             background: #007aff;
-            color: white;
+            color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
+            position: relative;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
 
         button:hover {
-            background: #005ecb;
+            background: #0066cc;
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            background: #d2d2d7;
+            cursor: not-allowed;
+        }
+
+        /* Apple-inspired loading spinner */
+        .loader {
+            display: none;
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        #accessMessage {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #ff2d55;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #accessMessage.show {
+            opacity: 1;
         }
 
         footer {
             position: absolute;
-            bottom: 20px;
+            bottom: 15px;
             font-size: 0.9em;
-            color: #6e6e73;
+            color: #8e8e93;
             z-index: 1;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Construction Icon */
+        .construction-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZTZlNzMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMiAyMGgxOG0tMTYtNGw0LTQtNC00bDQtNHptNiA0bDQtNC00LTQtNC00em0xMCA0bDQtNC00LTQtNC00Ii8+PC9zdmc+') no-repeat center;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+                max-width: 90%;
+            }
+            h1 { font-size: 2.2em; }
+            p { font-size: 1.1em; }
+            input { width: 180px; }
+            .construction-icon { width: 50px; height: 50px; }
         }
     </style>
 </head>
 <body>
     <div class="bg-element"></div>
     <div class="container">
+        <div class="construction-icon"></div>
         <h1>Under Construction</h1>
-        <p>Our current parking system is down, and a new one will be launched on April 1st, 2025, at 08:30 hrs. For today, this system will remain down. Sorry for the inconvenience.</p>
-        <p>To open the new website, enter the password below:</p>
+        <p>The current parking system is temporarily unavailable. A new system will launch on <strong>April 1st, 2025, at 08:30 hrs</strong>. We apologize for any inconvenience caused.</p>
+        <p>Enter the password below to access the new website:</p>
         <div class="password-protected">
-            <input type="password" id="password" placeholder="Enter Password">
-            <button onclick="checkPassword()">Submit</button>
+            <input type="password" id="password" placeholder="Enter Password" autocomplete="off">
+            <button id="submitBtn" onclick="checkPassword()">
+                <span class="loader" id="loader"></span>
+                <span id="btnText">Submit</span>
+            </button>
         </div>
-        <p id="accessMessage" style="display:none; color: red; margin-top: 10px;">Incorrect password.</p>
+        <p id="accessMessage">Incorrect password. Please try again.</p>
     </div>
     <footer>
         © 2025 All Rights Reserved. | Punjab Production
     </footer>
     <script>
+        const submitBtn = document.getElementById("submitBtn");
+        const loader = document.getElementById("loader");
+        const btnText = document.getElementById("btnText");
+        const accessMessage = document.getElementById("accessMessage");
+        const passwordInput = document.getElementById("password");
+
         function checkPassword() {
-            const password = document.getElementById("password").value;
-            if (password === "MELBIN") {
-                window.location.href = "https://security-12345.github.io/new-parking-system/index.html";
-            } else {
-                document.getElementById("accessMessage").style.display = "block";
-            }
+            const password = passwordInput.value.trim();
+            submitBtn.disabled = true;
+            loader.style.display = "block";
+            btnText.style.opacity = "0";
+            accessMessage.classList.remove("show");
+
+            setTimeout(() => {
+                if (password === "MELBIN") {
+                    window.location.href = "https://security-12345.github.io/new-parking-system/index.html";
+                } else {
+                    accessMessage.classList.add("show");
+                    submitBtn.disabled = false;
+                    loader.style.display = "none";
+                    btnText.style.opacity = "1";
+                    passwordInput.value = "";
+                    passwordInput.focus();
+                }
+            }, 1200); // Realistic delay for loading effect
         }
+
+        // Enter key support
+        passwordInput.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") {
+                checkPassword();
+            }
+        });
+
+        // Reset message on input
+        passwordInput.addEventListener("input", () => {
+            accessMessage.classList.remove("show");
+        });
     </script>
 </body>
 </html>
